@@ -8,8 +8,8 @@ export const site = {
   whatsapp: '351937800553',
   localidade: 'Covilhã',
   pais: 'PT',
-  /** [NIF] — por preencher. Aparece no rodapé de todas as páginas. */
-  nif: '[NIF]',
+  /** Aparece no rodapé de todas as páginas e nas páginas legais. */
+  nif: '251504387',
   fundador: 'Pedro Pereira',
   descricao:
     'Websites, lojas online e automações de IA para PME e marcas portuguesas. Prazo fixo e preço fechado.',

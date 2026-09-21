@@ -213,8 +213,7 @@ export default function Sobre() {
             </div>
             <h3>Técnico de contabilidade</h3>
             <p>Processos, faturação e obrigações das PME.</p>
-            {/* Por preencher: nome da certificação ou do curso. */}
-            <span className="by">[Certificação ou curso]</span>
+            {/* Sem linha de rodapé: a certificação não é para mostrar. */}
           </article>
 
           <article className="cert">

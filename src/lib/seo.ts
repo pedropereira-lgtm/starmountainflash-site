@@ -77,8 +77,8 @@ export const pessoaLd = {
   jobTitle: 'Fundador',
   worksFor: { '@id': site.url + '/#negocio' },
   address: { '@type': 'PostalAddress', addressLocality: site.localidade, addressCountry: site.pais },
-  // Sem "sameAs": os perfis em site.redes são da empresa, não pessoais.
-  // Se houver um LinkedIn do Pedro, é aqui que entra.
+  // Só perfis pessoais. Os da empresa estão no negocioLd.
+  sameAs: ['https://www.linkedin.com/in/pedro-silva-pereira-89782a313/'],
 };
 
 export function migalhasLd(itens: { nome: string; caminho: string }[]) {
