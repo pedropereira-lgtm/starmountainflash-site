@@ -19,11 +19,25 @@ export function Marca({ marca }: { marca: Trabalho['marca'] }) {
   return <span className="lg-txt">{marca.texto}</span>;
 }
 
+/** Largura real de um cartão: a toda a largura, ou metade da grelha de dois. */
+export const SIZES_CARTAO = {
+  largo: '100vw',
+  duasColunas: '(max-width: 960px) 100vw, 50vw',
+} as const;
+
 /**
  * O interior da moldura do browser: o screenshot quando existe, senão a marca.
  * Sem screenshot, o cartão fica como no protótipo, com o logótipo do cliente.
  */
-export function Shot({ t, grande = false }: { t: Trabalho; grande?: boolean }) {
+export function Shot({
+  t,
+  grande = false,
+  sizes = SIZES_CARTAO.duasColunas,
+}: {
+  t: Trabalho;
+  grande?: boolean;
+  sizes?: string;
+}) {
   const classe = 'shot' + (grande ? ' big' : '');
   const img = imagem(t.screenshot);
 
@@ -43,7 +57,9 @@ export function Shot({ t, grande = false }: { t: Trabalho; grande?: boolean }) {
         className="sc"
         width={img.width}
         height={img.height}
-        sizes={grande ? '(max-width: 960px) 100vw, 90vw' : '(max-width: 960px) 100vw, 45vw'}
+        sizes={sizes}
+        // Texto pequeno dentro do screenshot: menos compressão.
+        quality={90}
       />
     </div>
   );
@@ -59,7 +75,7 @@ function Cartao({ t }: { t: Trabalho }) {
           <i />
           <em>{t.dominio}</em>
         </div>
-        <Shot t={t} />
+        <Shot t={t} sizes={t.layout === 'wide' ? SIZES_CARTAO.largo : SIZES_CARTAO.duasColunas} />
       </div>
       <div className="meta">
         <div>

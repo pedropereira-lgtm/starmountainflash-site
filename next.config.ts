@@ -7,6 +7,10 @@ const nextConfig: NextConfig = {
   outputFileTracingRoot: path.join(__dirname),
   images: {
     formats: ['image/avif', 'image/webp'],
+    // A partir do Next 15 só são servidas as qualidades declaradas aqui.
+    // 75 é o valor por omissão; 90 é o dos screenshots dos trabalhos, onde
+    // se lê texto pequeno e a compressão nota-se.
+    qualities: [75, 90],
   },
   async rewrites() {
     // O painel Decap e uma pagina estatica em public/admin/.

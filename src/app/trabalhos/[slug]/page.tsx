@@ -3,7 +3,7 @@ import { notFound } from 'next/navigation';
 import type { Metadata } from 'next';
 import { HeroSm, JsonLd, NextStep, SectionHead } from '@/components/Blocks';
 import { Mockup, Screenshots } from '@/components/Mostras';
-import { Shot } from '@/components/Trabalhos';
+import { SIZES_CARTAO, Shot } from '@/components/Trabalhos';
 import { ArrowRight, ArrowUpRight } from '@/components/Icons';
 import { casos, type Cor, type Fonte, type SiteDoCaso } from '@/data/casos';
 import { proximoTrabalho, trabalhosPublicados, trabalhoPorSlug } from '@/data/trabalhos';
@@ -169,7 +169,7 @@ export default async function Caso({ params }: { params: Promise<{ slug: string 
                   <i />
                   <em>{trabalho.dominio}</em>
                 </div>
-                <Shot t={trabalho} grande />
+                <Shot t={trabalho} grande sizes={SIZES_CARTAO.largo} />
               </div>
             </div>
           )}
