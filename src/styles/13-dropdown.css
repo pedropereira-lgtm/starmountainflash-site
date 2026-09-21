@@ -1,0 +1,18 @@
+/* DROPDOWN SERVIÇOS */
+.hero>.nav{z-index:5}
+.dd{position:relative}
+.dd-btn{font:inherit;font-size:14px;padding:9px 16px;border-radius:999px;color:rgba(255,255,255,.82);background:none;border:0;cursor:pointer;display:inline-flex;align-items:center;gap:6px}
+.dd-btn svg{transition:transform .25s;opacity:.7}
+.dd:hover .dd-btn,.dd.open .dd-btn{background:rgba(255,255,255,.1);color:#fff}
+.dd:hover .dd-btn svg,.dd.open .dd-btn svg{transform:rotate(180deg)}
+.dd-menu{position:absolute;top:calc(100% + 12px);left:-6px;width:340px;padding:8px;border-radius:18px;background:#101211;border:1px solid rgba(255,255,255,.1);box-shadow:0 24px 60px rgba(0,0,0,.35);opacity:0;visibility:hidden;transform:translateY(6px);transition:opacity .2s,transform .25s,visibility .2s;z-index:30}
+.dd-menu::before{content:"";position:absolute;left:0;right:0;top:-16px;height:16px}
+.dd:hover .dd-menu,.dd.open .dd-menu,.dd:focus-within .dd-menu{opacity:1;visibility:visible;transform:none}
+.menu .dd-menu a.i{display:grid;grid-template-columns:1fr auto;gap:3px 14px;padding:13px 14px;border-radius:12px;color:#fff;font-size:inherit}
+.menu .dd-menu a.i:hover{background:rgba(255,255,255,.07)}
+.dd-menu strong{font-weight:500;font-size:15px}
+.dd-menu span{grid-column:1;font-size:13px;color:rgba(255,255,255,.55)}
+.dd-menu a.i svg{grid-row:1/span 2;grid-column:2;align-self:center;opacity:.45;transition:transform .2s,opacity .2s}
+.dd-menu a.i:hover svg{opacity:1;transform:translateX(3px)}
+.mbar .dd-btn{padding:9px 14px}
+

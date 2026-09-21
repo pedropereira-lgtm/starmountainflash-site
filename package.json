@@ -1,0 +1,36 @@
+{
+  "name": "starmountainflash-site",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "typecheck": "tsc --noEmit",
+    "og": "node scripts/gerar-og.mjs"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "2.58.0",
+    "github-slugger": "^2.0.0",
+    "gray-matter": "4.0.3",
+    "next": "^15.5.25",
+    "react": "19.1.1",
+    "react-dom": "19.1.1",
+    "rehype-slug": "6.0.0",
+    "rehype-stringify": "10.0.1",
+    "remark-gfm": "4.0.1",
+    "remark-parse": "^11.0.0",
+    "remark-rehype": "11.1.2",
+    "unified": "11.0.5"
+  },
+  "devDependencies": {
+    "@netlify/plugin-nextjs": "^5.16.0",
+    "@types/node": "22.18.1",
+    "@types/react": "19.1.13",
+    "@types/react-dom": "19.1.9",
+    "sharp": "^0.35.4",
+    "typescript": "5.9.2",
+    "wawoff2": "^2.0.1"
+  }
+}

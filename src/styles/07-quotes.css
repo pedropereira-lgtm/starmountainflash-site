@@ -1,0 +1,23 @@
+/* TESTEMUNHOS */
+.quotes{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.q{margin:0;background:#fff;border-radius:22px;padding:30px;display:flex;flex-direction:column;gap:28px;min-height:300px}
+.q blockquote{margin:0;font-size:17px;line-height:1.55;color:#3b3f3c}
+.q .qt{font-size:21px;font-weight:500;letter-spacing:-.02em;line-height:1.25;margin-bottom:-12px}
+.q .src{margin-left:auto;font-size:13px;color:var(--emerald);font-weight:500}
+.q .src:hover{text-decoration:underline}
+.who{margin-top:auto;display:flex;align-items:center;gap:12px}
+.av{width:44px;height:44px;border-radius:50%;background:#E6E4DE;display:grid;place-items:center;font-size:14px;font-weight:600;color:var(--emerald)}
+.who strong{display:block;font-size:15px;font-weight:600}.who span{font-size:13px;color:var(--muted)}
+
+/* SOBRE */
+.about{display:grid;grid-template-columns:1fr 1fr;gap:12px;align-items:stretch}
+.about .photo.has{min-height:0;height:auto;position:relative}.about .photo.has img{position:absolute;inset:0}
+.about .about-txt{gap:18px;padding:40px}
+.about .facts{margin-top:8px}
+.photo{border-radius:22px;min-height:560px;background:#E6E4DE;display:grid;place-items:center;font-size:13px;color:#A3A6A2}
+.about-txt .label i{background:var(--emerald)}
+.about-txt{border-radius:22px;background:#fff;padding:44px;display:flex;flex-direction:column;gap:22px}
+.about-txt p{margin:0;font-size:17px;line-height:1.65;color:#474b48}
+.facts{margin-top:auto;display:grid;grid-template-columns:repeat(3,1fr);gap:16px;padding-top:24px;border-top:1px dashed #BDBBB3}
+.facts strong{display:block;font-size:15px;font-weight:600}.facts span{font-size:13px;color:var(--muted)}
+

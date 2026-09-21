@@ -1,0 +1,101 @@
+# Painel de gestão do blog (Decap CMS).
+# Autenticação pelo GitHub, com o serviço de OAuth da Netlify.
+# Não usa Netlify Identity.
+backend:
+  name: github
+  repo: PEDRO-GITHUB/starmountainflash-site # ← trocar por utilizador/repositório
+  branch: main
+  base_url: https://api.netlify.com # serviço de OAuth da Netlify
+  auth_endpoint: auth
+
+# Fluxo de rascunhos: cada artigo passa por Rascunho → Em revisão → Pronto.
+publish_mode: editorial_workflow
+
+locale: pt
+media_folder: public/img/blog
+public_folder: /img/blog
+
+site_url: https://starmountainflash.pt
+display_url: https://starmountainflash.pt
+logo_url: https://starmountainflash.pt/img/og-starmountain-flash.jpg
+
+collections:
+  - name: blog
+    label: Artigos
+    label_singular: Artigo
+    folder: content/blog
+    create: true
+    slug: '{{fields.slug}}'
+    path: '{{fields.slug}}'
+    extension: md
+    format: yaml-frontmatter
+    summary: '{{titulo}} — {{estado}}'
+    sortable_fields: [data, titulo]
+    view_filters:
+      - label: Publicados
+        field: estado
+        pattern: publicado
+      - label: Rascunhos
+        field: estado
+        pattern: rascunho
+    editor:
+      preview: false
+    fields:
+      - label: Título
+        name: titulo
+        widget: string
+        hint: O título do artigo, como aparece na página e no Google.
+
+      - label: Endereço (slug)
+        name: slug
+        widget: string
+        pattern:
+          - '^[a-z0-9]+(-[a-z0-9]+)*$'
+          - 'Só letras minúsculas sem acentos, números e hífenes. Ex.: quanto-custa-um-site'
+        hint: Fica em starmountainflash.pt/blog/… . Depois de publicado, não mudar.
+
+      - label: Descrição
+        name: descricao
+        widget: string
+        pattern:
+          - '^.{1,155}$'
+          - 'No máximo 155 caracteres.'
+        hint: Aparece no Google e na lista de artigos. Máximo 155 caracteres.
+
+      - label: Categoria
+        name: categoria
+        widget: select
+        options: ['Websites', 'Lojas online', 'Automação', 'SEO e IA']
+        default: Websites
+
+      - label: Data
+        name: data
+        widget: datetime
+        date_format: 'DD/MM/YYYY'
+        time_format: false
+        picker_utc: true
+
+      - label: Imagem de capa
+        name: capa
+        widget: image
+        required: false
+        hint: Ideal 1600×900. Também é usada quando o artigo é partilhado.
+
+      - label: Texto alternativo da capa
+        name: capaAlt
+        widget: string
+        required: false
+        hint: Descreve a imagem para quem não a vê. Deixar vazio se a imagem for decorativa.
+
+      - label: Estado
+        name: estado
+        widget: select
+        options:
+          - { label: 'Rascunho (não aparece no site)', value: 'rascunho' }
+          - { label: 'Publicado', value: 'publicado' }
+        default: rascunho
+
+      - label: Artigo
+        name: body
+        widget: markdown
+        hint: Use títulos (##) para as secções. Com três ou mais, aparece um índice.

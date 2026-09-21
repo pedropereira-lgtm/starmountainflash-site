@@ -1,0 +1,23 @@
+/* CSS do protótipo aprovado, repartido por ficheiros.
+   A ORDEM DESTES IMPORTS É SIGNIFICATIVA: o bloco 12-brand.css reescreve
+   regras dos anteriores (.btn-light, .label i, peso dos títulos). Não reordenar. */
+@import './01-tokens.css';
+@import './02-hero.css';
+@import './03-home.css';
+@import './04-sections.css';
+@import './05-cards.css';
+@import './06-method.css';
+@import './07-quotes.css';
+@import './08-faq.css';
+@import './09-contact.css';
+@import './10-footer.css';
+@import './11-modal.css';
+@import './12-brand.css';
+@import './13-dropdown.css';
+@import './14-whatsapp.css';
+@import './15-mobile-nav.css';
+@import './16-pages.css';
+/* Acrescentados (não existiam no protótipo): */
+@import './17-media.css';
+@import './18-article.css';
+@import './19-cookies.css';

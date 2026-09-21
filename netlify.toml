@@ -1,0 +1,42 @@
+[build]
+  command = "npm run build"
+  publish = ".next"
+
+[build.environment]
+  NODE_VERSION = "22"
+
+# Adaptador oficial: páginas estáticas servidas pela CDN, /api/lead como função.
+[[plugins]]
+  package = "@netlify/plugin-nextjs"
+
+# --- Redirecionamentos 301 do site antigo -----------------------------------
+# Os URLs do protótipo estático estão tratados em next.config.ts.
+# Acrescentar aqui os URLs do site que está atualmente em starmountainflash.pt
+# que não existam no novo site. Exemplo:
+#
+# [[redirects]]
+#   from = "/servicos"
+#   to = "/websites"
+#   status = 301
+#   force = true
+
+# O painel de gestão é uma aplicação de página única servida de public/admin.
+[[headers]]
+  for = "/admin/*"
+  [headers.values]
+    X-Robots-Tag = "noindex, nofollow"
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    X-Frame-Options = "SAMEORIGIN"
+    Permissions-Policy = "camera=(), microphone=(), geolocation=(), interest-cohort=()"
+    Strict-Transport-Security = "max-age=31536000; includeSubDomains; preload"
+
+# A fonte e a imagem Open Graph não mudam de nome; podem ser guardadas por muito tempo.
+[[headers]]
+  for = "/img/*"
+  [headers.values]
+    Cache-Control = "public, max-age=604800, must-revalidate"

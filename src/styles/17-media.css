@@ -1,0 +1,12 @@
+/* A foto do hero passou de background CSS para next/image (local, responsiva).
+   Estas regras reproduzem o enquadramento original e fixam a ordem de pintura:
+   foto (0) · gradiente ::before (1) · conteúdo (2). */
+.hero>.hero-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 60%;z-index:0}
+.hero::before{z-index:1}
+.hero>*{z-index:2}
+.hero-sm>.hero-bg{object-position:center 35%}
+.name>.hero-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 70%;z-index:0}
+.name:before{z-index:1}
+.name>div{z-index:2}
+/* Screenshots dos trabalhos dentro da moldura do browser. */
+.shot>img.sc{width:100%;height:100%;object-fit:cover;object-position:top center;opacity:1;filter:none}

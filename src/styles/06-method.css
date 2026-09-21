@@ -1,0 +1,19 @@
+/* MÉTODO */
+.dark{background:var(--ink);color:#fff;border-radius:28px;margin:130px 12px 0;padding:110px 0}
+.dark .sec{padding-top:0}
+.dark .label i{background:var(--jade)}
+.dark h2 span{color:rgba(255,255,255,.45)}
+.dark .sec-head p{color:rgba(255,255,255,.6)}
+.steps{border-top:1px solid rgba(255,255,255,.14)}
+.step{display:grid;grid-template-columns:minmax(80px,140px) 1fr minmax(0,1.25fr);gap:40px;padding:44px 0;border-bottom:1px solid rgba(255,255,255,.14);align-items:start}
+.step b{font-weight:500;font-size:44px;letter-spacing:-.04em;color:var(--jade);line-height:1}
+.step h3{margin:0;font-weight:500;font-size:32px;letter-spacing:-.03em;line-height:1.1}
+.step .sum{display:block;margin-top:10px;font-size:16px;color:rgba(255,255,255,.5)}
+.step .txt{display:flex;flex-direction:column;gap:20px;max-width:640px}
+.step p{margin:0;font-size:16px;line-height:1.65;color:rgba(255,255,255,.72);text-align:justify;hyphens:auto;-webkit-hyphens:auto;text-wrap:pretty}
+.deliv{display:grid;grid-template-columns:120px 1fr;gap:16px;margin-top:6px;padding-top:18px;border-top:1px solid rgba(255,255,255,.12)}
+.deliv>span{font-size:12px;letter-spacing:.05em;text-transform:uppercase;color:rgba(255,255,255,.45);padding-top:2px}
+.deliv ol{margin:0;padding:0;list-style:none;display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.deliv li{font-size:14px;line-height:1.4;color:rgba(255,255,255,.88)}
+.deliv li i{display:block;font-style:normal;font-size:12px;color:var(--jade);margin-bottom:5px;font-variant-numeric:tabular-nums}
+

@@ -1,0 +1,17 @@
+/* INTRO */
+.intro{padding:120px var(--px) 40px;display:grid;grid-template-columns:1fr;gap:28px}
+.intro .label{color:var(--ink)} .intro .label i{background:var(--emerald)}
+.intro h2{margin:0;font-weight:500;font-size:clamp(30px,3.7vw,72px);line-height:1.12;letter-spacing:-.035em;max-width:80%}
+.intro h2 span{color:#A3A6A2}
+.intro .more{justify-self:end;display:inline-flex;gap:10px;align-items:center;font-size:15px;font-weight:500;padding-bottom:6px;border-bottom:1px dashed var(--emerald)}
+
+/* NUMBERS */
+.nums{padding:60px var(--px) 0}
+.nums .label i{background:var(--emerald)}
+.nums-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:32px;margin-top:24px}
+.num b{display:block;font-weight:500;font-size:clamp(40px,4.4vw,64px);letter-spacing:-.045em;line-height:1;padding-bottom:18px;border-bottom:1px dashed #BDBBB3}
+.num strong{display:block;font-weight:600;font-size:15px;margin-top:14px}
+.num p{margin:6px 0 0;font-size:14px;line-height:1.5;color:var(--muted);max-width:240px}
+
+
+
