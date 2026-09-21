@@ -13,12 +13,14 @@ export const site = {
   fundador: 'Pedro Pereira',
   descricao:
     'Websites, lojas online e automações de IA para PME e marcas portuguesas. Prazo fixo e preço fechado.',
-  /** Links por confirmar — entram no "sameAs" do JSON-LD e no rodapé. */
+  /** Perfis da empresa. Entram no "sameAs" do JSON-LD; os dois primeiros também no rodapé. */
   redes: {
-    instagram: '',
-    linkedin: '',
-    trustpilot: '',
-    googleBusiness: '',
+    instagram: 'https://www.instagram.com/starmountainflash/',
+    linkedin: 'https://www.linkedin.com/company/starmountain-flash',
+    trustpilot: 'https://www.trustpilot.com/review/starmountainflash.pt',
+    // O link curto share.google/loz0HoN2GsDjNjDHH resolve para este endereço.
+    // Fica a forma estável, sem os parâmetros de seguimento que o link curto acrescenta.
+    googleBusiness: 'https://www.google.com/search?kgmid=/g/11nvdc1v3n',
   },
 } as const;
 

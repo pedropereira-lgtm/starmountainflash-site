@@ -77,7 +77,8 @@ export const pessoaLd = {
   jobTitle: 'Fundador',
   worksFor: { '@id': site.url + '/#negocio' },
   address: { '@type': 'PostalAddress', addressLocality: site.localidade, addressCountry: site.pais },
-  ...(sameAs.length ? { sameAs } : {}),
+  // Sem "sameAs": os perfis em site.redes são da empresa, não pessoais.
+  // Se houver um LinkedIn do Pedro, é aqui que entra.
 };
 
 export function migalhasLd(itens: { nome: string; caminho: string }[]) {
