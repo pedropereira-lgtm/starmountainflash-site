@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { trabalhosPublicados, type Trabalho } from '@/data/trabalhos';
-import { imagemExiste } from '@/lib/imagens';
+import { imagem } from '@/lib/imagens';
 
 /** A marca do cliente, como aparece dentro da moldura do browser e na barra de logótipos. */
 export function Marca({ marca }: { marca: Trabalho['marca'] }) {
@@ -21,21 +21,13 @@ export function Marca({ marca }: { marca: Trabalho['marca'] }) {
 
 /**
  * O interior da moldura do browser: o screenshot quando existe, senão a marca.
- * `variante` escolhe entre o screenshot dos cartões e o da página de caso.
+ * Sem screenshot, o cartão fica como no protótipo, com o logótipo do cliente.
  */
-export function Shot({
-  t,
-  variante = 'cartao',
-  grande = false,
-}: {
-  t: Trabalho;
-  variante?: 'cartao' | 'caso';
-  grande?: boolean;
-}) {
-  const caminho = variante === 'caso' ? (t.screenshotCaso ?? t.screenshot) : t.screenshot;
+export function Shot({ t, grande = false }: { t: Trabalho; grande?: boolean }) {
   const classe = 'shot' + (grande ? ' big' : '');
+  const img = imagem(t.screenshot);
 
-  if (!imagemExiste(caminho)) {
+  if (!img) {
     return (
       <div className={classe}>
         <Marca marca={t.marca} />
@@ -43,17 +35,14 @@ export function Shot({
     );
   }
 
-  // O mockup é uma composição pronta e não pode ser cortado; um screenshot
-  // do site enche a moldura a partir do topo da página.
-  const mockup = variante === 'caso' && Boolean(t.screenshotCaso);
   return (
     <div className={classe}>
       <Image
-        src={caminho}
+        src={img.src}
         alt={'Site ' + t.nome}
-        className={mockup ? 'sc sc-mockup' : 'sc'}
-        width={2000}
-        height={1125}
+        className="sc"
+        width={img.width}
+        height={img.height}
         sizes={grande ? '(max-width: 960px) 100vw, 90vw' : '(max-width: 960px) 100vw, 45vw'}
       />
     </div>

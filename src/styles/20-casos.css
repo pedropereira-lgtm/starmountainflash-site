@@ -1,0 +1,69 @@
+/* PÁGINAS DE CASO — blocos novos, na linguagem do protótipo */
+
+/* Mockups já trazem moldura e fundo próprios: nada à volta. */
+.mockup{border-radius:22px;overflow:hidden;background:#E6E4DE}
+.mockup img{display:block;width:100%;height:auto}
+
+/* Screenshot de desktop + de telemóvel lado a lado. */
+.shots{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,272px);gap:12px;align-items:start}
+.shots-um{grid-template-columns:minmax(0,1fr)}
+.shots-um .phone-wrap{max-width:272px}
+.phone-wrap{border-radius:22px;background:#E6E4DE;padding:12px}
+.phone{position:relative;border-radius:26px;background:var(--ink);padding:8px;box-shadow:0 1px 0 rgba(0,0,0,.04)}
+.phone:before{content:"";position:absolute;top:15px;left:50%;transform:translateX(-50%);width:54px;height:5px;border-radius:5px;background:rgba(255,255,255,.22);z-index:2}
+.phone-shot{border-radius:19px;overflow:hidden;aspect-ratio:9/16;background:#fff}
+.phone-shot img{display:block;width:100%;height:100%;object-fit:cover;object-position:top center}
+@media (max-width:760px){
+  .shots{grid-template-columns:1fr}
+  .shots .phone-wrap{max-width:320px}
+}
+
+/* Uma sub-secção por site, dentro do mesmo caso de estudo. */
+.sites{display:flex;flex-direction:column}
+.site{padding:64px 0;border-top:1px solid var(--line);display:flex;flex-direction:column;gap:32px;scroll-margin-top:96px}
+.site:first-child{padding-top:44px}
+.site-head{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:24px 60px;align-items:start}
+.site-head h3{margin:0;font-weight:500;font-size:clamp(26px,2.6vw,40px);letter-spacing:-.035em;line-height:1.1}
+.site-head .url{display:inline-flex;align-items:center;gap:8px;margin-top:12px;font-size:15px;font-weight:500;color:var(--emerald);border-bottom:1px dashed var(--emerald);padding-bottom:4px}
+.site-head>div:last-child{display:flex;flex-direction:column;gap:18px}
+.site-head p{margin:0;font-size:17px;line-height:1.65;color:#3b3f3c}
+.site-head ul{margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:9px}
+.site-head li{display:flex;gap:10px;font-size:15px;line-height:1.5;color:#555a57}
+.site-head li:before{content:"";width:6px;height:6px;margin-top:8px;flex:none;background:var(--emerald)}
+
+/* Cores, tipografia e estrutura de cada site, numa linha só. */
+.site-ficha{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:12px;align-items:start}
+.site-ficha .swatches{grid-template-columns:repeat(5,1fr)}
+.site-ficha .fonts{grid-template-rows:auto auto}
+.site-ficha .fo{padding:20px 24px}
+.site-ficha .fo .aa{font-size:48px}
+@media (max-width:960px){
+  .site-head{grid-template-columns:1fr;gap:18px}
+  .site-ficha{grid-template-columns:1fr}
+  .site-ficha .swatches{grid-template-columns:repeat(3,1fr)}
+  .site{padding:48px 0}
+}
+@media (max-width:560px){
+  .site-ficha .swatches{grid-template-columns:1fr 1fr}
+}
+
+/* Amostra de cor que é um gradiente ocupa a largura toda da linha. */
+.sw.grad{grid-column:1/-1}
+.sw.grad span{aspect-ratio:auto;height:54px}
+
+/* Lista de páginas do site, em linha, quando não há lugar para a caixa. */
+.site-estrutura{display:flex;flex-wrap:wrap;gap:8px}
+.site-estrutura span{font-size:13px;padding:7px 13px;border-radius:999px;background:#E6E4DE}
+
+/* Avaliação em destaque a seguir a um dos sites. */
+.destaque-q{background:#fff;border-radius:22px;padding:40px;display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:28px 60px;align-items:start}
+.destaque-q .qt{margin:0;font-weight:500;font-size:clamp(24px,2.2vw,32px);letter-spacing:-.03em;line-height:1.2}
+.destaque-q blockquote{margin:0;font-size:17px;line-height:1.65;color:#3b3f3c}
+.destaque-q .who{margin-top:22px;display:flex;align-items:center;gap:12px}
+.destaque-q .src{display:inline-flex;margin-top:18px;font-size:14px;font-weight:500;color:var(--emerald);border-bottom:1px dashed var(--emerald);padding-bottom:4px}
+@media (max-width:960px){.destaque-q{grid-template-columns:1fr;padding:28px}}
+
+/* Vários botões "Visitar o site" quando o caso tem mais do que um. */
+.visitas{display:flex;flex-wrap:wrap;gap:10px;margin-top:auto;padding-top:20px}
+.visitas .btn{height:44px;font-size:14px;padding:0 5px 0 16px}
+.visitas .btn .ic{width:34px;height:34px}

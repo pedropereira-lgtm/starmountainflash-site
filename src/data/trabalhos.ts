@@ -13,8 +13,6 @@ export type Trabalho = {
   marca: { tipo: 'img'; src: string; alt: string } | { tipo: 'texto'; texto: string } | { tipo: 'img-texto'; src: string; texto: string };
   /** Screenshot para os cartões. Sem ele, fica a marca, como no protótipo. */
   screenshot?: string;
-  /** Imagem do topo da página de caso, quando difere da dos cartões. */
-  screenshotCaso?: string;
 };
 
 export const trabalhos: Trabalho[] = [
@@ -28,7 +26,6 @@ export const trabalhos: Trabalho[] = [
     layout: 'wide',
     marca: { tipo: 'img', src: '/img/ubi.png', alt: 'Universidade da Beira Interior' },
     screenshot: '/img/trabalhos/ubi-dei-desktop.webp',
-    screenshotCaso: '/img/trabalhos/ubi-dei-mockup.webp',
   },
   {
     slug: 'planet-trading',
@@ -49,6 +46,7 @@ export const trabalhos: Trabalho[] = [
     published: true,
     layout: 'normal',
     marca: { tipo: 'texto', texto: 'StudyOS' },
+    screenshot: '/img/trabalhos/studyos-landing-desktop.webp',
   },
   {
     // Por publicar. Mudar para published: true quando o site estiver no ar
