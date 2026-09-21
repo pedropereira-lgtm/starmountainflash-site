@@ -12,7 +12,7 @@
 .art-meta{display:flex;flex-direction:column;gap:6px;padding-top:18px;border-top:1px dashed #BDBBB3;font-size:13px;color:var(--muted)}
 
 .toc{padding-top:18px;border-top:1px dashed #BDBBB3}
-.toc h4{margin:0 0 12px;font-size:12px;font-weight:500;text-transform:uppercase;letter-spacing:.05em;color:var(--muted)}
+.toc h2{margin:0 0 12px;font-size:12px;font-weight:500;text-transform:uppercase;letter-spacing:.05em;color:var(--muted)}
 .toc ol{margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:9px}
 .toc li.lv3{padding-left:14px}
 .toc a{font-size:14px;line-height:1.4;color:#555a57}

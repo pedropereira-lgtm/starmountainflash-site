@@ -128,18 +128,23 @@ O painel autentica-se pelo GitHub, usando o serviço de OAuth da Netlify.
 
 1. Em <https://supabase.com/dashboard>, criar um projeto (região *West EU* é a
    mais próxima). Guardar a palavra-passe da base de dados.
-2. No projeto, **SQL Editor** → **New query** → colar o conteúdo de
+2. **Database** → **Extensions** → procurar `pg_cron` e ativar.
+   É preciso para a limpeza automática do hash do IP.
+3. **SQL Editor** → **New query** → colar o conteúdo de
    [`supabase/leads.sql`](supabase/leads.sql) → **Run**.
-3. **Project Settings** → **Data API** → copiar o **Project URL**
+   Além da tabela, isto agenda o apagamento do hash do IP ao fim de 30 dias,
+   que é o prazo prometido na política de privacidade. Confirmar com
+   `select jobname, schedule, active from cron.job;`.
+4. **Project Settings** → **Data API** → copiar o **Project URL**
    → é o `SUPABASE_URL`.
-4. **Project Settings** → **API Keys** → copiar a chave **`service_role`**
+5. **Project Settings** → **API Keys** → copiar a chave **`service_role`**
    → é o `SUPABASE_SERVICE_ROLE_KEY`.
 
    > Esta chave ignora as regras de segurança da base de dados. Só pode existir
    > nas variáveis de ambiente do servidor. Nunca a ponha no código nem numa
    > variável que comece por `NEXT_PUBLIC_`.
 
-5. Os pedidos ficam visíveis em **Table Editor** → `leads`.
+6. Os pedidos ficam visíveis em **Table Editor** → `leads`.
 
 ### Notificação por email (Brevo)
 

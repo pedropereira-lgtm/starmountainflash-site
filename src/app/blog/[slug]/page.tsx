@@ -74,7 +74,7 @@ export default async function Artigo({ params }: { params: Promise<{ slug: strin
             </div>
             {mostrarIndice && (
               <nav className="toc" aria-label="Índice do artigo">
-                <h4>Neste artigo</h4>
+                <h2>Neste artigo</h2>
                 <ol>
                   {titulos.map((t) => (
                     <li key={t.id} className={t.nivel === 3 ? 'lv3' : undefined}>

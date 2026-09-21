@@ -16,7 +16,7 @@ export default function Legal({ atualizado, seccoes }: { atualizado: string; sec
             <strong style={{ color: 'var(--ink)', fontSize: 15 }}>{atualizado}</strong>
           </div>
           <nav className="toc" aria-label="Índice">
-            <h4>Nesta página</h4>
+            <h2>Nesta página</h2>
             <ol>
               {seccoes.map((s) => (
                 <li key={s.id}>

@@ -15,20 +15,20 @@ export default function Footer() {
           <p>Websites e automações de IA para PME e marcas portuguesas. Covilhã, Serra da Estrela.</p>
         </div>
         <div>
-          <h4>Serviços</h4>
+          <h3>Serviços</h3>
           <Link href="/websites">Websites</Link>
           <Link href="/lojas-online">Lojas online</Link>
           <Link href="/automacoes">Automações de IA</Link>
         </div>
         <div>
-          <h4>Empresa</h4>
+          <h3>Empresa</h3>
           <Link href="/#trabalhos">Trabalhos</Link>
           <Link href="/metodo">Método</Link>
           <Link href="/sobre">Sobre</Link>
           <Link href="/blog">Blog</Link>
         </div>
         <div>
-          <h4>Contacto</h4>
+          <h3>Contacto</h3>
           <a href={`mailto:${site.email}`}>{site.email}</a>
           <a href={`tel:${site.telefoneRaw}`}>{site.telefone}</a>
           <a href="#whatsapp" data-wa>

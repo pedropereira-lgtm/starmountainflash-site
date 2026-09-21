@@ -29,3 +29,33 @@ create index if not exists leads_created_at_idx
 alter table public.leads enable row level security;
 
 revoke all on public.leads from anon, authenticated;
+
+-- ---------------------------------------------------------------------------
+-- Apagar o hash do IP ao fim de 30 dias.
+-- A política de privacidade promete este prazo, por isso este bloco não é
+-- opcional. Requer a extensão pg_cron (Database → Extensions → pg_cron).
+-- ---------------------------------------------------------------------------
+
+create extension if not exists pg_cron with schema extensions;
+
+create or replace function public.limpar_ip_hash()
+returns void
+language sql
+security definer
+set search_path = public
+as $$
+  update public.leads
+     set ip_hash = null
+   where ip_hash is not null
+     and created_at < now() - interval '30 days';
+$$;
+
+-- Todos os dias às 04:00 UTC.
+select cron.schedule(
+  'limpar-ip-hash-leads',
+  '0 4 * * *',
+  $$select public.limpar_ip_hash()$$
+);
+
+-- Para confirmar que ficou agendado:
+--   select jobname, schedule, active from cron.job;
