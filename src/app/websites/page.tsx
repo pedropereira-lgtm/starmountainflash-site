@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import type { Metadata } from 'next';
 import { Faqs, HeroSm, JsonLd, NextStep, SectionHead } from '@/components/Blocks';
-import { Marca } from '@/components/Trabalhos';
+import { Shot } from '@/components/Trabalhos';
 import { ArrowUpRight, Logo } from '@/components/Icons';
 import { faqsWebsites } from '@/data/faqs';
 import { trabalhoPorSlug } from '@/data/trabalhos';
@@ -159,9 +159,7 @@ export default function Websites() {
                   <i />
                   <em>{t.dominio}</em>
                 </div>
-                <div className="shot">
-                  <Marca marca={t.marca} />
-                </div>
+                <Shot t={t} />
               </div>
               <div className="meta">
                 <div>

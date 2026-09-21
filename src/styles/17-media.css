@@ -10,3 +10,7 @@
 .name>div{z-index:2}
 /* Screenshots dos trabalhos dentro da moldura do browser. */
 .shot>img.sc{width:100%;height:100%;object-fit:cover;object-position:top center;opacity:1;filter:none}
+/* Um mockup e uma composicao pronta: mostra-se inteiro, sem cortes. */
+.shot>img.sc-mockup{object-fit:contain;background:#fff}
+/* Amostras de cor muito claras precisam de contorno visivel no cartao branco. */
+.sw span{border-color:rgba(0,0,0,.14)}

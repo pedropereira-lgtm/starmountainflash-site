@@ -30,11 +30,11 @@ export const casos: Record<string, Caso> = {
     slug: 'ubi',
     titulo: 'Universidade da Beira Interior — Caso de estudo | Starmountain Flash',
     descricao:
-      'Três sites para a Universidade da Beira Interior, na Covilhã: o site do Departamento de Informática e dois sites de projetos de investigação e eventos.',
+      'Três sites para a Universidade da Beira Interior, na Covilhã: o site da Mostra UBI Equidade e dois sites de projetos de investigação e eventos.',
     h1: 'Universidade da Beira Interior.',
     h1Destaque: 'Três sites institucionais.',
     intro:
-      'Três sites para a Universidade da Beira Interior, na Covilhã: o site do Departamento de Informática e dois sites de projetos de investigação e eventos.',
+      'Três sites para a Universidade da Beira Interior, na Covilhã: o site da Mostra UBI Equidade e dois sites de projetos de investigação e eventos.',
     ficha: [
       { dt: 'Cliente', dd: 'Universidade da Beira Interior' },
       { dt: 'Serviço', dd: 'Sites institucionais' },
@@ -42,19 +42,19 @@ export const casos: Record<string, Caso> = {
       { dt: 'Sites', dd: 'dei.ubi.pt · lgbthealth.ubi.pt · 3lgbt.ubi.pt' },
     ],
     desafio:
-      '[O que a UBI precisava: por exemplo, substituir sites antigos, dar uma imagem coerente aos projetos, facilitar a atualização de conteúdos.]',
+      'A Mostra UBI Equidade junta num só dia as investigações em diversidade, equidade e inclusão desenvolvidas na universidade: 23 de outubro de 2026, das 10h00 às 18h00, na Biblioteca Central da UBI, com inscrição gratuita. O site tinha de explicar o evento, receber as submissões dos investigadores e abrir as inscrições do público.',
     solucao:
-      '[Como foi feito: estrutura das páginas, conteúdos principais, como os responsáveis atualizam o site.]',
+      'Uma contagem decrescente para o dia do evento logo no topo, seguida das secções de apresentação, programa, submissões, local e inscrição. A identidade assenta num azul-noite de fundo, com vermelho e azul como acentos sobre texto branco.',
     resultado:
-      'Três sites institucionais no ar e a Starmountain Flash como fornecedor digital da universidade. [Acrescentar um resultado concreto, se houver.]',
+      'Três sites institucionais no ar e a Starmountain Flash como fornecedor digital da universidade. [Acrescentar um resultado concreto: submissões recebidas, inscritos ou participantes.]',
     cores: [
-      { nome: 'Azul UBI', hex: '#0D2C54' },
-      { nome: '[Secundária]' },
-      { nome: '[Fundo]' },
-      { nome: '[Texto]' },
+      { nome: 'Fundo', hex: '#1A3A52' },
+      { nome: 'Vermelho', hex: '#EF4444' },
+      { nome: 'Azul', hex: '#3B82F6' },
+      { nome: 'Texto', hex: '#FFFFFF' },
     ],
     fontes: { titulos: '[Fonte dos títulos]', texto: '[Fonte do texto]' },
-    estrutura: ['Início', '[Página]', '[Página]', '[Página]'],
+    estrutura: ['Apresentação', 'Programa', 'Submissões', 'Local', 'Inscrição'],
     tecnologia: ['[Tecnologia usada]', '[Alojamento]', '[Outras ferramentas]'],
     visitar: 'https://dei.ubi.pt',
   },

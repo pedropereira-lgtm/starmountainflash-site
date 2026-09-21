@@ -11,8 +11,10 @@ export type Trabalho = {
   layout: 'wide' | 'normal';
   /** Como se identifica a marca dentro da moldura do browser. */
   marca: { tipo: 'img'; src: string; alt: string } | { tipo: 'texto'; texto: string } | { tipo: 'img-texto'; src: string; texto: string };
-  /** Screenshot real, quando existir; sem ela fica o padrão da referência. */
+  /** Screenshot para os cartões. Sem ele, fica a marca, como no protótipo. */
   screenshot?: string;
+  /** Imagem do topo da página de caso, quando difere da dos cartões. */
+  screenshotCaso?: string;
 };
 
 export const trabalhos: Trabalho[] = [
@@ -25,6 +27,8 @@ export const trabalhos: Trabalho[] = [
     published: true,
     layout: 'wide',
     marca: { tipo: 'img', src: '/img/ubi.png', alt: 'Universidade da Beira Interior' },
+    screenshot: '/img/trabalhos/ubi-dei-desktop.webp',
+    screenshotCaso: '/img/trabalhos/ubi-dei-mockup.webp',
   },
   {
     slug: 'planet-trading',

@@ -2,10 +2,11 @@ import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import type { Metadata } from 'next';
 import { HeroSm, JsonLd, NextStep, SectionHead } from '@/components/Blocks';
-import { Marca } from '@/components/Trabalhos';
+import { Shot } from '@/components/Trabalhos';
 import { ArrowRight, ArrowUpRight } from '@/components/Icons';
 import { AMOSTRA_VAZIA, casos } from '@/data/casos';
 import { proximoTrabalho, trabalhosPublicados, trabalhoPorSlug } from '@/data/trabalhos';
+import { imagemExiste } from '@/lib/imagens';
 import { meta, migalhasLd } from '@/lib/seo';
 
 /** Só os trabalhos publicados geram página. */
@@ -33,6 +34,7 @@ export default async function Caso({ params }: { params: Promise<{ slug: string 
   if (!caso || !trabalho || !trabalho.published) notFound();
 
   const proximo = proximoTrabalho(slug);
+  const temImagem = imagemExiste(trabalho.screenshotCaso ?? trabalho.screenshot);
 
   return (
     <>
@@ -61,13 +63,10 @@ export default async function Caso({ params }: { params: Promise<{ slug: string 
               <i />
               <em>{trabalho.dominio}</em>
             </div>
-            <div className="shot big">
-              <Marca marca={trabalho.marca} />
-            </div>
+            <Shot t={trabalho} variante="caso" grande />
           </div>
         </div>
-        {/* Por substituir quando houver screenshot real em public/img. */}
-        <p className="shot-note">Screenshot do site por inserir.</p>
+        {!temImagem && <p className="shot-note">Screenshot do site por inserir.</p>}
       </section>
 
       <section className="sec">
