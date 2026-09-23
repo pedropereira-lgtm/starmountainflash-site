@@ -1,6 +1,8 @@
 export type Trabalho = {
   slug: string;
   nome: string;
+  /** Versão curta, para menus e listagens. */
+  nomeCurto: string;
   /** Mostrado na lista da home. */
   resumo: string;
   dominio: string;
@@ -18,6 +20,7 @@ export type Trabalho = {
 export const trabalhos: Trabalho[] = [
   {
     slug: 'ubi',
+    nomeCurto: 'UBI',
     nome: 'Universidade da Beira Interior',
     resumo: 'Três sites institucionais · dei.ubi.pt · lgbthealth.ubi.pt · 3lgbt.ubi.pt',
     dominio: 'dei.ubi.pt',
@@ -28,17 +31,22 @@ export const trabalhos: Trabalho[] = [
     screenshot: '/img/trabalhos/ubi-dei-desktop.webp',
   },
   {
+    // Escondido até o site ser aberto ao público (previsto para a semana de
+    // 28 de setembro de 2026). Para o repor: published: true. O conteúdo do
+    // caso continua todo em casos.ts e volta a aparecer sozinho.
     slug: 'planet-trading',
+    nomeCurto: 'Planet Trading',
     nome: 'Planet Trading',
     resumo: 'Landing page 3D com formulário ligado a CRM',
     dominio: 'comunidadeplanet.pt',
     tags: ['WebGL', 'CRM'],
-    published: true,
+    published: false,
     layout: 'normal',
     marca: { tipo: 'img-texto', src: '/img/planet-trading.png', texto: 'Planet Trading' },
   },
   {
     slug: 'studyos',
+    nomeCurto: 'StudyOS',
     nome: 'StudyOS',
     resumo: 'Plataforma web para estudantes',
     dominio: 'gestaocrew.pt',
@@ -52,6 +60,7 @@ export const trabalhos: Trabalho[] = [
     // Por publicar. Mudar para published: true quando o site estiver no ar
     // e confirmar o domínio real.
     slug: 'diogo-costa',
+    nomeCurto: 'Diogo Costa',
     nome: 'Diogo Costa — Personal Trainer',
     resumo: 'Site de conversão para acompanhamento online · Porto',
     dominio: 'diogocosta.pt',
@@ -63,6 +72,14 @@ export const trabalhos: Trabalho[] = [
 ];
 
 export const trabalhosPublicados = trabalhos.filter((t) => t.published);
+
+/** "UBI, StudyOS e mais" — para menus. Acompanha sempre o que está publicado. */
+export function nomesPublicados(comMais = false) {
+  const nomes = trabalhosPublicados.map((t) => t.nomeCurto);
+  const lista =
+    nomes.length > 1 ? nomes.slice(0, -1).join(', ') + ' e ' + nomes[nomes.length - 1] : (nomes[0] ?? '');
+  return comMais ? nomes.join(', ') + ' e mais' : lista;
+}
 
 export function trabalhoPorSlug(slug: string) {
   return trabalhos.find((t) => t.slug === slug);

@@ -2,6 +2,7 @@
 import Link from 'next/link';
 import { useEffect, useRef } from 'react';
 import { site } from '@/data/site';
+import { nomesPublicados } from '@/data/trabalhos';
 import { ArrowUpRight, Close, Logo, Mail, PanelArrow, Phone, WhatsAppGlyph } from '../Icons';
 import LocalTime from './LocalTime';
 
@@ -11,7 +12,7 @@ const links = [
   { n: '03', href: '/automacoes', titulo: 'Automações', sub: 'Processos repetitivos a correr sozinhos' },
 ];
 const empresa = [
-  { n: '04', href: '/#trabalhos', titulo: 'Trabalhos', sub: 'UBI, Planet Trading, StudyOS e mais' },
+  { n: '04', href: '/#trabalhos', titulo: 'Trabalhos', sub: nomesPublicados(true) },
   { n: '05', href: '/sobre', titulo: 'Sobre', sub: 'O contabilista que automatiza' },
   { n: '06', href: '/blog', titulo: 'Blog', sub: 'Sites, SEO e automação para PME' },
 ];

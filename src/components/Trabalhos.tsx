@@ -65,9 +65,27 @@ export function Shot({
   );
 }
 
-function Cartao({ t }: { t: Trabalho }) {
+/**
+ * A grelha tem duas colunas. Um cartão normal que ficasse sozinho na última
+ * linha deixava metade dela vazia, por isso passa a ocupar a linha toda.
+ * Quando houver mais trabalhos publicados, volta sozinho a meia largura.
+ */
+function larguras(lista: Trabalho[]): Trabalho['layout'][] {
+  const out = lista.map((t) => t.layout);
+  const inicioDeLinha: boolean[] = [];
+  let coluna = 0;
+  out.forEach((l, i) => {
+    inicioDeLinha[i] = coluna === 0;
+    coluna = (coluna + (l === 'wide' ? 2 : 1)) % 2;
+  });
+  const ultimo = out.length - 1;
+  if (ultimo >= 0 && out[ultimo] === 'normal' && inicioDeLinha[ultimo]) out[ultimo] = 'wide';
+  return out;
+}
+
+function Cartao({ t, layout }: { t: Trabalho; layout: Trabalho['layout'] }) {
   return (
-    <Link className={t.layout === 'wide' ? 'proj wide' : 'proj'} href={'/trabalhos/' + t.slug}>
+    <Link className={layout === 'wide' ? 'proj wide' : 'proj'} href={'/trabalhos/' + t.slug}>
       <div className="browser">
         <div className="bar">
           <i />
@@ -75,7 +93,7 @@ function Cartao({ t }: { t: Trabalho }) {
           <i />
           <em>{t.dominio}</em>
         </div>
-        <Shot t={t} sizes={t.layout === 'wide' ? SIZES_CARTAO.largo : SIZES_CARTAO.duasColunas} />
+        <Shot t={t} sizes={layout === 'wide' ? SIZES_CARTAO.largo : SIZES_CARTAO.duasColunas} />
       </div>
       <div className="meta">
         <div>
@@ -96,10 +114,11 @@ function Cartao({ t }: { t: Trabalho }) {
 
 /** Grelha de trabalhos da página inicial. Só mostra os que têm published: true. */
 export default function TrabalhosGrid() {
+  const larg = larguras(trabalhosPublicados);
   return (
     <div className="work">
-      {trabalhosPublicados.map((t) => (
-        <Cartao t={t} key={t.slug} />
+      {trabalhosPublicados.map((t, i) => (
+        <Cartao t={t} layout={larg[i]} key={t.slug} />
       ))}
     </div>
   );

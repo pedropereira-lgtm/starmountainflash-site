@@ -4,7 +4,7 @@ import { Faqs, HeroSm, JsonLd, NextStep, SectionHead } from '@/components/Blocks
 import { Shot } from '@/components/Trabalhos';
 import { ArrowUpRight, Logo } from '@/components/Icons';
 import { faqsWebsites } from '@/data/faqs';
-import { trabalhoPorSlug } from '@/data/trabalhos';
+import { trabalhosPublicados } from '@/data/trabalhos';
 import { faqLd, meta, migalhasLd, servicoLd } from '@/lib/seo';
 
 const TITULO = 'Criação de websites para PME | Starmountain Flash';
@@ -24,7 +24,9 @@ const incluido = [
   ['08', 'Domínio em seu nome', 'Ajudo a registar e configurar. O domínio fica sempre em nome da empresa.'],
 ];
 
-const destaques = [trabalhoPorSlug('ubi')!, trabalhoPorSlug('planet-trading')!];
+// Os dois primeiros trabalhos publicados. Um trabalho escondido nunca
+// aparece aqui, mesmo que estivesse escolhido a dedo.
+const destaques = trabalhosPublicados.slice(0, 2);
 
 export default function Websites() {
   return (

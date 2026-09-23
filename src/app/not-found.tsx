@@ -2,6 +2,7 @@ import Link from 'next/link';
 import type { Metadata } from 'next';
 import { HeroSm, SectionHead } from '@/components/Blocks';
 import { ArrowRight } from '@/components/Icons';
+import { nomesPublicados } from '@/data/trabalhos';
 
 export const metadata: Metadata = {
   title: 'Página não encontrada | Starmountain Flash',
@@ -13,7 +14,7 @@ const atalhos = [
   { href: '/websites', titulo: 'Websites', texto: 'Landing pages e sites institucionais para PME.' },
   { href: '/lojas-online', titulo: 'Lojas online', texto: 'Shopify ou à medida, prontas a vender.' },
   { href: '/automacoes', titulo: 'Automações de IA', texto: 'O trabalho repetitivo a fazer-se sozinho.' },
-  { href: '/#trabalhos', titulo: 'Trabalhos', texto: 'UBI, Planet Trading e StudyOS.' },
+  { href: '/#trabalhos', titulo: 'Trabalhos', texto: nomesPublicados() + '.' },
   { href: '/metodo', titulo: 'Método', texto: 'Três fases, prazo fixo e preço fechado.' },
   { href: '/blog', titulo: 'Blog', texto: 'Notas sobre sites, SEO e automação.' },
 ];
