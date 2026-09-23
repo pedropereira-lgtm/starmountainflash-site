@@ -77,13 +77,10 @@ e acrescentar a entrada correspondente em `src/data/casos.ts`.
 2. Na pasta do projeto:
 
    ```bash
-   git remote add origin https://github.com/UTILIZADOR/starmountainflash-site.git
+   git remote add origin https://github.com/pedropereira-lgtm/starmountainflash-site.git
    git branch -M main
    git push -u origin main
    ```
-
-3. Em `public/admin/config.yml`, na linha `repo:`, trocar
-   `PEDRO-GITHUB/starmountainflash-site` pelo `utilizador/repositório` reais.
 
 > O `.env.local` está no `.gitignore` e nunca vai para o GitHub.
 

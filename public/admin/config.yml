@@ -3,7 +3,7 @@
 # Não usa Netlify Identity.
 backend:
   name: github
-  repo: PEDRO-GITHUB/starmountainflash-site # ← trocar por utilizador/repositório
+  repo: pedropereira-lgtm/starmountainflash-site
   branch: main
   base_url: https://api.netlify.com # serviço de OAuth da Netlify
   auth_endpoint: auth
