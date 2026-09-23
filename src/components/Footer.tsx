@@ -2,8 +2,15 @@ import Link from 'next/link';
 import { site } from '@/data/site';
 import { Logo } from './Icons';
 
+/** Só entram os perfis que já têm endereço. */
+const perfis = [
+  { label: 'Instagram', href: site.redes.instagram },
+  { label: 'LinkedIn', href: site.redes.linkedin },
+  { label: 'Trustpilot', href: site.redes.trustpilot },
+  { label: 'Google', href: site.redes.googleBusiness },
+].filter((p) => p.href);
+
 export default function Footer() {
-  const { redes } = site;
   return (
     <footer>
       <div className="f-top">
@@ -34,22 +41,17 @@ export default function Footer() {
           <a href="#whatsapp" data-wa>
             WhatsApp
           </a>
-          {/* Links por confirmar: ficam sem href enquanto não existirem. */}
-          {redes.instagram ? (
-            <a href={redes.instagram} target="_blank" rel="noopener">
-              Instagram
-            </a>
-          ) : (
-            <a href="#">Instagram</a>
-          )}
-          {redes.linkedin ? (
-            <a href={redes.linkedin} target="_blank" rel="noopener">
-              LinkedIn
-            </a>
-          ) : (
-            <a href="#">LinkedIn</a>
-          )}
         </div>
+        {perfis.length > 0 && (
+          <div>
+            <h3>Onde estamos</h3>
+            {perfis.map((p) => (
+              <a href={p.href} target="_blank" rel="noopener" key={p.label}>
+                {p.label}
+              </a>
+            ))}
+          </div>
+        )}
       </div>
       <div className="f-bot">
         <span>

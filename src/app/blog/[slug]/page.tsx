@@ -61,7 +61,7 @@ export default async function Artigo({ params }: { params: Promise<{ slug: strin
         <div className="art">
           <aside className="art-side">
             <Link href="/sobre" className="author">
-              <Image src="/img/pedro-pereira.jpg" alt="Pedro Pereira" width={96} height={96} />
+              <Image src="/img/pedro-avatar.jpg" alt="Pedro Pereira" width={128} height={128} />
               <span>
                 <strong>Pedro Pereira</strong>
                 <span>Starmountain Flash</span>

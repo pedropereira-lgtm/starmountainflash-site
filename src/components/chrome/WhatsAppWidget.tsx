@@ -1,4 +1,5 @@
 'use client';
+import Image from 'next/image';
 import { useEffect, useRef, useState } from 'react';
 import { site, whatsappMensagens } from '@/data/site';
 import { ArrowRight, Close, WhatsAppGlyph } from '../Icons';
@@ -55,7 +56,9 @@ export default function WhatsAppWidget({
         ref={painel}
       >
         <div className="wa-head">
-          <span className="wa-av">PP</span>
+          <span className="wa-av">
+            <Image src="/img/pedro-avatar.jpg" alt="" width={128} height={128} />
+          </span>
           <div>
             <strong>Pedro Pereira</strong>
             <span>Starmountain Flash · WhatsApp</span>

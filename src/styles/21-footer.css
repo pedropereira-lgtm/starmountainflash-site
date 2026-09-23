@@ -1,0 +1,20 @@
+/* RODAPÉ — cinco colunas: marca, serviços, empresa, contacto e perfis.
+   Substitui a grelha de quatro do protótipo, que deixava muito espaço vazio
+   e misturava contactos com redes sociais na mesma coluna. */
+.f-top{grid-template-columns:1.5fr repeat(4,minmax(0,1fr))}
+
+@media (max-width:1200px){
+  .f-top{grid-template-columns:1.3fr repeat(4,minmax(0,1fr));gap:32px}
+}
+
+/* Em ecrãs estreitos a marca ocupa a linha toda e os quatro grupos de
+   ligações ficam numa grelha de dois por dois, sem sobras. */
+@media (max-width:960px){
+  .f-top{grid-template-columns:repeat(2,minmax(0,1fr));gap:40px 24px;padding-bottom:48px}
+  .f-top>div:first-child{grid-column:1/-1}
+  .f-top>div:last-child{grid-column:auto}
+}
+
+@media (max-width:420px){
+  .f-top{gap:32px 18px}
+}

@@ -14,3 +14,6 @@
 .shot>img.sc-mockup{object-fit:contain;background:#fff}
 /* Amostras de cor muito claras precisam de contorno visivel no cartao branco. */
 .sw span{border-color:rgba(0,0,0,.14)}
+/* Fotografia do Pedro no cabecalho do widget de WhatsApp.
+   O ficheiro pedro-avatar.jpg ja vem enquadrado para circulo. */
+.wa-av img{width:100%;height:100%;border-radius:50%;object-fit:cover}
