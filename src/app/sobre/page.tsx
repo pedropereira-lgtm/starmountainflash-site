@@ -79,10 +79,6 @@ export default function Sobre() {
               reconhecimento nacional ensinaram-me duas coisas que trago para cada projeto: um plano escrito antes de
               começar, e prazos que se cumprem.
             </p>
-            <p>
-              Continuo a estudar. Estou a tirar a licenciatura em Gestão na Universidade Aberta e vou acrescentando
-              formação à medida que os projetos pedem.
-            </p>
             <div className="sig">
               <strong>Pedro Pereira</strong>Covilhã, Serra da Estrela
             </div>

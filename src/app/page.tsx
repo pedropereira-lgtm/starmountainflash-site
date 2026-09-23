@@ -158,7 +158,8 @@ export default function Home() {
       <section className="sec" id="servicos">
         <SectionHead etiqueta="Serviços" titulo="Dois serviços." destaque="Feitos a fundo, sem dispersão.">
           <p>
-            Não faço gestão de redes sociais, fotografia nem publicidade. Faço websites e automações, e faço-os bem.
+            Não faço gestão de redes sociais, fotografia nem publicidade. Concentro-me em websites e automações, e é
+            aí que ponho o tempo todo.
           </p>
         </SectionHead>
         <div className="svc">
