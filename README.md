@@ -32,13 +32,23 @@ supabase/leads.sql   Script para criar a tabela dos pedidos
 
 ### O CSS
 
-`src/styles/globals.css` importa os ficheiros `01-…` a `19-…` **por ordem**.
+`src/styles/globals.css` importa os ficheiros `01-…` a `23-…` **por ordem**.
 Essa ordem é significativa: `12-brand.css` reescreve regras dos anteriores
 (`.btn-light`, `.label i`, o peso dos títulos). Não reordenar os imports.
 
-Os ficheiros `01` a `16` são o CSS do protótipo, copiado tal e qual.
-Os três últimos são novos: `17-media.css` (foto do hero servida por `next/image`),
-`18-article.css` (páginas do blog) e `19-cookies.css` (aviso de cookies).
+Os ficheiros `01` a `16` são o CSS do protótipo, copiado tal e qual, com uma
+exceção: os cinzentos de `01-tokens.css` e os `#A3A6A2` foram escurecidos para
+cumprir as WCAG AA. Os restantes são novos:
+
+| Ficheiro | O que traz |
+| --- | --- |
+| `17-media.css` | Foto do hero e screenshots servidos por `next/image` |
+| `18-article.css` | Páginas de artigo e listagem do blog |
+| `19-cookies.css` | Aviso de cookies |
+| `20-casos.css` | Mockups, molduras de telemóvel e sub-secções dos casos |
+| `21-footer.css` | Rodapé de cinco colunas e acordeão em telemóvel |
+| `22-menu.css` | Menu mobile sem numeração, com serviços a abrir no sítio |
+| `23-contraste.css` | Ajustes de contraste para as WCAG AA |
 
 ### Onde mudar conteúdo sem tocar em código
 
