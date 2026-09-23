@@ -33,6 +33,16 @@ const nextConfig: NextConfig = {
       { source: '/trabalho-planet-trading', destination: '/trabalhos/planet-trading', statusCode: 301 },
       { source: '/trabalho-studyos.html', destination: '/trabalhos/studyos', statusCode: 301 },
       { source: '/trabalho-studyos', destination: '/trabalhos/studyos', statusCode: 301 },
+
+      // URLs do site anterior, retirados do sitemap.xml e das ligações internas
+      // de starmountainflash.pt em 23/09/2026.
+      { source: '/servicos/sistemas-digitais', destination: '/websites', statusCode: 301 },
+      { source: '/servicos/automatizacoes', destination: '/automacoes', statusCode: 301 },
+      { source: '/servicos', destination: '/#servicos', statusCode: 301 },
+      { source: '/privacy', destination: '/privacidade', statusCode: 301 },
+      { source: '/terms', destination: '/termos', statusCode: 301 },
+      // /aviso-legal, /cookies, /blog e /blog/quando-automatizar-o-teu-negocio
+      // continuam a existir com o mesmo endereço: não precisam de redirecionamento.
     ];
   },
 };

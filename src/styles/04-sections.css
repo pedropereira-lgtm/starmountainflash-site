@@ -4,7 +4,7 @@
 .sec-head>div{flex:1 1 auto;min-width:0}
 .sec-head .label i{background:var(--emerald)}
 .sec h2{margin:14px 0 0;font-weight:500;font-size:clamp(32px,3.6vw,64px);line-height:1.05;letter-spacing:-.04em}
-.sec h2 span{color:#A3A6A2}
+.sec h2 span{color:#878986}
 .sec-head p{margin:0;flex:0 0 auto;max-width:380px;font-size:16px;line-height:1.55;color:var(--muted)}
 .pill{display:inline-block;font-size:13px;padding:7px 13px;border-radius:999px;background:#E6E4DE;color:var(--ink)}
 

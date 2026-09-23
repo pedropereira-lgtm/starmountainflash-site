@@ -1,22 +1,20 @@
 ---
-title: "Quanto custa um site para uma PME em Portugal?"
+titulo: "Quanto custa um site para uma PME em Portugal?"
 slug: "quanto-custa-um-site-pme-portugal"
-description: "Quanto custa um site para uma PME em Portugal em 2026: valores de referência, o que faz variar o preço, custos escondidos e o que perguntar antes de aceitar um orçamento."
-category: "Websites"
-date: 2026-09-21
-author: "Pedro Pereira"
-cover: ""
-coverAlt: ""
-status: "publicado"
+descricao: "Quanto custa um site para uma PME em Portugal em 2026: valores de referência, o que faz variar o preço e o que perguntar antes de aceitar um orçamento."
+categoria: "Websites"
+data: 2026-09-21
+capa: ""
+capaAlt: ""
+estado: "publicado"
 faq:
-  - question: "Quanto tempo demora a fazer um site?"
-    answer: "Uma landing page pode ficar pronta em poucas semanas. Sites institucionais e lojas online demoram mais, conforme o número de páginas e integrações. O prazo deve ficar escrito no orçamento."
-  - question: "É melhor um freelancer ou uma agência?"
-    answer: "Depende do projeto. Um profissional independente costuma ter contacto direto e preços mais ajustados. Uma agência tem mais pessoas envolvidas. O importante é o que fica escrito na proposta: âmbito, prazo, valor e acompanhamento."
-  - question: "Posso fazer o meu próprio site?"
-    answer: "Pode, com plataformas de arrastar e largar. Poupa no início, mas paga em tempo, e o resultado costuma ser mais fraco em velocidade e SEO."
+  - pergunta: "Quanto tempo demora a fazer um site?"
+    resposta: "Uma landing page pode ficar pronta em poucas semanas. Sites institucionais e lojas online demoram mais, conforme o número de páginas e integrações. O prazo deve ficar escrito no orçamento."
+  - pergunta: "É melhor um freelancer ou uma agência?"
+    resposta: "Depende do projeto. Um profissional independente costuma ter contacto direto e preços mais ajustados. Uma agência tem mais pessoas envolvidas. O importante é o que fica escrito na proposta: âmbito, prazo, valor e acompanhamento."
+  - pergunta: "Posso fazer o meu próprio site?"
+    resposta: "Pode, com plataformas de arrastar e largar. Poupa no início, mas paga em tempo, e o resultado costuma ser mais fraco em velocidade e SEO."
 ---
-
 Um site profissional para uma PME custa normalmente entre 500 € e 5.000 €. Uma loja online pode chegar aos 15.000 €. A diferença não é arbitrária: depende do tipo de site, do que ele tem de fazer e de quem o faz.
 
 Este guia explica os valores de referência, o que faz o preço subir ou descer, e o que deve perguntar antes de aceitar um orçamento.

@@ -257,9 +257,9 @@ export default function Home() {
                   href={t.link}
                   target="_blank"
                   rel="noopener"
-                  aria-label={'Ver avaliação de ' + t.nome}
+                  aria-label={'Ver no ' + t.plataforma + ' a avaliação de ' + t.nome}
                 >
-                  Ver ↗
+                  Ver no {t.plataforma} ↗
                 </a>
               </figcaption>
             </figure>

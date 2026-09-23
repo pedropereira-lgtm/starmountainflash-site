@@ -3,7 +3,10 @@ export type Testemunho = {
   texto: string;
   nome: string;
   iniciais: string;
+  /** Linha por baixo do nome. */
   fonte: string;
+  /** Onde está a avaliação, para o link dizer para onde vai. */
+  plataforma: string;
   link: string;
 };
 
@@ -15,6 +18,7 @@ export const testemunhos: Testemunho[] = [
     nome: 'João Rebordão',
     iniciais: 'JR',
     fonte: 'Avaliação no Trustpilot',
+    plataforma: 'Trustpilot',
     link: 'https://www.trustpilot.com/reviews/6a85d2b5c50db450c227695c',
   },
   {
@@ -23,7 +27,8 @@ export const testemunhos: Testemunho[] = [
       'Fiquei muito satisfeito com o serviço da Star Mountain Flash. Todo o processo foi simples, rápido e profissional, desde o primeiro contacto até à conclusão do serviço. A equipa demonstrou grande atenção ao detalhe, simpatia e disponibilidade para esclarecer todas as dúvidas. Recomendo vivamente a quem procura um serviço eficiente, sério e de confiança. Sem dúvida, uma experiência de 5 estrelas!',
     nome: 'Henrique Pereira',
     iniciais: 'HP',
-    fonte: 'Avaliação no Trustpilot',
+    fonte: 'Coautor do livro publicado em lgbthealth.ubi.pt',
+    plataforma: 'Trustpilot',
     link: 'https://www.trustpilot.com/reviews/6a2fde4eec482bf7be526d36',
   },
   {
@@ -32,6 +37,7 @@ export const testemunhos: Testemunho[] = [
     nome: 'Débora Baêta',
     iniciais: 'DB',
     fonte: 'Avaliação no Google',
+    plataforma: 'Google',
     link: 'https://www.google.com/maps/contrib/116236321279869004351/reviews?hl=pt-PT',
   },
 ];

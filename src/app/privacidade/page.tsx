@@ -11,7 +11,7 @@ const DESCRICAO =
 
 export const metadata: Metadata = meta({ titulo: TITULO, descricao: DESCRICAO, caminho: '/privacidade' });
 
-const ATUALIZADO = '21 de setembro de 2026';
+const ATUALIZADO = '23 de setembro de 2026';
 
 const seccoes: Seccao[] = [
   {
@@ -20,8 +20,8 @@ const seccoes: Seccao[] = [
     corpo: (
       <>
         <p>
-          O responsável pelo tratamento dos dados recolhidos neste site é {site.fundador}, que exerce atividade sob a
-          marca Starmountain Flash, com sede na {site.localidade}, Portugal, NIF {site.nif}.
+          O responsável pelo tratamento dos dados recolhidos neste site é {site.nomeLegal}, que exerce atividade sob o
+          nome comercial Starmountain Flash, com sede na {site.localidade}, Portugal, NIF {site.nif}.
         </p>
         <p>
           Para qualquer questão sobre privacidade, escreva para <a href={'mailto:' + site.email}>{site.email}</a> ou
@@ -181,7 +181,8 @@ const seccoes: Seccao[] = [
         </ul>
         <p>
           Para mudar a sua escolha, limpe os dados deste site no navegador: o aviso volta a aparecer na visita
-          seguinte.
+          seguinte. O detalhe de cada cookie, com nomes e durações, está na{' '}
+          <Link href="/cookies">política de cookies</Link>.
         </p>
       </>
     ),
@@ -198,6 +199,22 @@ const seccoes: Seccao[] = [
     ),
   },
   {
+    id: 'menores',
+    titulo: 'Menores',
+    corpo: (
+      <>
+        <p>
+          Os serviços da Starmountain Flash dirigem-se a empresas e profissionais. O site não se destina a menores de
+          16 anos e não recolhe intencionalmente dados de menores.
+        </p>
+        <p>
+          Se souber que um menor nos enviou dados pessoais sem autorização de quem exerce as responsabilidades
+          parentais, escreva para <a href={'mailto:' + site.email}>{site.email}</a> e esses dados são apagados.
+        </p>
+      </>
+    ),
+  },
+  {
     id: 'alteracoes',
     titulo: 'Alterações a esta política',
     corpo: (
@@ -207,7 +224,8 @@ const seccoes: Seccao[] = [
           indicada ao lado.
         </p>
         <p>
-          Veja também os <Link href="/termos">termos e condições</Link>.
+          Veja também a <Link href="/cookies">política de cookies</Link>, o{' '}
+          <Link href="/aviso-legal">aviso legal</Link> e os <Link href="/termos">termos e condições</Link>.
         </p>
       </>
     ),

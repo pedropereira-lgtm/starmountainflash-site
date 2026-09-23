@@ -35,7 +35,7 @@
 .endcta .btns{display:flex;gap:10px;flex-wrap:wrap}
 .btn-wa{background:var(--emerald);color:#fff}
 .btn-wa .ic{background:rgba(255,255,255,.14)}
-.tools{display:flex;flex-wrap:wrap;gap:10px 28px;font-size:clamp(20px,2vw,28px);font-weight:500;letter-spacing:-.03em;color:#A3A6A2}
+.tools{display:flex;flex-wrap:wrap;gap:10px 28px;font-size:clamp(20px,2vw,28px);font-weight:500;letter-spacing:-.03em;color:#878986}
 .posts{border-top:1px solid var(--line)}
 .post{display:grid;grid-template-columns:160px 1fr auto;gap:32px;align-items:baseline;padding:32px 0;border-bottom:1px solid var(--line)}
 .post .d{font-size:13px;color:var(--muted)}

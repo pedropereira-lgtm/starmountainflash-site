@@ -14,7 +14,7 @@
 .about .photo.has{min-height:0;height:auto;position:relative}.about .photo.has img{position:absolute;inset:0}
 .about .about-txt{gap:18px;padding:40px}
 .about .facts{margin-top:8px}
-.photo{border-radius:22px;min-height:560px;background:#E6E4DE;display:grid;place-items:center;font-size:13px;color:#A3A6A2}
+.photo{border-radius:22px;min-height:560px;background:#E6E4DE;display:grid;place-items:center;font-size:13px;color:#878986}
 .about-txt .label i{background:var(--emerald)}
 .about-txt{border-radius:22px;background:#fff;padding:44px;display:flex;flex-direction:column;gap:22px}
 .about-txt p{margin:0;font-size:17px;line-height:1.65;color:#474b48}

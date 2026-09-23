@@ -55,8 +55,10 @@ export default function Footer() {
           © {new Date().getFullYear()} Starmountain Flash · {site.fundador} · NIF {site.nif}
         </span>
         <div>
-          <Link href="/privacidade">Política de privacidade</Link>
+          <Link href="/privacidade">Privacidade</Link>
+          <Link href="/cookies">Cookies</Link>
           <Link href="/termos">Termos</Link>
+          <Link href="/aviso-legal">Aviso legal</Link>
           <a href="https://www.livroreclamacoes.pt" target="_blank" rel="noopener">
             Livro de Reclamações
           </a>

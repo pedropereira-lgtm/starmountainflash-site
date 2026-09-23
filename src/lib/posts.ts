@@ -14,6 +14,8 @@ export type Categoria = (typeof CATEGORIAS)[number];
 
 const PASTA = path.join(process.cwd(), 'content', 'blog');
 
+export type PerguntaDoPost = { pergunta: string; resposta: string };
+
 export type Post = {
   slug: string;
   titulo: string;
@@ -23,6 +25,8 @@ export type Post = {
   capa?: string;
   capaAlt?: string;
   publicado: boolean;
+  /** Perguntas frequentes do artigo, que também geram o FAQPage. */
+  faq: PerguntaDoPost[];
   markdown: string;
 };
 
@@ -49,6 +53,14 @@ function ler(ficheiro: string): Post | null {
     capaAlt: data.capaAlt ? String(data.capaAlt) : undefined,
     // No CMS o campo chama-se "estado"; aqui interessa só publicado ou não.
     publicado: data.estado ? data.estado === 'publicado' : false,
+    faq: Array.isArray(data.faq)
+      ? data.faq
+          .map((f: { pergunta?: string; resposta?: string }) => ({
+            pergunta: String(f?.pergunta ?? '').trim(),
+            resposta: String(f?.resposta ?? '').trim(),
+          }))
+          .filter((f: PerguntaDoPost) => f.pergunta && f.resposta)
+      : [],
     markdown: content,
   };
 }

@@ -30,5 +30,5 @@
 /* STRIP */
 .strip{display:flex;align-items:center;gap:clamp(48px,6vw,120px);padding:34px var(--px);border-bottom:1px solid var(--line);overflow-x:auto}
 .strip .lead{display:flex;align-items:center;gap:12px;font-size:12px;line-height:1.35;text-transform:uppercase;letter-spacing:.04em;min-width:220px}
-.strip .names{flex:1;justify-content:space-between;display:flex;gap:56px;align-items:center;white-space:nowrap;font-size:20px;font-weight:600;letter-spacing:-.02em;color:#A3A6A2}
+.strip .names{flex:1;justify-content:space-between;display:flex;gap:56px;align-items:center;white-space:nowrap;font-size:20px;font-weight:600;letter-spacing:-.02em;color:#878986}
 

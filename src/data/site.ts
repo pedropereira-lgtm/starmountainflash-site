@@ -11,6 +11,8 @@ export const site = {
   /** Aparece no rodapé de todas as páginas e nas páginas legais. */
   nif: '251504387',
   fundador: 'Pedro Pereira',
+  /** Nome completo, para os documentos legais. */
+  nomeLegal: 'Pedro Miguel da Silva Pereira',
   descricao:
     'Websites, lojas online e automações de IA para PME e marcas portuguesas. Prazo fixo e preço fechado.',
   /** Perfis da empresa. Entram no "sameAs" do JSON-LD; os dois primeiros também no rodapé. */

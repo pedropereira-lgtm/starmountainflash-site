@@ -7,6 +7,7 @@ que ficou guardado em [`referencia/`](referencia/).
 npm install
 npm run dev     # http://localhost:3000
 npm run build   # build de produção
+npm run cms     # painel do blog em localhost (ver secção 3)
 npm run og      # regenera a imagem Open Graph (só quando a marca mudar)
 ```
 
@@ -50,6 +51,9 @@ Os três últimos são novos: `17-media.css` (foto do hero servida por `next/ima
 | `src/data/testemunhos.ts` | Avaliações de clientes |
 | `src/data/faqs.ts` | Perguntas frequentes de cada página |
 
+As quatro páginas legais — aviso legal, privacidade, cookies e termos — estão
+em `src/app/`, uma por pasta, escritas secção a secção.
+
 **Publicar o trabalho do Diogo Costa:** em `src/data/trabalhos.ts`, mudar
 `published: false` para `true` na entrada `diogo-costa`, confirmar o domínio,
 e acrescentar a entrada correspondente em `src/data/casos.ts`.
@@ -84,10 +88,27 @@ e acrescentar a entrada correspondente em `src/data/casos.ts`.
    O Netlify indica os servidores de nomes ou os registos DNS a configurar no
    registrar do domínio. O certificado HTTPS é emitido automaticamente.
 
-## 3. Painel `/admin` (Decap CMS com GitHub)
+## 3. Painel `/admin` (Decap CMS)
 
-O painel autentica-se pelo GitHub, usando o serviço de OAuth da Netlify.
-**Não** usa Netlify Identity.
+### Escrever artigos já, sem GitHub nem Netlify
+
+Para experimentar o painel enquanto o site não está publicado, o Decap fala
+diretamente com os ficheiros da pasta. Em dois terminais:
+
+```bash
+npm run cms     # servidor de ficheiros do Decap, na porta 8081
+npm run dev     # o site, na porta 3000
+```
+
+Abrir <http://localhost:3000/admin>. Não pede login e grava em
+`content/blog/`. Neste modo local não há separador **Workflow**: o que
+gravar fica logo escrito no ficheiro, e é o campo **Estado** que decide se
+aparece no site. Depois é só fazer commit dos artigos.
+
+### Em produção, com GitHub
+
+O painel publicado autentica-se pelo GitHub, usando o serviço de OAuth da
+Netlify. **Não** usa Netlify Identity.
 
 1. **Criar a aplicação OAuth no GitHub**
    - <https://github.com/settings/developers> → **OAuth Apps** → **New OAuth App**
@@ -181,5 +202,14 @@ claro, só um hash com sal.
   [Bing Webmaster Tools](https://www.bing.com/webmasters).
 - Confirmar que o Google Business Profile aponta para o site novo.
 - Testar no telemóvel: formulário, pop-up de orçamento, WhatsApp e `/admin`.
-- Acrescentar os redirecionamentos 301 dos URLs antigos em `netlify.toml`
-  (há um exemplo comentado no ficheiro).
+- Confirmar no Search Console que os URLs antigos passaram a apontar para os
+  novos. Os redirecionamentos já estão escritos em `next.config.ts`, a partir
+  do sitemap do site anterior:
+
+  | URL antigo | Vai para |
+  | --- | --- |
+  | `/servicos/sistemas-digitais/` | `/websites` |
+  | `/servicos/automatizacoes/` | `/automacoes` |
+  | `/privacy` | `/privacidade` |
+  | `/terms` | `/termos` |
+  | `/aviso-legal`, `/cookies`, `/blog/`, `/blog/quando-automatizar-o-teu-negocio/` | mantêm o endereço |

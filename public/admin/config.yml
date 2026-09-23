@@ -11,6 +11,11 @@ backend:
 # Fluxo de rascunhos: cada artigo passa por Rascunho → Em revisão → Pronto.
 publish_mode: editorial_workflow
 
+# Em localhost, o painel trabalha contra os ficheiros da pasta, sem GitHub.
+# Basta correr, em dois terminais:  npm run cms   e   npm run dev
+# e abrir http://localhost:3000/admin
+local_backend: true
+
 locale: pt
 media_folder: public/img/blog
 public_folder: /img/blog
@@ -94,6 +99,17 @@ collections:
           - { label: 'Rascunho (não aparece no site)', value: 'rascunho' }
           - { label: 'Publicado', value: 'publicado' }
         default: rascunho
+
+      - label: Perguntas frequentes
+        name: faq
+        widget: list
+        required: false
+        label_singular: Pergunta
+        summary: '{{fields.pergunta}}'
+        hint: Aparecem no fim do artigo e ajudam o Google a mostrar respostas.
+        fields:
+          - { label: Pergunta, name: pergunta, widget: string }
+          - { label: Resposta, name: resposta, widget: text }
 
       - label: Artigo
         name: body

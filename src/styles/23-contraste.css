@@ -1,0 +1,16 @@
+/* CONTRASTE — ajustes para cumprir as WCAG AA (4.5:1 em texto normal,
+   3:1 em texto grande). Os valores foram calculados sobre os fundos reais
+   em que cada elemento assenta, não só sobre o fundo geral do site. */
+
+/* Logótipos escritos a texto na barra de clientes e nas molduras. */
+.lg-ubi,.lg-pt,.lg-txt{opacity:.62}
+
+/* Numeração dos cartões de serviço sobre o verde escuro. */
+.c-em .n{color:rgba(255,255,255,.62)}
+
+/* Etiquetas e termos de lista dentro de cartões claros:
+   "Formato 01", "Missão", "Ideal para", "Estrutura"… */
+.fmt .for,.stack .for,.fmt dt{opacity:.62}
+
+/* Um link dentro de um parágrafo não pode distinguir-se só pela cor. */
+.cert .by a{text-decoration:underline;text-underline-offset:3px}

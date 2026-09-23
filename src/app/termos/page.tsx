@@ -11,7 +11,7 @@ const DESCRICAO =
 
 export const metadata: Metadata = meta({ titulo: TITULO, descricao: DESCRICAO, caminho: '/termos' });
 
-const ATUALIZADO = '21 de setembro de 2026';
+const ATUALIZADO = '23 de setembro de 2026';
 
 const seccoes: Seccao[] = [
   {
@@ -20,8 +20,8 @@ const seccoes: Seccao[] = [
     corpo: (
       <>
         <p>
-          Este site é propriedade de {site.fundador}, profissional independente que exerce atividade sob a marca
-          Starmountain Flash, com sede na {site.localidade}, Portugal, NIF {site.nif}.
+          Este site é propriedade de {site.nomeLegal}, profissional independente que exerce atividade sob o nome
+          comercial Starmountain Flash, com sede na {site.localidade}, Portugal, NIF {site.nif}.
         </p>
         <p>
           Contactos: <a href={'mailto:' + site.email}>{site.email}</a> ·{' '}
@@ -100,6 +100,28 @@ const seccoes: Seccao[] = [
     ),
   },
   {
+    id: 'cliente',
+    titulo: 'O que compete ao cliente',
+    corpo: (
+      <>
+        <p>Para o projeto avançar no prazo acordado, compete ao cliente:</p>
+        <ul>
+          <li>
+            entregar textos, imagens, logótipos e acessos nos momentos combinados, e garantir que tem direito a
+            usá-los;
+          </li>
+          <li>indicar uma pessoa responsável por validar o trabalho e dar resposta nos pontos de validação;</li>
+          <li>manter em segurança as credenciais dos serviços criados em seu nome;</li>
+          <li>usar o site e as automações de acordo com a lei, incluindo as regras de proteção de dados.</li>
+        </ul>
+        <p>
+          O conteúdo fornecido pelo cliente é da sua responsabilidade. Não são publicados conteúdos ilícitos, que
+          violem direitos de terceiros ou que a lei proíba.
+        </p>
+      </>
+    ),
+  },
+  {
     id: 'pagamentos',
     titulo: 'Pagamentos',
     corpo: (
@@ -152,6 +174,43 @@ const seccoes: Seccao[] = [
           Não estão abrangidos por esta garantia problemas causados por alterações feitas por terceiros, falhas de
           serviços externos, ou conteúdos introduzidos pelo cliente. Depois desse período, as alterações são feitas ao
           abrigo de uma avença mensal ou a pedido.
+        </p>
+      </>
+    ),
+  },
+  {
+    id: 'confidencialidade',
+    titulo: 'Confidencialidade',
+    corpo: (
+      <>
+        <p>
+          Tudo o que for partilhado durante um projeto — números, processos internos, credenciais, planos por
+          anunciar — é tratado como confidencial e não é revelado a terceiros, nem usado para outro fim que não o
+          próprio projeto.
+        </p>
+        <p>
+          Esta obrigação mantém-se depois de o projeto terminar. Não abrange informação que já seja pública, que o
+          cliente autorize divulgar, ou cuja divulgação seja exigida por lei ou por autoridade competente.
+        </p>
+      </>
+    ),
+  },
+  {
+    id: 'rescisao',
+    titulo: 'Suspensão e rescisão',
+    corpo: (
+      <>
+        <p>
+          Qualquer das partes pode pôr fim ao projeto por escrito. Nesse caso é faturado o trabalho já realizado até à
+          data, e os montantes pagos que lhe correspondam não são devolvidos.
+        </p>
+        <p>
+          O trabalho pode ser suspenso enquanto se mantiver uma falta de pagamento ou a falta prolongada dos elementos
+          pedidos ao cliente. A suspensão é comunicada com antecedência e o prazo final é adiado na mesma medida.
+        </p>
+        <p>
+          Com o projeto pago na íntegra, a titularidade do trabalho e das contas mantém-se do lado do cliente, nos
+          termos do ponto anterior, independentemente de o contrato ter terminado.
         </p>
       </>
     ),

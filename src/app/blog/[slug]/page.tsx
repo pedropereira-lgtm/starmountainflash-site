@@ -2,8 +2,8 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import type { Metadata } from 'next';
-import { HeroSm, JsonLd, NextStep, SectionHead } from '@/components/Blocks';
-import { OG_PADRAO, meta, migalhasLd, pessoaLd } from '@/lib/seo';
+import { Faqs, HeroSm, JsonLd, NextStep, SectionHead } from '@/components/Blocks';
+import { OG_PADRAO, faqLd, meta, migalhasLd, pessoaLd } from '@/lib/seo';
 import { site } from '@/data/site';
 import {
   dataPt,
@@ -99,6 +99,14 @@ export default async function Artigo({ params }: { params: Promise<{ slug: strin
         </div>
       </section>
 
+      {post.faq.length > 0 && (
+        <Faqs
+          titulo="Sobre este tema."
+          destaque="Em poucas palavras."
+          itens={post.faq.map((f) => ({ q: f.pergunta, a: f.resposta }))}
+        />
+      )}
+
       {outros.length > 0 && (
         <section className="sec">
           <SectionHead etiqueta="Continuar a ler" titulo="Artigos relacionados." />
@@ -142,6 +150,7 @@ export default async function Artigo({ params }: { params: Promise<{ slug: strin
             image: site.url + (post.capa || OG_PADRAO),
             isPartOf: { '@id': site.url + '/blog#blog' },
           },
+          ...(post.faq.length > 0 ? [faqLd(post.faq.map((f) => ({ q: f.pergunta, a: f.resposta })))] : []),
         ]}
       />
     </>

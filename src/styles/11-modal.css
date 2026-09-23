@@ -8,7 +8,7 @@
 .qm.open .qm-card{opacity:1;transform:none}
 .qm-head{display:flex;justify-content:space-between;align-items:flex-start;gap:16px}
 .qm-head h3{margin:10px 0 0;font-weight:500;font-size:28px;letter-spacing:-.035em;line-height:1.1}
-.qm-head h3 span{color:#A3A6A2}
+.qm-head h3 span{color:#878986}
 .qm-x{flex:none;width:40px;height:40px;border-radius:50%;border:1px solid var(--line);background:#fff;display:grid;place-items:center;cursor:pointer}
 .qm-steps{display:flex;gap:6px;margin:20px 0 22px}
 .qm-steps i{flex:1;height:3px;border-radius:3px;background:var(--line);transition:background .3s}
