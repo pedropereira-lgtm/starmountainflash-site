@@ -74,6 +74,15 @@ export default function Sobre() {
               A parte dos sites começou como um gosto pessoal por web design. Tornou-se serviço quando percebi que
               muitas PME tinham bons produtos e nenhuma forma de serem encontradas.
             </p>
+            <p>
+              Antes da contabilidade houve o Exército. Uma missão internacional ao serviço da NATO e uma medalha de
+              reconhecimento nacional ensinaram-me duas coisas que trago para cada projeto: um plano escrito antes de
+              começar, e prazos que se cumprem.
+            </p>
+            <p>
+              Continuo a estudar. Estou a tirar a licenciatura em Gestão na Universidade Aberta e vou acrescentando
+              formação à medida que os projetos pedem.
+            </p>
             <div className="sig">
               <strong>Pedro Pereira</strong>Covilhã, Serra da Estrela
             </div>
@@ -243,6 +252,32 @@ export default function Sobre() {
               </div>
             ))}
           </div>
+        </div>
+      </section>
+
+      <section className="sec">
+        <SectionHead etiqueta="Visão e missão" titulo="Para onde vou." destaque="E o que faço todos os dias.">
+          <p>Duas frases que decidem o que aceito e o que recuso.</p>
+        </SectionHead>
+        <div className="fmt">
+          <article style={{ background: '#fff' }}>
+            <span className="for">Missão</span>
+            <h3>O que faço todos os dias</h3>
+            <p style={{ color: '#555a57' }}>
+              Dar a PME e a marcas portuguesas a mesma presença online e a mesma automação que as grandes empresas
+              têm há muito: sites rápidos e fáceis de encontrar, e processos repetitivos a correr sozinhos. Com prazo
+              escrito, preço fechado e sem ninguém pelo meio entre quem pede e quem constrói.
+            </p>
+          </article>
+          <article style={{ background: 'var(--ink)', color: '#fff' }}>
+            <span className="for">Visão</span>
+            <h3>Para onde quero chegar</h3>
+            <p style={{ color: 'rgba(255,255,255,.72)' }}>
+              Que qualquer PME em Portugal seja encontrada por quem procura o que ela faz, no Google e nas respostas
+              dos motores de IA, e que o trabalho repetitivo deixe de ocupar as horas de quem devia estar a fazer
+              crescer o negócio.
+            </p>
+          </article>
         </div>
       </section>
 

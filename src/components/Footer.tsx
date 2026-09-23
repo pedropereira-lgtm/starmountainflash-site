@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import { site } from '@/data/site';
 import { Logo } from './Icons';
+import FooterGroup from './FooterGroup';
 
 /** Só entram os perfis que já têm endereço. */
 const perfis = [
@@ -21,36 +22,32 @@ export default function Footer() {
           </Link>
           <p>Websites e automações de IA para PME e marcas portuguesas. Covilhã, Serra da Estrela.</p>
         </div>
-        <div>
-          <h3>Serviços</h3>
+        <FooterGroup titulo="Serviços">
           <Link href="/websites">Websites</Link>
           <Link href="/lojas-online">Lojas online</Link>
           <Link href="/automacoes">Automações de IA</Link>
-        </div>
-        <div>
-          <h3>Empresa</h3>
+        </FooterGroup>
+        <FooterGroup titulo="Empresa">
           <Link href="/#trabalhos">Trabalhos</Link>
           <Link href="/metodo">Método</Link>
           <Link href="/sobre">Sobre</Link>
           <Link href="/blog">Blog</Link>
-        </div>
-        <div>
-          <h3>Contacto</h3>
+        </FooterGroup>
+        <FooterGroup titulo="Contacto">
           <a href={`mailto:${site.email}`}>{site.email}</a>
           <a href={`tel:${site.telefoneRaw}`}>{site.telefone}</a>
           <a href="#whatsapp" data-wa>
             WhatsApp
           </a>
-        </div>
+        </FooterGroup>
         {perfis.length > 0 && (
-          <div>
-            <h3>Onde estamos</h3>
+          <FooterGroup titulo="Onde estamos">
             {perfis.map((p) => (
               <a href={p.href} target="_blank" rel="noopener" key={p.label}>
                 {p.label}
               </a>
             ))}
-          </div>
+          </FooterGroup>
         )}
       </div>
       <div className="f-bot">

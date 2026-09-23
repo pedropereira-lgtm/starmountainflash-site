@@ -18,3 +18,22 @@
 @media (max-width:420px){
   .f-top{gap:32px 18px}
 }
+
+/* Grupos do rodapé como acordeão. O <details> sai aberto do servidor e só
+   fecha em ecrãs estreitos, já no browser: sem JavaScript vê-se tudo. */
+.f-grupo>summary{list-style:none;cursor:default}
+.f-grupo>summary::-webkit-details-marker{display:none}
+.f-grupo>summary h3{margin:0 0 14px}
+
+@media (max-width:960px){
+  .f-top>.f-grupo{border-top:1px solid var(--line);padding-top:4px}
+  .f-grupo>summary{cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:20px;padding:16px 0}
+  .f-grupo>summary h3{margin:0}
+  .f-grupo>summary:after{content:"+";font-size:22px;line-height:1;color:var(--emerald);transition:transform .2s}
+  .f-grupo[open]>summary:after{transform:rotate(45deg)}
+  .f-grupo>.f-links{padding-bottom:18px}
+  /* Um grupo por linha, para o acordeão abrir sem empurrar o vizinho. */
+  .f-top{grid-template-columns:minmax(0,1fr);gap:0}
+  .f-top>div:first-child{grid-column:auto;margin-bottom:28px}
+}
+@media (prefers-reduced-motion:reduce){.f-grupo>summary:after{transition:none}}

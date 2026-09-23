@@ -1,27 +1,26 @@
 'use client';
 import Link from 'next/link';
 import { useEffect, useRef } from 'react';
-import { site } from '@/data/site';
+import { navServicos, site } from '@/data/site';
 import { nomesPublicados } from '@/data/trabalhos';
 import { ArrowUpRight, Close, Logo, Mail, PanelArrow, Phone, WhatsAppGlyph } from '../Icons';
 import LocalTime from './LocalTime';
 
-const links = [
-  { n: '01', href: '/websites', titulo: 'Websites', sub: 'Landing pages e sites institucionais' },
-  { n: '02', href: '/lojas-online', titulo: 'Lojas online', sub: 'Vender online sem complicar' },
-  { n: '03', href: '/automacoes', titulo: 'Automações', sub: 'Processos repetitivos a correr sozinhos' },
-];
-const empresa = [
-  { n: '04', href: '/#trabalhos', titulo: 'Trabalhos', sub: nomesPublicados(true) },
-  { n: '05', href: '/sobre', titulo: 'Sobre', sub: 'O contabilista que automatiza' },
-  { n: '06', href: '/blog', titulo: 'Blog', sub: 'Sites, SEO e automação para PME' },
+/** As quatro entradas do menu. "Serviços" abre no sítio, para não perder as páginas. */
+const principais = [
+  { href: '/#trabalhos', titulo: 'Trabalhos', sub: nomesPublicados(true) },
+  { href: '/sobre', titulo: 'Sobre', sub: 'O contabilista que automatiza' },
+  { href: '/blog', titulo: 'Blog', sub: 'Sites, SEO e automação para PME' },
 ];
 
 export default function MobilePanel({ open, onClose }: { open: boolean; onClose: () => void }) {
   const closeRef = useRef<HTMLButtonElement>(null);
+  const servicos = useRef<HTMLDetailsElement>(null);
 
   useEffect(() => {
     if (open) closeRef.current?.focus();
+    // Cada abertura do menu recomeça com os serviços fechados.
+    else if (servicos.current) servicos.current.open = false;
   }, [open]);
 
   return (
@@ -42,26 +41,33 @@ export default function MobilePanel({ open, onClose }: { open: boolean; onClose:
           </b>
         </button>
       </div>
+
       <nav aria-label="Menu">
-        <span className="grp">Serviços</span>
-        {links.map((l) => (
+        <details className="m-svc" ref={servicos}>
+          <summary>
+            <strong>Serviços</strong>
+            <small>Websites, lojas online e automações de IA</small>
+          </summary>
+          <div className="m-sub">
+            {navServicos.map((s) => (
+              <Link href={s.href} key={s.href} onClick={onClose}>
+                <strong>{s.titulo}</strong>
+                <small>{s.sub}</small>
+                <PanelArrow />
+              </Link>
+            ))}
+          </div>
+        </details>
+
+        {principais.map((l) => (
           <Link href={l.href} key={l.href} onClick={onClose}>
-            <em>{l.n}</em>
             <strong>{l.titulo}</strong>
-            <PanelArrow />
             <small>{l.sub}</small>
-          </Link>
-        ))}
-        <span className="grp">Starmountain Flash</span>
-        {empresa.map((l) => (
-          <Link href={l.href} key={l.href} onClick={onClose}>
-            <em>{l.n}</em>
-            <strong>{l.titulo}</strong>
             <PanelArrow />
-            <small>{l.sub}</small>
           </Link>
         ))}
       </nav>
+
       <div className="bottom">
         <div className="quick">
           <a href={`tel:${site.telefoneRaw}`}>

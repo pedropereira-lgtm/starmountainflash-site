@@ -1,0 +1,33 @@
+/* MENU MOBILE — quatro entradas, sem numeração, com "Serviços" a abrir no sítio.
+   Substitui a grelha de três colunas do protótipo, cuja primeira coluna era o
+   número de cada entrada. */
+.panel nav a,
+.panel nav .m-svc>summary{grid-template-columns:minmax(0,1fr) auto}
+.panel nav a small,
+.panel nav .m-svc>summary small{grid-column:1}
+.panel nav a svg{grid-column:2}
+
+/* O cabeçalho dos serviços comporta-se como as outras entradas. */
+.m-svc>summary{list-style:none;cursor:pointer;display:grid;align-items:center;gap:4px 10px;padding:11px 6px;
+  border-bottom:1px solid rgba(255,255,255,.09);
+  opacity:0;transform:translateY(24px);transition:opacity .5s,transform .6s cubic-bezier(.2,.8,.2,1)}
+.m-svc>summary::-webkit-details-marker{display:none}
+.m-svc>summary strong{font-size:clamp(26px,7.4vw,38px);font-weight:500;letter-spacing:-.04em;line-height:1}
+.m-svc>summary small{font-size:13px;color:rgba(255,255,255,.5)}
+.m-svc>summary:after{content:"+";grid-row:1/span 2;grid-column:2;font-size:26px;line-height:1;color:var(--jade);transition:transform .25s}
+.m-svc[open]>summary:after{transform:rotate(45deg)}
+.panel.open .m-svc>summary{opacity:1;transform:none;transition-delay:.2s}
+
+/* As três páginas de serviço, um degrau abaixo. */
+.m-sub{padding-left:14px;border-left:1px solid rgba(255,255,255,.12);margin:4px 0 6px 6px}
+.panel nav .m-sub a{padding:9px 6px;border-bottom:0;opacity:1;transform:none;transition-delay:0s}
+.panel nav .m-sub a strong{font-size:clamp(19px,5vw,24px)}
+.panel nav .m-sub a small{font-size:12px}
+
+@media (max-height:740px){
+  .m-svc>summary{padding:8px 6px}
+  .m-svc>summary small{display:none}
+}
+@media (prefers-reduced-motion:reduce){
+  .m-svc>summary,.m-svc>summary:after{transition:none}
+}
