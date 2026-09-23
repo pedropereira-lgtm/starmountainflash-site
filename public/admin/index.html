@@ -6,6 +6,9 @@
 <meta name="robots" content="noindex, nofollow">
 <title>Gestão do blog · Starmountain Flash</title>
 <link rel="icon" href="data:,">
+<!-- Caminho absoluto para a configuração: em /admin (sem barra final) o
+     caminho relativo resolveria para /config.yml e dava 404. -->
+<link href="/admin/config.yml" type="text/yaml" rel="cms-config-url">
 </head>
 <body>
 <script src="https://unpkg.com/decap-cms@3.9.0/dist/decap-cms.js"></script>
