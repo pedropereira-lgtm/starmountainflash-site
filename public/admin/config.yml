@@ -78,6 +78,10 @@ collections:
       - label: Data
         name: data
         widget: datetime
+        # "format" manda no valor gravado; "date_format" só no que se vê no
+        # seletor. Sem o primeiro, a data ficava gravada como 29/09/2026, que
+        # o JavaScript lê como inválida e derrubava o build.
+        format: 'YYYY-MM-DD'
         date_format: 'DD/MM/YYYY'
         time_format: false
         picker_utc: true

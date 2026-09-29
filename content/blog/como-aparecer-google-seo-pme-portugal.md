@@ -4,7 +4,7 @@ slug: como-aparecer-google-seo-pme-portugal
 descricao: Descobre como melhorar a presença da tua PME no Google em 2026 com
   SEO, conteúdo, SEO local, Core Web Vitals e boas práticas de indexação.
 categoria: Websites
-data: 29/09/2026
+data: 2026-09-29
 estado: publicado
 ---
 Ter um website já não é suficiente. Para uma PME, estar online só faz diferença quando as pessoas conseguem encontrar a empresa no momento em que procuram exatamente aquilo que ela vende.

@@ -35,6 +35,23 @@ export type Titulo = { texto: string; id: string; nivel: 2 | 3 };
 /** Um artigo longo justifica índice. O limiar é o mesmo que a página usa. */
 const MINIMO_INDICE = 3;
 
+/**
+ * Aceita tudo o que o YAML e o painel podem dar: um Date (o YAML resolve
+ * datas sem aspas), "2026-09-29", "29/09/2026" ou uma data ISO completa.
+ * Devolve null em vez de rebentar — uma data mal escrita num artigo não pode
+ * derrubar o build do site inteiro.
+ */
+function lerData(valor: unknown): string | null {
+  if (valor instanceof Date) return Number.isNaN(valor.getTime()) ? null : valor.toISOString();
+  const texto = String(valor ?? '').trim();
+  if (!texto) return null;
+  // DD/MM/AAAA — o formato português, que o JavaScript não sabe ler.
+  const pt = /^(\d{1,2})[/-](\d{1,2})[/-](\d{4})$/.exec(texto);
+  const normalizado = pt ? `${pt[3]}-${pt[2].padStart(2, '0')}-${pt[1].padStart(2, '0')}` : texto;
+  const d = new Date(normalizado);
+  return Number.isNaN(d.getTime()) ? null : d.toISOString();
+}
+
 function ler(ficheiro: string): Post | null {
   const bruto = fs.readFileSync(path.join(PASTA, ficheiro), 'utf8');
   const { data, content } = matter(bruto);
@@ -43,12 +60,18 @@ function ler(ficheiro: string): Post | null {
 
   const categoria = CATEGORIAS.includes(data.categoria) ? (data.categoria as Categoria) : 'Websites';
 
+  const dataIso = lerData(data.data);
+  if (!dataIso) {
+    console.warn(`[blog] ${ficheiro}: data ilegível (${String(data.data)}). Artigo ignorado.`);
+    return null;
+  }
+
   return {
     slug,
     titulo: String(data.titulo),
     descricao: String(data.descricao || '').slice(0, 155),
     categoria,
-    data: new Date(data.data).toISOString(),
+    data: dataIso,
     capa: data.capa ? String(data.capa) : undefined,
     capaAlt: data.capaAlt ? String(data.capaAlt) : undefined,
     // No CMS o campo chama-se "estado"; aqui interessa só publicado ou não.
