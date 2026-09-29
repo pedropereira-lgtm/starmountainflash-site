@@ -30,8 +30,10 @@ collections:
     label_singular: Artigo
     folder: content/blog
     create: true
+    # Sem "path": com folder + slug o ficheiro já fica em content/blog/<slug>.md.
+    # Um "path" redundante muda a identidade interna da entrada e parte a
+    # gravação de rascunhos no fluxo de trabalho.
     slug: '{{fields.slug}}'
-    path: '{{fields.slug}}'
     extension: md
     format: yaml-frontmatter
     summary: '{{titulo}} — {{estado}}'
