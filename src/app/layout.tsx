@@ -29,6 +29,18 @@ export const metadata: Metadata = {
   creator: site.fundador,
   publisher: site.nome,
   formatDetection: { telephone: false },
+  // Caminhos fixos em public/, sem hash de build: o Google e os browsers
+  // procuram-nos em endereços previsíveis, e o /favicon.ico é pedido na raiz
+  // mesmo quando não está declarado.
+  icons: {
+    icon: [
+      { url: '/favicon.ico', sizes: '48x48', type: 'image/x-icon' },
+      { url: '/favicon-v2.png', sizes: '192x192', type: 'image/png' },
+      { url: '/icon.svg', type: 'image/svg+xml' },
+    ],
+    apple: [{ url: '/apple-touch-icon.png', sizes: '180x180', type: 'image/png' }],
+    shortcut: ['/favicon.ico'],
+  },
 };
 
 export const viewport: Viewport = {

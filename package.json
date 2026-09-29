@@ -9,7 +9,8 @@
     "lint": "next lint",
     "typecheck": "tsc --noEmit",
     "og": "node scripts/gerar-og.mjs",
-    "cms": "decap-server"
+    "cms": "decap-server",
+    "favicons": "node scripts/gerar-favicons.mjs"
   },
   "dependencies": {
     "@supabase/supabase-js": "2.58.0",
