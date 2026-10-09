@@ -15,6 +15,11 @@ export type Trabalho = {
   marca: { tipo: 'img'; src: string; alt: string } | { tipo: 'texto'; texto: string } | { tipo: 'img-texto'; src: string; texto: string };
   /** Screenshot para os cartões. Sem ele, fica a marca, como no protótipo. */
   screenshot?: string;
+  /**
+   * Localidade do cliente. Só entra no /llms.txt; não aparece nas páginas.
+   * Preencher apenas com autorização do cliente.
+   */
+  localidade?: string;
 };
 
 export const trabalhos: Trabalho[] = [
@@ -29,6 +34,7 @@ export const trabalhos: Trabalho[] = [
     layout: 'wide',
     marca: { tipo: 'img', src: '/img/ubi.png', alt: 'Universidade da Beira Interior' },
     screenshot: '/img/trabalhos/ubi-dei-desktop.webp',
+    localidade: 'Covilhã',
   },
   {
     // Escondido até o site ser aberto ao público (previsto para a semana de

@@ -55,13 +55,20 @@ export const negocioLd = {
   '@id': site.url + '/#negocio',
   name: site.nome,
   url: site.url,
+  // Sem logótipo declarado, os motores de IA escolhem uma imagem ao acaso.
+  logo: site.url + '/favicon-v2.png',
+  image: site.url + OG_PADRAO,
   email: site.email,
   telephone: site.telefoneRaw.replace(/\s/g, ''),
   // Repetido em vez de só referenciado, para o bloco fazer sentido isolado,
   // e com @id para os artigos poderem ligar o autor a esta mesma pessoa.
   founder: { '@type': 'Person', '@id': site.url + '/sobre#pedro-pereira', name: site.fundador },
   address: { '@type': 'PostalAddress', addressLocality: site.localidade, addressCountry: site.pais },
-  areaServed: 'PT',
+  // País inteiro, com a sede nomeada: é onde há reuniões presenciais.
+  areaServed: [
+    { '@type': 'Country', name: 'Portugal' },
+    { '@type': 'City', name: site.localidade },
+  ],
   description: site.descricao,
   knowsAbout: ['Criação de websites', 'Lojas online', 'Automações de IA', 'SEO'],
   ...(sameAs.length ? { sameAs } : {}),
