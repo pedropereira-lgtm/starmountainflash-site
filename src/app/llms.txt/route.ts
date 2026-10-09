@@ -41,7 +41,9 @@ export function GET() {
     '',
     '## Trabalhos',
     '',
-    ...trabalhosPublicados.map((t) => `- **${t.nome}** (${u}/trabalhos/${t.slug}): ${t.resumo}`),
+    ...trabalhosPublicados.map(
+      (t) => `- **${t.nome}**${t.localidade ? `, ${t.localidade}` : ''} (${u}/trabalhos/${t.slug}): ${t.resumo}`,
+    ),
     '',
     '## Páginas principais',
     '',
