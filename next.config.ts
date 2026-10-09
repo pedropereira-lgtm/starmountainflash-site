@@ -15,7 +15,12 @@ const nextConfig: NextConfig = {
   async rewrites() {
     // O painel Decap e uma pagina estatica em public/admin/.
     // Sem isto, /admin nao resolve para o index.html dessa pasta.
-    return [{ source: '/admin', destination: '/admin/index.html' }];
+    // A landing page da análise gratuita também é estática, em public/analise-gratuita/.
+    return [
+      { source: '/admin', destination: '/admin/index.html' },
+      { source: '/analise-gratuita', destination: '/analise-gratuita/index.html' },
+      { source: '/analise-gratuita/obrigado', destination: '/analise-gratuita/obrigado/index.html' },
+    ];
   },
   async redirects() {
     return [
