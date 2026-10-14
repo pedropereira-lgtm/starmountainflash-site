@@ -16,6 +16,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ['/metodo', 0.7, 'yearly'],
     ['/sobre', 0.7, 'yearly'],
     ['/blog', 0.6, 'weekly'],
+    ['/contacto', 0.7, 'yearly'],
     ['/privacidade', 0.2, 'yearly'],
     ['/cookies', 0.2, 'yearly'],
     ['/termos', 0.2, 'yearly'],

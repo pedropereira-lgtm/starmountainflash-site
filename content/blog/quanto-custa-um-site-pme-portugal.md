@@ -70,4 +70,4 @@ São intervalos largos de propósito. Dois sites com "cinco páginas" podem cust
 
 Um site barato que não traz contactos sai sempre mais caro do que um site pensado para vender.
 
-*Quer saber quanto custa o seu site? Peça um orçamento: recebe uma proposta por escrito, com prazo e preço fechados.*
+*Quer saber quanto custa o seu site? [Peça um orçamento](#orcamento): recebe uma proposta por escrito, com prazo e preço fechados.*

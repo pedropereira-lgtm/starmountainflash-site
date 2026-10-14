@@ -11,6 +11,7 @@ const principais = [
   { href: '/#trabalhos', titulo: 'Trabalhos', sub: nomesPublicados(true) },
   { href: '/sobre', titulo: 'Sobre', sub: 'O contabilista que automatiza' },
   { href: '/blog', titulo: 'Blog', sub: 'Sites, SEO e automação para PME' },
+  { href: '/contacto', titulo: 'Contacto', sub: 'Email, telefone e WhatsApp' },
 ];
 
 export default function MobilePanel({ open, onClose }: { open: boolean; onClose: () => void }) {

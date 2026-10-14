@@ -30,6 +30,7 @@ export function Menu({ label }: { label: string }) {
       <Link href="/metodo">Método</Link>
       <Link href="/sobre">Sobre</Link>
       <Link href="/blog">Blog</Link>
+      <Link href="/contacto">Contacto</Link>
     </nav>
   );
 }

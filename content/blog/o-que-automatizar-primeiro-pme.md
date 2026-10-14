@@ -80,4 +80,4 @@ Depois de estar a funcionar, uma automação precisa de acompanhamento, porque a
 
 ## Por onde começar
 
-Se não sabes qual é a tua primeira automação, não precisas de adivinhar. Pede o Diagnóstico Flash através do [formulário de orçamento](https://starmountainflash.pt/automacoes) e começamos por perceber onde está, de facto, o teu tempo.
+Se não sabes qual é a tua primeira automação, não precisas de adivinhar. Pede o Diagnóstico Flash através do [formulário de orçamento](#orcamento) e começamos por perceber onde está, de facto, o teu tempo.
