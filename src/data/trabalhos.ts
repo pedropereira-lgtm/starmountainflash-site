@@ -37,16 +37,13 @@ export const trabalhos: Trabalho[] = [
     localidade: 'Covilhã',
   },
   {
-    // Escondido até o site ser aberto ao público (previsto para a semana de
-    // 28 de setembro de 2026). Para o repor: published: true. O conteúdo do
-    // caso continua todo em casos.ts e volta a aparecer sozinho.
     slug: 'planet-trading',
     nomeCurto: 'Planet Trading',
     nome: 'Planet Trading',
     resumo: 'Landing page 3D com formulário ligado a CRM',
     dominio: 'comunidadeplanet.pt',
     tags: ['WebGL', 'CRM'],
-    published: false,
+    published: true,
     layout: 'normal',
     marca: { tipo: 'img-texto', src: '/img/planet-trading.png', texto: 'Planet Trading' },
   },
