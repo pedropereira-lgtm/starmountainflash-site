@@ -207,7 +207,7 @@ export const casos: Record<string, Caso> = {
       'Lançar a nova fase da comunidade, "New Era", com uma página que causasse impacto logo à primeira visita e que transformasse visitas em contactos organizados, prontos a seguir.',
     solucao:
       'Uma página única construída em 3D com WebGL, com vídeos de fundo e animações, e um formulário que envia cada contacto diretamente para o CRM. Tudo desenvolvido em código, sem construtores.',
-    resultado: 'Site em produção em comunidadeplanet.pt, com abertura pública prevista para outubro de 2026.',
+    resultado: 'Site público em comunidadeplanet.pt desde outubro de 2026, a servir de porta de entrada da nova fase da comunidade.',
     // Sem cores, fontes nem estrutura: esses blocos ficam escondidos até haver dados.
     tecnologia: ['WebGL / 3D', 'Vídeo de fundo', 'Formulário ligado a CRM'],
     visitar: [{ label: 'Visitar o site', href: 'https://comunidadeplanet.pt' }],
