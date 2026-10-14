@@ -51,6 +51,8 @@ const nextConfig: NextConfig = {
       { source: '/servicos/websites.html', destination: '/websites', statusCode: 301 },
       { source: '/servicos/automatizacao-ia.html', destination: '/automacoes', statusCode: 301 },
       { source: '/terms', destination: '/termos', statusCode: 301 },
+      // Ainda com impressões no Search Console em 14/10/2026.
+      { source: '/terms.html', destination: '/termos', statusCode: 301 },
       // /aviso-legal, /cookies, /blog e /blog/quando-automatizar-o-teu-negocio
       // continuam a existir com o mesmo endereço: não precisam de redirecionamento.
     ];
