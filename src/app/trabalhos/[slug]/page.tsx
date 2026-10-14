@@ -211,6 +211,17 @@ export default async function Caso({ params }: { params: Promise<{ slug: string 
         </section>
       )}
 
+      {caso.construcao && (
+        <section className="sec">
+          <SectionHead etiqueta="Por dentro do código" titulo={caso.construcao.titulo} destaque={caso.construcao.destaque} />
+          <div className="construcao">
+            {caso.construcao.paragrafos.map((p) => (
+              <p key={p.slice(0, 40)}>{p}</p>
+            ))}
+          </div>
+        </section>
+      )}
+
       {caso.seccoesExtra?.map((e) => (
         <section className="sec" key={e.etiqueta}>
           <SectionHead etiqueta={e.etiqueta} titulo={e.titulo} destaque={e.destaque}>

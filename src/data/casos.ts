@@ -55,6 +55,8 @@ export type Caso = {
   desktop?: string;
   mobile?: string;
   seccoesExtra?: SeccaoExtra[];
+  /** "Como foi construído": explicação técnica, só com o que está no código. */
+  construcao?: { titulo: string; destaque?: string; paragrafos: string[] };
   /** Para casos de um só site. */
   cores?: Cor[];
   fontes?: Fonte[];
@@ -212,6 +214,15 @@ export const casos: Record<string, Caso> = {
     // O de telemóvel fica escondido até o ficheiro existir em public/.
     desktop: '/img/trabalhos/planet-trading-desktop.webp',
     mobile: '/img/trabalhos/planet-trading-mobile.webp',
+    construcao: {
+      titulo: 'Uma intro 3D em WebGL.',
+      destaque: 'Como foi construído.',
+      paragrafos: [
+        'A página abre com uma intro 3D controlada pelo scroll, construída em WebGL com Three.js. São cerca de 120 mil partículas, animadas por shaders GLSL escritos à medida, que passam por várias fases à medida que o visitante desce: uma esfera que se desfaz, uma onda, um túnel em hiperespaço e, no fim, um clarão que dá origem a uma galáxia em espiral. O brilho vem de pós-processamento com Unreal Bloom, e as cores mudam de frio para quente em função da distância ao centro da galáxia.',
+        'Toda a sequência depende da posição do scroll, por isso o deslize foi suavizado com Lenis, para o movimento ser contínuo em rato, trackpad e ecrã tátil. Os títulos de cada fase aparecem e desaparecem sincronizados com a animação, e a intro corre uma só vez antes de dar lugar ao resto da página.',
+        'A partir daí, a página é uma landing page em secções: resultados, como funciona, o que inclui, demonstração da plataforma, planos, equipa, testemunhos e FAQ. As secções entram com animações acionadas por Intersection Observer, só quando ficam visíveis. As imagens abaixo da dobra carregam de forma diferida, o vídeo da comunidade só arranca quando aparece no ecrã, e a densidade de pixels do 3D está limitada para não sobrecarregar telemóveis com ecrãs de alta resolução. Quem tem o movimento reduzido ativo no sistema vê a página sem as animações.',
+      ],
+    },
     tecnologia: ['WebGL / 3D', 'Vídeo de fundo', 'Formulário ligado a CRM'],
     visitar: [{ label: 'Visitar o site', href: 'https://comunidadeplanet.pt' }],
   },
