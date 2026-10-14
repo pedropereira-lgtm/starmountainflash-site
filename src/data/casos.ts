@@ -37,6 +37,18 @@ export type SeccaoExtra = {
   mobile?: string;
 };
 
+/** "Como foi construído": explicação técnica em blocos, só com o que está no código. */
+export type Construcao = {
+  titulo: string;
+  destaque?: string;
+  /** Números grandes no topo da secção. */
+  numeros: { valor: string; legenda: string }[];
+  /** Etapas de uma sequência (ex.: fases de uma animação), mostradas em linha. */
+  fases?: { titulo: string; nome: string; texto: string }[];
+  /** Um cartão por tema, com pontos e tecnologias. */
+  blocos: { titulo: string; texto: string; pontos?: string[]; stack?: string[] }[];
+};
+
 export type Caso = {
   slug: string;
   titulo: string;
@@ -56,7 +68,7 @@ export type Caso = {
   mobile?: string;
   seccoesExtra?: SeccaoExtra[];
   /** "Como foi construído": explicação técnica, só com o que está no código. */
-  construcao?: { titulo: string; destaque?: string; paragrafos: string[] };
+  construcao?: Construcao;
   /** Para casos de um só site. */
   cores?: Cor[];
   fontes?: Fonte[];
@@ -217,10 +229,48 @@ export const casos: Record<string, Caso> = {
     construcao: {
       titulo: 'Uma intro 3D em WebGL.',
       destaque: 'Como foi construído.',
-      paragrafos: [
-        'A página abre com uma intro 3D controlada pelo scroll, construída em WebGL com Three.js. São cerca de 120 mil partículas, animadas por shaders GLSL escritos à medida, que passam por várias fases à medida que o visitante desce: uma esfera que se desfaz, uma onda, um túnel em hiperespaço e, no fim, um clarão que dá origem a uma galáxia em espiral. O brilho vem de pós-processamento com Unreal Bloom, e as cores mudam de frio para quente em função da distância ao centro da galáxia.',
-        'Toda a sequência depende da posição do scroll, por isso o deslize foi suavizado com Lenis, para o movimento ser contínuo em rato, trackpad e ecrã tátil. Os títulos de cada fase aparecem e desaparecem sincronizados com a animação, e a intro corre uma só vez antes de dar lugar ao resto da página.',
-        'A partir daí, a página é uma landing page em secções: resultados, como funciona, o que inclui, demonstração da plataforma, planos, equipa, testemunhos e FAQ. As secções entram com animações acionadas por Intersection Observer, só quando ficam visíveis. As imagens abaixo da dobra carregam de forma diferida, o vídeo da comunidade só arranca quando aparece no ecrã, e a densidade de pixels do 3D está limitada para não sobrecarregar telemóveis com ecrãs de alta resolução. Quem tem o movimento reduzido ativo no sistema vê a página sem as animações.',
+      numeros: [
+        { valor: '120 mil', legenda: 'partículas animadas em tempo real' },
+        { valor: '4', legenda: 'fases na intro, ao ritmo do scroll' },
+        { valor: 'GLSL', legenda: 'shaders escritos à medida' },
+        { valor: '0', legenda: 'construtores visuais: tudo em código' },
+      ],
+      fases: [
+        { titulo: 'Fase 01', nome: 'Esfera', texto: 'As partículas formam uma esfera que se desfaz.' },
+        { titulo: 'Fase 02', nome: 'Onda', texto: 'Espalham-se numa onda em movimento.' },
+        { titulo: 'Fase 03', nome: 'Túnel', texto: 'A onda curva-se num túnel em hiperespaço.' },
+        { titulo: 'Fase 04', nome: 'Galáxia', texto: 'Um clarão dá origem a uma galáxia em espiral.' },
+      ],
+      blocos: [
+        {
+          titulo: 'Render 3D',
+          texto:
+            'A intro é construída em WebGL com Three.js. As partículas são animadas por shaders GLSL escritos à medida, e o brilho vem de pós-processamento com Unreal Bloom. As cores mudam de frio para quente em função da distância ao centro da galáxia.',
+          stack: ['Three.js', 'WebGL', 'GLSL', 'Unreal Bloom'],
+        },
+        {
+          titulo: 'Scroll e animação',
+          texto:
+            'Toda a sequência depende da posição do scroll, por isso o deslize foi suavizado com Lenis, para o movimento ser contínuo em rato, trackpad e ecrã tátil.',
+          pontos: [
+            'Títulos de cada fase sincronizados com a animação',
+            'A intro corre uma só vez e dá lugar ao resto da página',
+            'Secções seguintes com entrada animada só quando ficam visíveis',
+          ],
+          stack: ['Lenis', 'Intersection Observer'],
+        },
+        {
+          titulo: 'Desempenho e acessibilidade',
+          texto:
+            'A partir da intro, a página é uma landing page em secções: resultados, como funciona, o que inclui, demonstração da plataforma, planos, equipa, testemunhos e FAQ.',
+          pontos: [
+            'Imagens abaixo da dobra com carregamento diferido',
+            'Vídeo da comunidade só arranca quando aparece no ecrã',
+            'Densidade de pixels do 3D limitada em ecrãs de alta resolução',
+            'Sem animações para quem tem o movimento reduzido ativo',
+          ],
+          stack: ['Lazy loading', 'prefers-reduced-motion'],
+        },
       ],
     },
     tecnologia: ['WebGL / 3D', 'Vídeo de fundo', 'Formulário ligado a CRM'],
