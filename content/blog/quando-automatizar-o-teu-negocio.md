@@ -17,7 +17,7 @@ Responder ao mesmo tipo de pedido, copiar informação de um sítio para outro, 
 
 ## A informação está espalhada por vários sítios
 
-Um pedido chega por WhatsApp, outro por email, outro por formulário do site, e no fim tens de juntar tudo manualmente para não perder nada. Quando a informação não está toda no mesmo sítio, o risco de esquecer alguém aumenta, e isso normalmente custa mais do que o tempo que a automatização levaria a construir.
+Um pedido chega por WhatsApp, outro por email, outro por [formulário do site](/blog/ligar-formulario-site-crm-email), e no fim tens de juntar tudo manualmente para não perder nada. Quando a informação não está toda no mesmo sítio, o risco de esquecer alguém aumenta, e isso normalmente custa mais do que o tempo que a automatização levaria a construir.
 
 ## O crescimento está limitado pelo tempo que passas em tarefas administrativas
 
@@ -27,4 +27,4 @@ Se a razão para não aceitares mais clientes é "não tenho tempo para gerir ma
 
 Se o processo ainda está a mudar toda a semana, ou se só acontece raramente, automatizar cedo demais costuma ser tempo mal gasto: o processo ainda não estabilizou o suficiente para valer a pena fixá-lo num sistema. Nesse caso, a prioridade é primeiro perceber bem o processo à mão, e só depois construir à volta dele.
 
-Se reconheces pelo menos um dos três primeiros sinais, provavelmente já há tempo a ser perdido em algo que não precisava da tua atenção direta.
+Se reconheces pelo menos um dos três primeiros sinais, provavelmente já há tempo a ser perdido em algo que não precisava da tua atenção direta. Vê [que tipo de automações faço para PME](/automacoes).
