@@ -47,9 +47,9 @@ export default function Sobre() {
           <div className="photo has">
             <Image
               src="/img/pedro-pereira.jpg"
-              alt="Pedro Pereira, fundador da Starmountain Flash, no escritório"
-              width={1100}
-              height={1379}
+              alt="Pedro Pereira, fundador da Starmountain Flash"
+              width={1254}
+              height={1254}
               sizes="(max-width: 960px) 100vw, 42vw"
             />
           </div>

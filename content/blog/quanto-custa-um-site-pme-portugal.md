@@ -22,9 +22,9 @@ Este guia explica os valores de referência, o que faz o preço subir ou descer,
 ## Valores de referência em 2026
 
 - **Landing page** (uma página com um único objetivo): 500 € a 2.000 €
-- **Site institucional** (várias páginas, para apresentar a empresa): 1.000 € a 5.000 €
-- **Loja online:** 1.500 € a 15.000 €
-- **Plataformas à medida** (áreas de membros, subscrições, sistemas internos): normalmente acima de 10.000 €
+- **[Site institucional](/websites)** (várias páginas, para apresentar a empresa): 1.000 € a 5.000 €
+- **[Loja online](/lojas-online):** 1.500 € a 15.000 €
+- **Plataformas à medida** (como o [StudyOS](/trabalhos/studyos): áreas de membros, subscrições, sistemas internos): normalmente acima de 10.000 €
 
 São intervalos largos de propósito. Dois sites com "cinco páginas" podem custar valores muito diferentes, conforme o que está por trás.
 
@@ -33,8 +33,8 @@ São intervalos largos de propósito. Dois sites com "cinco páginas" podem cust
 1. **Número de páginas e de funcionalidades.** Um formulário de contacto não é o mesmo que um sistema de marcações ou uma área de clientes.
 2. **Design à medida ou tema pronto.** Um tema comprado é mais barato, mas o seu site fica parecido com milhares de outros.
 3. **Conteúdos.** Se os textos e as fotografias estão prontos, o projeto anda mais depressa. Se têm de ser criados, o custo sobe.
-4. **Integrações.** Ligar o site a um CRM, a um programa de faturação ou a um sistema de pagamentos acrescenta trabalho e valor.
-5. **SEO e preparação para IA.** Um site pensado para aparecer no Google e nas respostas do ChatGPT exige estrutura, dados técnicos e conteúdo organizado.
+4. **Integrações.** [Ligar o site a um CRM](/blog/ligar-formulario-site-crm-email), a um programa de faturação ou a um sistema de pagamentos acrescenta trabalho e valor.
+5. **SEO e preparação para IA.** Um site pensado para [aparecer no Google](/blog/como-aparecer-google-seo-pme-portugal) e nas respostas do ChatGPT exige estrutura, dados técnicos e conteúdo organizado.
 6. **Quem faz.** Agências, freelancers e plataformas de arrastar e largar têm custos, prazos e níveis de acompanhamento muito diferentes.
 
 ## Os custos que nem sempre aparecem no orçamento

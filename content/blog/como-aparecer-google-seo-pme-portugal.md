@@ -33,7 +33,7 @@ Todas estas pesquisas estão relacionadas, mas não têm exatamente a mesma inte
 
 Um erro comum em websites de PME é tentar colocar todos os serviços numa única página. Para o utilizador pode parecer simples, mas para o Google isso torna mais difícil perceber qual é o tema principal de cada secção.
 
-Se a tua empresa vende serviços diferentes, vale a pena criar páginas específicas para cada um deles. Uma empresa que trabalhe com websites, lojas online e automações, por exemplo, beneficia de ter páginas separadas para cada serviço.
+Se a tua empresa vende serviços diferentes, vale a pena criar páginas específicas para cada um deles. Uma empresa que trabalhe com websites, lojas online e automações, por exemplo, beneficia de ter páginas separadas para cada serviço: [websites](/websites), [lojas online](/lojas-online) e [automações](/automacoes).
 
 Uma boa página de serviço deve explicar com clareza o que é o serviço, para quem faz sentido, que problema resolve, como funciona, que resultados pode gerar e como pedir orçamento.
 
@@ -61,7 +61,7 @@ Publicar por publicar raramente traz resultados. O ideal é escolher temas que c
 
 Uma empresa que cria websites pode escrever artigos sobre temas como:
 
-- quanto custa um website para uma PME;
+- [quanto custa um website para uma PME](/blog/quanto-custa-um-site-pme-portugal);
 - quanto tempo demora criar um site;
 - o que deve ter um website empresarial;
 - como aparecer no Google;
@@ -73,8 +73,8 @@ Uma empresa de automação pode abordar perguntas como:
 - o que é automação de processos;
 - que tarefas administrativas podem ser automatizadas;
 - como automatizar pedidos de orçamento;
-- como ligar WhatsApp, email e CRM;
-- quando é que uma PME deve começar a automatizar.
+- [como ligar WhatsApp, email e CRM](/blog/ligar-formulario-site-crm-email);
+- [quando é que uma PME deve começar a automatizar](/blog/quando-automatizar-o-teu-negocio).
 
 O ponto importante é este: o artigo deve resolver uma dúvida concreta. Se o utilizador termina a leitura a saber exatamente o mesmo que sabia antes, dificilmente aquele conteúdo vai ser realmente útil.
 
@@ -122,7 +122,7 @@ Ainda assim, convém ter expectativas realistas: pedir indexação não signific
 
 Os links internos não servem apenas para navegação. Também ajudam a mostrar a relação entre diferentes páginas do site.
 
-Se publicas um artigo sobre como aparecer no Google, faz sentido incluir um link para a página de websites. Se escreves sobre o custo de criar um site, podes ligar a projetos realizados, serviços e formulários de pedido de orçamento.
+Se publicas um artigo sobre como aparecer no Google, faz sentido incluir um link para a [página de websites](/websites). Se escreves sobre o custo de criar um site, podes ligar a projetos realizados, serviços e formulários de pedido de orçamento.
 
 Evita colocar links apenas porque “é bom para SEO”. O link deve ser útil para quem está a ler.
 
@@ -136,7 +136,7 @@ Uma boa regra é simples: se o utilizador provavelmente gostaria de saber mais s
 
 Mostrar projetos reais é muito mais convincente.
 
-Sempre que possível, transforma trabalhos realizados em pequenos casos de estudo. Explica qual era o problema, o que foi desenvolvido e qual foi o resultado.
+Sempre que possível, transforma trabalhos realizados em pequenos casos de estudo, como os [três sites feitos para a Universidade da Beira Interior](/trabalhos/ubi). Explica qual era o problema, o que foi desenvolvido e qual foi o resultado.
 
 Mesmo quando não existem métricas financeiras, já há valor em mostrar a lógica do projeto: o cliente não tinha presença digital, precisava de receber pedidos de orçamento online, queria automatizar um processo ou precisava de melhorar a imagem da empresa.
 

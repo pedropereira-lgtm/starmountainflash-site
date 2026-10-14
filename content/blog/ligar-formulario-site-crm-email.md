@@ -51,7 +51,7 @@ Se o seu site só faz a segunda, cada pedido depende de alguém ver um email a t
 - **Brevo:** a escolha mais simples quando o essencial é enviar emails, a confirmação ao cliente e o aviso interno.
 - **HubSpot:** compensa quando há um processo de venda com várias fases, propostas e seguimentos, porque junta contactos, negócios e tarefas no mesmo sítio.
 
-Uma regra prática: se não sabe dizer em que fase está cada pedido que recebeu este mês, precisa de um CRM. Se sabe, uma folha de cálculo ainda chega.
+Uma regra prática: se não sabe dizer em que fase está cada pedido que recebeu este mês, precisa de um CRM. Se quiser ajuda a montá-lo, veja as [automações para PME](/automacoes). Se sabe, uma folha de cálculo ainda chega.
 
 ## Como está montado o formulário do meu próprio site
 
