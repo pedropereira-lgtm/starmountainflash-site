@@ -67,3 +67,8 @@
 .visitas{display:flex;flex-wrap:wrap;gap:10px;margin-top:auto;padding-top:20px}
 .visitas .btn{height:44px;font-size:14px;padding:0 5px 0 16px}
 .visitas .btn .ic{width:34px;height:34px}
+
+/* "Como foi construído": texto técnico corrido, com largura de leitura. */
+.construcao{max-width:760px;margin-top:8px}
+.construcao p{margin:0 0 18px;font-size:17px;line-height:1.7;color:#3b3f3c}
+.construcao p:last-child{margin-bottom:0}
