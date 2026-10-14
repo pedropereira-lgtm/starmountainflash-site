@@ -5,7 +5,7 @@ import { HeroSm, JsonLd, NextStep, SectionHead } from '@/components/Blocks';
 import { Mockup, Screenshots } from '@/components/Mostras';
 import { SIZES_CARTAO, Shot } from '@/components/Trabalhos';
 import { ArrowRight, ArrowUpRight } from '@/components/Icons';
-import { casos, type Cor, type Fonte, type SiteDoCaso } from '@/data/casos';
+import { casos, type Construcao, type Cor, type Fonte, type SiteDoCaso } from '@/data/casos';
 import { proximoTrabalho, trabalhosPublicados, trabalhoPorSlug } from '@/data/trabalhos';
 import { testemunhos } from '@/data/testemunhos';
 import { imagem } from '@/lib/imagens';
@@ -126,6 +126,56 @@ function TestemunhoDestacado({ nome, legenda }: { nome: string; legenda: string 
   );
 }
 
+function ConstrucaoBlocos({ c }: { c: Construcao }) {
+  return (
+    <div className="cons">
+      <dl className="cons-nums">
+        {c.numeros.map((n) => (
+          <div key={n.legenda}>
+            <dt>{n.valor}</dt>
+            <dd>{n.legenda}</dd>
+          </div>
+        ))}
+      </dl>
+
+      {c.fases && c.fases.length > 0 && (
+        <ol className="cons-fases">
+          {c.fases.map((f) => (
+            <li key={f.nome}>
+              <span>{f.titulo}</span>
+              <strong>{f.nome}</strong>
+              <p>{f.texto}</p>
+            </li>
+          ))}
+        </ol>
+      )}
+
+      <div className="cons-blocos">
+        {c.blocos.map((b) => (
+          <article key={b.titulo}>
+            <h3>{b.titulo}</h3>
+            <p>{b.texto}</p>
+            {b.pontos && (
+              <ul>
+                {b.pontos.map((p) => (
+                  <li key={p}>{p}</li>
+                ))}
+              </ul>
+            )}
+            {b.stack && (
+              <div className="cons-stack">
+                {b.stack.map((t) => (
+                  <span key={t}>{t}</span>
+                ))}
+              </div>
+            )}
+          </article>
+        ))}
+      </div>
+    </div>
+  );
+}
+
 export default async function Caso({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
   const caso = casos[slug];
@@ -214,11 +264,7 @@ export default async function Caso({ params }: { params: Promise<{ slug: string 
       {caso.construcao && (
         <section className="sec">
           <SectionHead etiqueta="Por dentro do código" titulo={caso.construcao.titulo} destaque={caso.construcao.destaque} />
-          <div className="construcao">
-            {caso.construcao.paragrafos.map((p) => (
-              <p key={p.slice(0, 40)}>{p}</p>
-            ))}
-          </div>
+          <ConstrucaoBlocos c={caso.construcao} />
         </section>
       )}
 

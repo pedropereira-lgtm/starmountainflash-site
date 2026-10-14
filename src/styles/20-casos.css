@@ -68,7 +68,33 @@
 .visitas .btn{height:44px;font-size:14px;padding:0 5px 0 16px}
 .visitas .btn .ic{width:34px;height:34px}
 
-/* "Como foi construído": texto técnico corrido, com largura de leitura. */
-.construcao{max-width:760px;margin-top:8px}
-.construcao p{margin:0 0 18px;font-size:17px;line-height:1.7;color:#3b3f3c}
-.construcao p:last-child{margin-bottom:0}
+/* "Como foi construído": números, fases e cartões por tema. */
+.cons{display:flex;flex-direction:column;gap:12px}
+.cons-nums{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:0}
+.cons-nums>div{background:#fff;border-radius:22px;padding:28px 28px 24px;display:flex;flex-direction:column;justify-content:space-between;gap:28px;min-height:170px}
+.cons-nums dt{font-size:clamp(40px,4.2vw,72px);font-weight:500;letter-spacing:-.04em;line-height:1;color:var(--ink)}
+.cons-nums dd{margin:0;font-size:15px;line-height:1.45;color:var(--muted);max-width:220px}
+.cons-fases{list-style:none;margin:0;padding:36px 32px;background:var(--ink);color:#fff;border-radius:22px;display:grid;grid-template-columns:repeat(4,1fr);gap:28px;position:relative}
+.cons-fases li{position:relative;padding-top:26px;border-top:1px solid rgba(255,255,255,.18)}
+.cons-fases li::before{content:"";position:absolute;top:-5px;left:0;width:9px;height:9px;border-radius:50%;background:var(--jade)}
+.cons-fases span{font-family:var(--font-mono,ui-monospace),ui-monospace,monospace;font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--jade)}
+.cons-fases strong{display:block;margin-top:10px;font-size:26px;font-weight:500;letter-spacing:-.02em}
+.cons-fases p{margin:8px 0 0;font-size:15px;line-height:1.55;color:rgba(255,255,255,.66)}
+.cons-blocos{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.cons-blocos article{background:#fff;border-radius:22px;padding:32px;display:flex;flex-direction:column;gap:16px}
+.cons-blocos h3{margin:0;font-size:24px;font-weight:500;letter-spacing:-.02em}
+.cons-blocos p{margin:0;font-size:16px;line-height:1.65;color:#3b3f3c}
+.cons-blocos ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:10px}
+.cons-blocos li{position:relative;padding-left:22px;font-size:15px;line-height:1.5;color:#3b3f3c}
+.cons-blocos li::before{content:"";position:absolute;left:0;top:.55em;width:10px;height:2px;background:var(--emerald)}
+.cons-stack{margin-top:auto;padding-top:8px;display:flex;flex-wrap:wrap;gap:6px}
+.cons-stack span{font-size:13px;padding:6px 12px;border-radius:999px;background:var(--bg);color:var(--ink)}
+@media (max-width:960px){
+  .cons-nums{grid-template-columns:1fr 1fr}
+  .cons-fases{grid-template-columns:1fr 1fr;gap:32px 24px}
+  .cons-blocos{grid-template-columns:1fr}
+}
+@media (max-width:560px){
+  .cons-nums>div{min-height:140px;padding:22px}
+  .cons-fases{grid-template-columns:1fr;padding:28px 24px}
+}
