@@ -32,6 +32,7 @@ export default function Footer() {
           <Link href="/metodo">Método</Link>
           <Link href="/sobre">Sobre</Link>
           <Link href="/blog">Blog</Link>
+          <Link href="/contacto">Contacto</Link>
         </FooterGroup>
         <FooterGroup titulo="Contacto">
           <a href={`mailto:${site.email}`}>{site.email}</a>

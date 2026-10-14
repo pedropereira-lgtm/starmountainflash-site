@@ -54,6 +54,7 @@ export function GET() {
     `- Método: ${u}/metodo`,
     `- Sobre: ${u}/sobre`,
     `- Blog: ${u}/blog`,
+    `- Contacto: ${u}/contacto`,
     `- Privacidade: ${u}/privacidade`,
     `- Cookies: ${u}/cookies`,
     `- Termos: ${u}/termos`,
