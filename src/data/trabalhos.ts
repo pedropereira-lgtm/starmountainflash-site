@@ -46,6 +46,7 @@ export const trabalhos: Trabalho[] = [
     published: true,
     layout: 'normal',
     marca: { tipo: 'img-texto', src: '/img/planet-trading.png', texto: 'Planet Trading' },
+    screenshot: '/img/trabalhos/planet-trading-desktop.webp',
   },
   {
     slug: 'studyos',
