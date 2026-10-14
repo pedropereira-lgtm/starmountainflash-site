@@ -360,7 +360,7 @@ export default function Home() {
                 maxWidth: 440,
               }}
             >
-              Diga-me o que precisa. Respondo com uma proposta por escrito, com prazo e valor.
+              Diga-me o que precisa. Leio cada pedido e respondo com os próximos passos, sem compromisso.
             </p>
             <div className="direct">
               <a href={'mailto:' + site.email}>

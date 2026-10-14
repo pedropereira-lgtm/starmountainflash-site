@@ -72,7 +72,7 @@ export default function Contacto() {
               Pedir orçamento
             </span>
             <h2>
-              Diga-me o que precisa. <span style={{ color: 'rgba(255,255,255,.6)' }}>Proposta por escrito.</span>
+              Diga-me o que precisa. <span style={{ color: 'rgba(255,255,255,.6)' }}>Sem compromisso.</span>
             </h2>
             <p
               style={{
@@ -83,7 +83,7 @@ export default function Contacto() {
                 maxWidth: 440,
               }}
             >
-              Respondo com uma proposta por escrito, com prazo e valor.
+              Leio cada pedido e respondo com os próximos passos.
             </p>
           </div>
           <ContactForm />

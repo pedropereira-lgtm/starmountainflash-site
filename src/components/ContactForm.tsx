@@ -1,9 +1,9 @@
 'use client';
 import Link from 'next/link';
-import { useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { opcoesServico } from '@/data/servicos';
 import { site } from '@/data/site';
-import { ArrowUpRight } from './Icons';
+import { ArrowUpRight, Check } from './Icons';
 
 const vazio = { nome: '', email: '', empresa: '', telefone: '', servico: opcoesServico[0], mensagem: '', website: '' };
 
@@ -11,6 +11,15 @@ const vazio = { nome: '', email: '', empresa: '', telefone: '', servico: opcoesS
 export default function ContactForm() {
   const [campos, setCampos] = useState(vazio);
   const [estado, setEstado] = useState<'idle' | 'a-enviar' | 'enviado' | 'erro'>('idle');
+  const [nomeEnviado, setNomeEnviado] = useState('');
+  const confirmacao = useRef<HTMLDivElement>(null);
+
+  // Depois de enviar, a confirmação ocupa o lugar do formulário e fica à vista.
+  useEffect(() => {
+    if (estado !== 'enviado' || !confirmacao.current) return;
+    confirmacao.current.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    confirmacao.current.focus({ preventScroll: true });
+  }, [estado]);
 
   const set =
     (k: keyof typeof vazio) =>
@@ -27,11 +36,37 @@ export default function ContactForm() {
         body: JSON.stringify({ ...campos, origem: 'Formulário de contacto' }),
       });
       if (!r.ok) throw new Error(String(r.status));
+      setNomeEnviado(campos.nome.trim().split(/\s+/)[0] ?? '');
       setCampos(vazio);
       setEstado('enviado');
     } catch {
       setEstado('erro');
     }
+  }
+
+  if (estado === 'enviado') {
+    return (
+      <div className="cf-ok" ref={confirmacao} tabIndex={-1} role="status">
+        <span className="ok">
+          <Check />
+        </span>
+        <h3>Pedido recebido.</h3>
+        <p>
+          Obrigado{nomeEnviado ? ', ' + nomeEnviado : ''}. Vou analisar o que me enviou e respondo com os próximos
+          passos, para o email que indicou.
+        </p>
+        <p className="cf-ok-alt">
+          Se for urgente, fale comigo pelo{' '}
+          <a href="#whatsapp" data-wa>
+            WhatsApp
+          </a>{' '}
+          ou pelo <a href={'tel:' + site.telefoneRaw}>{site.telefone}</a>.
+        </p>
+        <button type="button" className="cf-ok-novo" onClick={() => setEstado('idle')}>
+          Enviar outro pedido
+        </button>
+      </div>
+    );
   }
 
   return (
@@ -90,9 +125,7 @@ export default function ContactForm() {
         </span>
       </button>
       <small aria-live="polite">
-        {estado === 'enviado' ? (
-          <>Pedido recebido. Respondo com os próximos passos.</>
-        ) : estado === 'erro' ? (
+        {estado === 'erro' ? (
           <>Não foi possível enviar. Tente outra vez, ou escreva para {site.email}.</>
         ) : (
           <>
