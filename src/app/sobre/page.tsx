@@ -51,6 +51,7 @@ export default function Sobre() {
               width={1254}
               height={1254}
               sizes="(max-width: 960px) 100vw, 42vw"
+              quality={90}
             />
           </div>
           <div className="bio-t">

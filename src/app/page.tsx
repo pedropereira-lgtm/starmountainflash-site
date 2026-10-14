@@ -277,6 +277,7 @@ export default function Home() {
               width={1254}
               height={1254}
               sizes="(max-width: 960px) 100vw, 36vw"
+              quality={90}
             />
           </div>
           <div className="about-txt">
