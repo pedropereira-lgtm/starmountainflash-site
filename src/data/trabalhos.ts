@@ -70,7 +70,7 @@ export const trabalhos: Trabalho[] = [
     published: true,
     layout: 'wide',
     marca: { tipo: 'texto', texto: 'Beatriz Nunes' },
-    // Falta o screenshot de computador: sem ele, o cartão mostra o nome.
+    screenshot: '/img/trabalhos/beatriz-nunes-desktop.webp',
   },
   {
     // Por publicar. Mudar para published: true quando o site estiver no ar
