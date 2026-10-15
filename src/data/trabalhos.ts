@@ -61,6 +61,18 @@ export const trabalhos: Trabalho[] = [
     screenshot: '/img/trabalhos/studyos-landing-desktop.webp',
   },
   {
+    slug: 'beatriz-nunes',
+    nomeCurto: 'Beatriz Nunes',
+    nome: 'Beatriz Nunes, Personal Trainer',
+    resumo: 'Redesign de um site de personal trainer, com pedidos por email',
+    dominio: 'personaltrainerbeatriznunes.pt',
+    tags: ['Redesign', 'Conversão'],
+    published: true,
+    layout: 'wide',
+    marca: { tipo: 'texto', texto: 'Beatriz Nunes' },
+    // Falta o screenshot de computador: sem ele, o cartão mostra o nome.
+  },
+  {
     // Por publicar. Mudar para published: true quando o site estiver no ar
     // e confirmar o domínio real.
     slug: 'diogo-costa',

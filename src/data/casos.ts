@@ -277,6 +277,38 @@ export const casos: Record<string, Caso> = {
     visitar: [{ label: 'Visitar o site', href: 'https://comunidadeplanet.pt' }],
   },
 
+  'beatriz-nunes': {
+    slug: 'beatriz-nunes',
+    titulo: 'Beatriz Nunes — Caso de estudo | Starmountain Flash',
+    descricao:
+      'Redesign do site da personal trainer Beatriz Nunes: mais impacto visual em cada secção, mantendo os textos e a identidade dela, e a parte técnica tratada.',
+    h1: 'Beatriz Nunes.',
+    h1Destaque: 'O redesign de um site que já existia.',
+    intro:
+      'A Beatriz criou o próprio site e pediu-me para o levar mais longe. Redesenhei cada secção sem mexer nos textos nem na identidade dela, e tratei da parte que não se vê.',
+    ficha: [
+      { dt: 'Cliente', dd: 'Beatriz Nunes, personal trainer' },
+      { dt: 'Serviço', dd: 'Redesign + parte técnica' },
+      { dt: 'Ano', dd: '2026' },
+      { dt: 'Site', dd: 'personaltrainerbeatriznunes.pt' },
+    ],
+    desafio:
+      'O site já tinha os textos e a identidade da Beatriz, mas as secções não tinham impacto, a navegação no telemóvel era limitada e os pedidos de treino não tinham um caminho direto até ela.',
+    solucao:
+      'Um redesign secção a secção, com as cores e as letras que ela escolheu: abertura com foto em arco, painéis arredondados, cartões de resultados e galeria em faixa. Por trás, o formulário passou a enviar os pedidos para o email dela, o menu foi pensado para o telemóvel, o link mostra foto e descrição quando é partilhado no WhatsApp e a parte legal ficou tratada.',
+    resultado:
+      'Site público em personaltrainerbeatriznunes.pt desde outubro de 2026, com domínio próprio e os pedidos de treino experimental a chegar diretamente ao email.',
+    // Sem cores nem fontes até estarem confirmadas; sem screenshots até os ficheiros existirem.
+    estrutura: ['Sobre mim', 'Como funciona', 'Treinos', 'Resultados', 'Testemunhos', 'Dúvidas', 'Treino experimental'],
+    tecnologia: [
+      'Formulário com pedidos por email',
+      'Navegação pensada para telemóvel',
+      'Pré-visualização ao partilhar o link',
+      'Privacidade, Livro de Reclamações e resolução de litígios',
+    ],
+    visitar: [{ label: 'Visitar o site', href: 'https://personaltrainerbeatriznunes.pt' }],
+  },
+
   studyos: {
     slug: 'studyos',
     titulo: 'StudyOS — Caso de estudo | Starmountain Flash',
