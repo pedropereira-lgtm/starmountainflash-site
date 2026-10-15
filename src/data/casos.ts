@@ -298,7 +298,20 @@ export const casos: Record<string, Caso> = {
       'Um redesign secção a secção, com as cores e as letras que ela escolheu: abertura com foto em arco, painéis arredondados, cartões de resultados e galeria em faixa. Por trás, o formulário passou a enviar os pedidos para o email dela, o menu foi pensado para o telemóvel, o link mostra foto e descrição quando é partilhado no WhatsApp e a parte legal ficou tratada.',
     resultado:
       'Site público em personaltrainerbeatriznunes.pt desde outubro de 2026, com domínio próprio e os pedidos de treino experimental a chegar diretamente ao email.',
-    // Sem cores nem fontes até estarem confirmadas; sem screenshots até os ficheiros existirem.
+    // Sem cores nem fontes até estarem confirmadas; sem screenshot de telemóvel por agora.
+    desktop: '/img/trabalhos/beatriz-nunes-desktop.webp',
+    seccoesExtra: [
+      {
+        etiqueta: 'Antes e depois',
+        titulo: 'O ponto de partida.',
+        destaque: 'O site que a Beatriz tinha feito.',
+        descricao:
+          'Os textos, as fotos e as cores já eram dela. O redesign partiu daqui: a abertura passou a ter a foto em arco e as secções ganharam painéis, cartões e mais hierarquia.',
+        dominio: 'personaltrainerbeatriznunes.pt',
+        nome: 'Site da Beatriz Nunes antes do redesign',
+        desktop: '/img/trabalhos/beatriz-nunes-antes-desktop.webp',
+      },
+    ],
     estrutura: ['Sobre mim', 'Como funciona', 'Treinos', 'Resultados', 'Testemunhos', 'Dúvidas', 'Treino experimental'],
     tecnologia: [
       'Formulário com pedidos por email',
