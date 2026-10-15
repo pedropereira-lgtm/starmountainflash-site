@@ -40,3 +40,10 @@
   for = "/img/*"
   [headers.values]
     Cache-Control = "public, max-age=604800, must-revalidate"
+
+# Cartão digital: o contacto abre direto na agenda do telemóvel.
+[[headers]]
+  for = "/card/pedro-pereira.vcf"
+  [headers.values]
+    Content-Type = "text/vcard; charset=utf-8"
+    Content-Disposition = "attachment; filename=pedro-pereira.vcf"
