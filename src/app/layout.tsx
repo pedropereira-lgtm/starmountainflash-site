@@ -59,8 +59,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <SiteChrome />
         <JsonLd data={negocioLd} />
         {/* Plausible: medição de audiências sem cookies. */}
-        <Script src="https://plausible.io/js/pa-2lRVurfYSTx4d-6iro9y0.js" strategy="afterInteractive" />
-        <Script id="plausible-init" strategy="afterInteractive">
+        <Script src="https://plausible.io/js/pa-2lRVurfYSTx4d-6iro9y0.js" strategy="lazyOnload" />
+        <Script id="plausible-init" strategy="lazyOnload">
           {`window.plausible=window.plausible||function(){(plausible.q=plausible.q||[]).push(arguments)},plausible.init=plausible.init||function(i){plausible.o=i||{}};plausible.init()`}
         </Script>
       </body>
