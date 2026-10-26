@@ -1,11 +1,16 @@
 'use client';
 import { useCallback, useEffect, useState } from 'react';
 import { usePathname } from 'next/navigation';
+import dynamic from 'next/dynamic';
 import StickyBar from './chrome/StickyBar';
-import MobilePanel from './chrome/MobilePanel';
-import QuoteModal from './chrome/QuoteModal';
-import WhatsAppWidget from './chrome/WhatsAppWidget';
-import CookieBanner from './chrome/CookieBanner';
+
+// Painéis que não são precisos para o primeiro ecrã: o código vai em ficheiros
+// à parte e só é carregado depois de a página ficar pronta (ou ao primeiro
+// clique), para não pesar no arranque da página.
+const MobilePanel = dynamic(() => import('./chrome/MobilePanel'), { ssr: false });
+const QuoteModal = dynamic(() => import('./chrome/QuoteModal'), { ssr: false });
+const WhatsAppWidget = dynamic(() => import('./chrome/WhatsAppWidget'), { ssr: false });
+const CookieBanner = dynamic(() => import('./chrome/CookieBanner'), { ssr: false });
 
 /**
  * Tudo o que é interativo e partilhado por todas as páginas.
@@ -21,6 +26,28 @@ export default function SiteChrome() {
   const [orcamento, setOrcamento] = useState(false);
   const [whatsapp, setWhatsapp] = useState(false);
   const [barra, setBarra] = useState(false);
+  const [pronto, setPronto] = useState(false);
+
+  // Os painéis só entram quando o browser está livre, depois do carregamento.
+  useEffect(() => {
+    let idle = 0;
+    let t = 0;
+    const montar = () => setPronto(true);
+    const agendar = () => {
+      if ('requestIdleCallback' in window) idle = window.requestIdleCallback(montar, { timeout: 2500 });
+      else t = setTimeout(montar, 1200) as unknown as number;
+    };
+    if (document.readyState === 'complete') agendar();
+    else window.addEventListener('load', agendar, { once: true });
+    return () => {
+      window.removeEventListener('load', agendar);
+      if (idle) window.cancelIdleCallback(idle);
+      if (t) clearTimeout(t);
+    };
+  }, []);
+
+  // Um clique antes disso também os monta logo.
+  const montado = pronto || menu || orcamento || whatsapp;
 
   const fecharTudo = useCallback(() => {
     setMenu(false);
@@ -124,19 +151,23 @@ export default function SiteChrome() {
   return (
     <>
       <StickyBar show={barra} />
-      <MobilePanel open={menu} onClose={() => setMenu(false)} />
-      <QuoteModal open={orcamento} onClose={() => setOrcamento(false)} />
-      <WhatsAppWidget
-        open={whatsapp}
-        onOpen={() => {
-          setMenu(false);
-          setOrcamento(false);
-          setWhatsapp(true);
-        }}
-        onClose={() => setWhatsapp(false)}
-        fabEscondido={menu || whatsapp}
-      />
-      <CookieBanner />
+      {montado && (
+        <>
+          <MobilePanel open={menu} onClose={() => setMenu(false)} />
+          <QuoteModal open={orcamento} onClose={() => setOrcamento(false)} />
+          <WhatsAppWidget
+            open={whatsapp}
+            onOpen={() => {
+              setMenu(false);
+              setOrcamento(false);
+              setWhatsapp(true);
+            }}
+            onClose={() => setWhatsapp(false)}
+            fabEscondido={menu || whatsapp}
+          />
+          <CookieBanner />
+        </>
+      )}
     </>
   );
 }

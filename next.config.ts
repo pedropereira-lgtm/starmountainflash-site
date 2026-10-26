@@ -5,7 +5,14 @@ const nextConfig: NextConfig = {
   reactStrictMode: true,
   // Existe um package-lock.json na pasta do utilizador; fixa a raiz neste projeto.
   outputFileTracingRoot: path.join(__dirname),
+  experimental: {
+    // O CSS (13 KB) vai dentro do HTML: o primeiro ecrã não espera por um pedido à parte.
+    inlineCss: true,
+  },
   images: {
+    // 1440 e 1600 entre os tamanhos de ecrã: num portátil o hero deixa de
+    // descarregar a versão de 1920 px.
+    deviceSizes: [640, 750, 828, 1080, 1200, 1440, 1600, 1920, 2048, 3840],
     formats: ['image/avif', 'image/webp'],
     // A partir do Next 15 só são servidas as qualidades declaradas aqui.
     // 75 é o valor por omissão; 90 é o dos screenshots dos trabalhos, onde
