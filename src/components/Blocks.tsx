@@ -17,7 +17,6 @@ export function HeroFoto({ priority = false }: { priority?: boolean }) {
       // O next/image faz o preload, mas nao marca a prioridade na propria tag.
       fetchPriority={priority ? 'high' : undefined}
       sizes="100vw"
-      placeholder="blur"
       aria-hidden="true"
     />
   );
