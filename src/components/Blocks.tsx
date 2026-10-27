@@ -6,6 +6,13 @@ import { ArrowUpRight, CornerArrow, WhatsAppGlyph } from './Icons';
 import Nav from './Nav';
 import hero from '@/img/hero-lagoa-comprida.jpg';
 
+/**
+ * Pré-visualização da foto (32 px, já desfocada) enquanto a original carrega.
+ * Substitui o placeholder="blur" do next/image, que desenha um SVG com
+ * feGaussianBlur em ecrã inteiro e bloqueava a thread principal em CPUs lentos.
+ */
+const HERO_PREVIEW = 'data:image/jpeg;base64,/9j/2wBDAA0JCgsKCA0LCgsODg0PEyAVExISEyccHhcgLikxMC4pLSwzOko+MzZGNywtQFdBRkxOUlNSMj5aYVpQYEpRUk//2wBDAQ4ODhMREyYVFSZPNS01T09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT0//wAARCAAVACADASIAAhEBAxEB/8QAGQAAAgMBAAAAAAAAAAAAAAAAAAMBBAUG/8QAIRAAAgICAgEFAAAAAAAAAAAAAQIAEQMEEiEFExQyM0H/xAAXAQEBAQEAAAAAAAAAAAAAAAACBAED/8QAGxEAAwACAwAAAAAAAAAAAAAAAAECAyERMVH/2gAMAwEAAhEDEQA/AOWCMrTS1l9WlYzOXYYn67lvWGV2+JSVKk+iVx6O2NXiepX9o92BG7IyYzTPcE2HRemiVcBeNMnxGNM2yqsooC4zbYtkajxAP5CEE7Z1rUlLIzA9m4vI5EITWFH/2Q==';
+
 /** A fotografia do hero, servida localmente a partir do original do Unsplash. */
 export function HeroFoto({ priority = false }: { priority?: boolean }) {
   return (
@@ -17,6 +24,7 @@ export function HeroFoto({ priority = false }: { priority?: boolean }) {
       // O next/image faz o preload, mas nao marca a prioridade na propria tag.
       fetchPriority={priority ? 'high' : undefined}
       sizes="100vw"
+      placeholder={HERO_PREVIEW}
       aria-hidden="true"
     />
   );
