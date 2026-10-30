@@ -30,6 +30,8 @@ const nextConfig: NextConfig = {
         { source: '/admin', destination: '/admin/index.html' },
         { source: '/analise-gratuita', destination: '/analise-gratuita/index.html' },
         { source: '/analise-gratuita/obrigado', destination: '/analise-gratuita/obrigado/index.html' },
+        { source: '/en/analise-gratuita', destination: '/en/analise-gratuita/index.html' },
+        { source: '/en/analise-gratuita/obrigado', destination: '/en/analise-gratuita/obrigado/index.html' },
         // Cartão digital do Web Summit, página estática em public/card/.
         { source: '/card', destination: '/card/index.html' },
         ...servicos.flatMap((s) => [
