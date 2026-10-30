@@ -33,10 +33,12 @@ export function Shot({
   t,
   grande = false,
   sizes = SIZES_CARTAO.duasColunas,
+  lang = 'pt',
 }: {
   t: Trabalho;
   grande?: boolean;
   sizes?: string;
+  lang?: 'pt' | 'en';
 }) {
   const classe = 'shot' + (grande ? ' big' : '');
   const img = imagem(t.screenshot);
@@ -53,7 +55,7 @@ export function Shot({
     <div className={classe}>
       <Image
         src={img.src}
-        alt={'Site ' + t.nome}
+        alt={lang === 'en' ? t.nome + ' website' : 'Site ' + t.nome}
         className="sc"
         width={img.width}
         height={img.height}

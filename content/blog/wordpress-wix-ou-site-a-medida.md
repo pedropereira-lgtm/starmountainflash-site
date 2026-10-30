@@ -74,4 +74,4 @@ Nos projetos para clientes, a escolha depende do que o site tem de fazer. A land
 
 Para saber quanto custa cada opção, veja o guia [quanto custa um site para uma PME em Portugal](/blog/quanto-custa-um-site-pme-portugal).
 
-*Não sabe qual é a melhor opção para o seu caso? [Peça um orçamento](#orcamento) e recebe uma proposta por escrito com a solução que faz sentido para o seu site.*
+*Não sabe qual é a melhor opção para o seu caso? [Peça uma proposta visual gratuita](#orcamento) e veja a solução que faz sentido para o seu site.*

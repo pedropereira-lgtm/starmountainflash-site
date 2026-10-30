@@ -9,7 +9,7 @@ const TITULO = 'Aviso legal | Starmountain Flash';
 const DESCRICAO =
   'Identificação do titular do site starmountainflash.pt, âmbito, propriedade intelectual, responsabilidade e lei aplicável.';
 
-export const metadata: Metadata = meta({ titulo: TITULO, descricao: DESCRICAO, caminho: '/aviso-legal' });
+export const metadata: Metadata = meta({ titulo: TITULO, descricao: DESCRICAO, caminho: '/aviso-legal', alternativo: { pt: '/aviso-legal', en: '/en/aviso-legal' } });
 
 const ATUALIZADO = '23 de setembro de 2026';
 

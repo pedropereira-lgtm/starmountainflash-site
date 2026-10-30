@@ -102,11 +102,13 @@ export function Screenshots({
   mobile,
   dominio,
   nome,
+  lang = 'pt',
 }: {
   desktop?: string;
   mobile?: string;
   dominio: string;
   nome: string;
+  lang?: 'pt' | 'en';
 }) {
   const temDesktop = Boolean(imagem(desktop));
   const temMobile = Boolean(imagem(mobile));
@@ -114,8 +116,12 @@ export function Screenshots({
 
   return (
     <div className={temDesktop && temMobile ? 'shots' : 'shots shots-um'}>
-      <Desktop src={desktop} alt={`${nome} em computador`} dominio={dominio} />
-      <Telemovel src={mobile} alt={`${nome} em telemóvel`} />
+      <Desktop
+        src={desktop}
+        alt={lang === 'en' ? `${nome} on desktop` : `${nome} em computador`}
+        dominio={dominio}
+      />
+      <Telemovel src={mobile} alt={lang === 'en' ? `${nome} on mobile` : `${nome} em telemóvel`} />
     </div>
   );
 }

@@ -48,7 +48,9 @@ export function HeroSm({
   destaque,
   descricao,
   acoes = 'orcamento-whatsapp',
+  lang = 'pt',
 }: {
+  lang?: 'pt' | 'en';
   caminho: { label: string; href?: string }[];
   titulo: string;
   destaque?: string;
@@ -61,8 +63,8 @@ export function HeroSm({
         <HeroFoto priority />
         <div className="hero-body">
           <div>
-            <nav className="crumb" aria-label="Caminho">
-              <Link href="/">Início</Link>
+            <nav className="crumb" aria-label={lang === 'en' ? 'Breadcrumb' : 'Caminho'}>
+              <Link href={lang === 'en' ? '/en' : '/'}>{lang === 'en' ? 'Home' : 'Início'}</Link>
               {caminho.map((c) => (
                 <span key={c.label} style={{ display: 'contents' }}>
                   <span>/</span>
@@ -79,7 +81,7 @@ export function HeroSm({
             {acoes === 'orcamento-whatsapp' && (
               <div className="ctas">
                 <a href="#orcamento" className="btn btn-light">
-                  Proposta gratuita{' '}
+                  {lang === 'en' ? 'Free proposal' : 'Proposta gratuita'}{' '}
                   <span className="ic">
                     <ArrowUpRight size={16} />
                   </span>

@@ -6,6 +6,7 @@ import { Faqs, HeroSm, JsonLd, NextStep, SectionHead } from '@/components/Blocks
 import { OG_PADRAO, faqLd, meta, migalhasLd, pessoaLd } from '@/lib/seo';
 import { site } from '@/data/site';
 import {
+  temTraducao,
   dataPt,
   indice,
   paraHtml,
@@ -30,6 +31,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     titulo: post.titulo + ' | Starmountain Flash',
     descricao: post.descricao,
     caminho: '/blog/' + post.slug,
+    alternativo: temTraducao(post.slug, 'en') ? { pt: '/blog/' + post.slug, en: '/en/blog/' + post.slug } : undefined,
     imagem: post.capa || OG_PADRAO,
     tipo: 'article',
     publicadoEm: post.data,

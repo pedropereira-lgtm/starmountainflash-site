@@ -13,6 +13,10 @@ export const CATEGORIAS = ['Websites', 'Lojas online', 'Automação', 'SEO e IA'
 export type Categoria = (typeof CATEGORIAS)[number];
 
 const PASTA = path.join(process.cwd(), 'content', 'blog');
+/** Artigos em inglês: mesmo slug, em content/blog/en/. */
+const PASTA_EN = path.join(PASTA, 'en');
+export type Lingua = 'pt' | 'en';
+const pasta = (lang: Lingua) => (lang === 'en' ? PASTA_EN : PASTA);
 
 export type PerguntaDoPost = { pergunta: string; resposta: string };
 
@@ -52,8 +56,8 @@ function lerData(valor: unknown): string | null {
   return Number.isNaN(d.getTime()) ? null : d.toISOString();
 }
 
-function ler(ficheiro: string): Post | null {
-  const bruto = fs.readFileSync(path.join(PASTA, ficheiro), 'utf8');
+function ler(ficheiro: string, lang: Lingua = 'pt'): Post | null {
+  const bruto = fs.readFileSync(path.join(pasta(lang), ficheiro), 'utf8');
   const { data, content } = matter(bruto);
   const slug = String(data.slug || ficheiro.replace(/\.mdx?$/, ''));
   if (!data.titulo || !data.data) return null;
@@ -89,23 +93,28 @@ function ler(ficheiro: string): Post | null {
 }
 
 /** Todos os artigos publicados, do mais recente para o mais antigo. */
-export function todosOsPosts(): Post[] {
-  if (!fs.existsSync(PASTA)) return [];
+export function todosOsPosts(lang: Lingua = 'pt'): Post[] {
+  if (!fs.existsSync(pasta(lang))) return [];
   return fs
-    .readdirSync(PASTA)
+    .readdirSync(pasta(lang))
     .filter((f) => /\.mdx?$/.test(f))
-    .map(ler)
+    .map((f) => ler(f, lang))
     .filter((p): p is Post => p !== null && p.publicado)
     .sort((a, b) => b.data.localeCompare(a.data));
 }
 
-export function postPorSlug(slug: string): Post | undefined {
-  return todosOsPosts().find((p) => p.slug === slug);
+export function postPorSlug(slug: string, lang: Lingua = 'pt'): Post | undefined {
+  return todosOsPosts(lang).find((p) => p.slug === slug);
+}
+
+/** O artigo tem versão na outra língua? */
+export function temTraducao(slug: string, lang: Lingua): boolean {
+  return !!postPorSlug(slug, lang);
 }
 
 /** Até três artigos da mesma categoria; completa com os mais recentes. */
-export function relacionados(post: Post, quantos = 3): Post[] {
-  const outros = todosOsPosts().filter((p) => p.slug !== post.slug);
+export function relacionados(post: Post, quantos = 3, lang: Lingua = 'pt'): Post[] {
+  const outros = todosOsPosts(lang).filter((p) => p.slug !== post.slug);
   const mesma = outros.filter((p) => p.categoria === post.categoria);
   const resto = outros.filter((p) => p.categoria !== post.categoria);
   return [...mesma, ...resto].slice(0, quantos);
@@ -159,3 +168,15 @@ export async function paraHtml(markdown: string) {
 export function dataPt(iso: string) {
   return new Date(iso).toLocaleDateString('pt-PT', { day: 'numeric', month: 'long', year: 'numeric' });
 }
+
+export function dataEn(iso: string) {
+  return new Date(iso).toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' });
+}
+
+/** Nome das categorias em inglês (a chave interna fica em português). */
+export const CATEGORIA_EN: Record<Categoria, string> = {
+  Websites: 'Websites',
+  'Lojas online': 'Online stores',
+  Automação: 'Automation',
+  'SEO e IA': 'SEO and AI',
+};
