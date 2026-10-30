@@ -25,6 +25,9 @@ const nextConfig: NextConfig = {
       { source: '/analise-gratuita/obrigado', destination: '/analise-gratuita/obrigado/index.html' },
       // Cartão digital do Web Summit, página estática em public/card/.
       { source: '/card', destination: '/card/index.html' },
+      // Páginas de serviço novas, estáticas em public/<slug>/ (fontes e imagens em public/assets/servicos/).
+      { source: '/visibilidade-ia', destination: '/visibilidade-ia/index.html' },
+      { source: '/ia-privada', destination: '/ia-privada/index.html' },
     ];
   },
   async redirects() {

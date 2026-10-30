@@ -13,6 +13,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ['/websites', 0.9, 'monthly'],
     ['/lojas-online', 0.9, 'monthly'],
     ['/automacoes', 0.9, 'monthly'],
+    ['/visibilidade-ia', 0.9, 'monthly'],
+    ['/ia-privada', 0.9, 'monthly'],
     ['/metodo', 0.7, 'yearly'],
     ['/sobre', 0.7, 'yearly'],
     ['/blog', 0.6, 'weekly'],
