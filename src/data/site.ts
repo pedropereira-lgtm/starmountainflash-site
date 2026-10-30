@@ -39,8 +39,9 @@ export const whatsappMensagens = [
 export const navServicos = [
   { href: '/websites', titulo: 'Websites', sub: 'Landing pages e sites institucionais' },
   { href: '/lojas-online', titulo: 'Lojas online', sub: 'Vender online sem complicar' },
-  { href: '/automacoes', titulo: 'Automações de IA', sub: 'Processos repetitivos a correr sozinhos' },
-  { href: '/visibilidade-ia', titulo: 'Visibilidade em IA (GEO)', sub: 'Aparecer quando perguntam ao ChatGPT' },
+  { href: '/visibilidade-ia', titulo: 'Visibilidade em IA', sub: 'Aparecer quando perguntam à IA' },
   { href: '/avaliacoes-google', titulo: 'Avaliações Google', sub: 'Mais avaliações, todas respondidas' },
-  { href: '/ia-privada', titulo: 'IA privada para empresas', sub: 'Os documentos internos, consultáveis com IA' },
+  { href: '/starmap', titulo: 'Método StarMap', sub: 'O ponto de partida para automatizar' },
+  { href: '/automacoes', titulo: 'Automações à medida', sub: 'Trabalho repetitivo a correr sozinho' },
+  { href: '/assistente-interno', titulo: 'Assistente interno', sub: 'Para empresas de maior dimensão' },
 ] as const;

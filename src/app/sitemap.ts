@@ -9,13 +9,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const agora = new Date();
 
   const fixas: [string, number, MetadataRoute.Sitemap[number]['changeFrequency']][] = [
-    ['/', 1, 'monthly'],
-    ['/websites', 0.9, 'monthly'],
-    ['/lojas-online', 0.9, 'monthly'],
-    ['/automacoes', 0.9, 'monthly'],
-    ['/visibilidade-ia', 0.9, 'monthly'],
-    ['/ia-privada', 0.9, 'monthly'],
-    ['/avaliacoes-google', 0.9, 'monthly'],
     ['/metodo', 0.7, 'yearly'],
     ['/sobre', 0.7, 'yearly'],
     ['/blog', 0.6, 'weekly'],
@@ -26,7 +19,24 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ['/aviso-legal', 0.2, 'yearly'],
   ];
 
+  // Páginas com versão inglesa em /en: cada uma indica a alternativa.
+  const bilingues: [string, number][] = [
+    ['', 1],
+    ['/websites', 0.9],
+    ['/lojas-online', 0.9],
+    ['/automacoes', 0.9],
+    ['/starmap', 0.9],
+    ['/visibilidade-ia', 0.9],
+    ['/avaliacoes-google', 0.9],
+    ['/assistente-interno', 0.9],
+  ];
+  const alt = (c: string) => ({ languages: { 'pt-PT': site.url + (c || '/'), en: site.url + '/en' + c } });
+
   return [
+    ...bilingues.flatMap(([c, priority]) => [
+      { url: site.url + (c || '/'), lastModified: agora, changeFrequency: 'monthly' as const, priority, alternates: alt(c) },
+      { url: site.url + '/en' + c, lastModified: agora, changeFrequency: 'monthly' as const, priority: priority - 0.1, alternates: alt(c) },
+    ]),
     ...fixas.map(([url, priority, changeFrequency]) => ({
       url: site.url + url,
       lastModified: agora,
