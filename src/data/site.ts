@@ -14,7 +14,7 @@ export const site = {
   /** Nome completo, para os documentos legais. */
   nomeLegal: 'Pedro Miguel da Silva Pereira',
   descricao:
-    'Websites, lojas online e automações de IA para PME e marcas portuguesas. Prazo fixo e preço fechado.',
+    'Websites, lojas online, visibilidade em IA e automações com IA para empresas e marcas portuguesas. Proposta visual gratuita.',
   /** Perfis da empresa. Entram no "sameAs" do JSON-LD; os dois primeiros também no rodapé. */
   redes: {
     instagram: 'https://www.instagram.com/starmountainflash/',
@@ -39,5 +39,9 @@ export const whatsappMensagens = [
 export const navServicos = [
   { href: '/websites', titulo: 'Websites', sub: 'Landing pages e sites institucionais' },
   { href: '/lojas-online', titulo: 'Lojas online', sub: 'Vender online sem complicar' },
-  { href: '/automacoes', titulo: 'Automações de IA', sub: 'Processos repetitivos a correr sozinhos' },
+  { href: '/visibilidade-ia', titulo: 'Visibilidade em IA', sub: 'Aparecer quando perguntam à IA' },
+  { href: '/avaliacoes-google', titulo: 'Avaliações Google', sub: 'Mais avaliações, todas respondidas' },
+  { href: '/starmap', titulo: 'Método StarMap', sub: 'O ponto de partida para automatizar' },
+  { href: '/automacoes', titulo: 'Automações à medida', sub: 'Trabalho repetitivo a correr sozinho' },
+  { href: '/assistente-interno', titulo: 'Assistente interno', sub: 'Para empresas de maior dimensão' },
 ] as const;

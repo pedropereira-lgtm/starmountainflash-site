@@ -16,19 +16,36 @@ const nextConfig: NextConfig = {
     qualities: [75, 90],
   },
   async rewrites() {
-    // O painel Decap e uma pagina estatica em public/admin/.
-    // Sem isto, /admin nao resolve para o index.html dessa pasta.
-    // A landing page da análise gratuita também é estática, em public/analise-gratuita/.
-    return [
-      { source: '/admin', destination: '/admin/index.html' },
-      { source: '/analise-gratuita', destination: '/analise-gratuita/index.html' },
-      { source: '/analise-gratuita/obrigado', destination: '/analise-gratuita/obrigado/index.html' },
-      // Cartão digital do Web Summit, página estática em public/card/.
-      { source: '/card', destination: '/card/index.html' },
-    ];
+    // Página inicial e páginas de serviço: HTML estático em public/, em PT e EN
+    // (gerado a partir do protótipo; fontes e imagens em public/assets/site/).
+    const servicos = ['websites', 'lojas-online', 'visibilidade-ia', 'avaliacoes-google', 'starmap', 'automacoes', 'assistente-interno'];
+    return {
+      // Antes das rotas da app, para o "/" não cair em nenhuma página React.
+      beforeFiles: [
+        { source: '/', destination: '/inicio/index.html' },
+        { source: '/en', destination: '/en/index.html' },
+      ],
+      afterFiles: [
+        // O painel Decap e uma pagina estatica em public/admin/.
+        { source: '/admin', destination: '/admin/index.html' },
+        { source: '/analise-gratuita', destination: '/analise-gratuita/index.html' },
+        { source: '/analise-gratuita/obrigado', destination: '/analise-gratuita/obrigado/index.html' },
+        // Cartão digital do Web Summit, página estática em public/card/.
+        { source: '/card', destination: '/card/index.html' },
+        ...servicos.flatMap((s) => [
+          { source: `/${s}`, destination: `/${s}/index.html` },
+          { source: `/en/${s}`, destination: `/en/${s}/index.html` },
+        ]),
+      ],
+      fallback: [],
+    };
   },
   async redirects() {
     return [
+      // IA privada passou a chamar-se Assistente interno (30/10/2026).
+      { source: '/ia-privada', destination: '/assistente-interno', statusCode: 301 },
+      // O HTML de base não deve ser indexado pelo seu endereço interno.
+      { source: '/inicio', destination: '/', statusCode: 301 },
       // URLs do protótipo estático → rotas limpas.
       { source: '/index.html', destination: '/', statusCode: 301 },
       { source: '/websites.html', destination: '/websites', statusCode: 301 },

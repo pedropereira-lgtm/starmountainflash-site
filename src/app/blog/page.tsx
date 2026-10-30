@@ -6,7 +6,7 @@ import { site } from '@/data/site';
 import { meta, migalhasLd } from '@/lib/seo';
 
 const TITULO = 'Blog | Starmountain Flash';
-const DESCRICAO = 'Artigos práticos sobre websites, SEO, GEO e automação para PME portuguesas.';
+const DESCRICAO = 'Artigos práticos sobre websites, SEO, GEO e automação para empresas portuguesas.';
 
 export const metadata: Metadata = meta({ titulo: TITULO, descricao: DESCRICAO, caminho: '/blog' });
 

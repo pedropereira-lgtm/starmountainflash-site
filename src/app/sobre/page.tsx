@@ -6,7 +6,7 @@ import { meta, migalhasLd, pessoaLd } from '@/lib/seo';
 
 const TITULO = 'Sobre Pedro Pereira | Starmountain Flash';
 const DESCRICAO =
-  'Pedro Pereira, fundador da Starmountain Flash: técnico de contabilidade, formação militar e websites e automações de IA para PME, a partir da Covilhã.';
+  'Pedro Pereira, fundador da Starmountain Flash: técnico de contabilidade, formação militar e websites e automações com IA para empresas, a partir da Covilhã.';
 
 export const metadata: Metadata = meta({ titulo: TITULO, descricao: DESCRICAO, caminho: '/sobre' });
 
@@ -26,8 +26,8 @@ const percurso = [
 ];
 
 const regras = [
-  ['01', 'Prazo é prazo', 'O prazo fica escrito na proposta e é cumprido. Se alguma coisa mudar, sabe no próprio dia.'],
-  ['02', 'Preço fechado', 'O valor acordado é o valor final. Sem horas extra surpresa nem custos escondidos.'],
+  ['01', 'Ver antes de decidir', 'Começo por uma proposta visual gratuita. O orçamento só chega depois, se quiser avançar.'],
+  ['02', 'Um plano escrito', 'Antes de começar, fica escrito o que vai receber e quando. Se alguma coisa mudar, sabe no próprio dia.'],
   ['03', 'Sem intermediários', 'Fala sempre comigo. Quem ouve o pedido é quem o constrói.'],
   ['04', 'Franqueza', 'Se alguma coisa não compensa, digo-lhe. Mesmo que isso signifique um projeto mais pequeno.'],
 ];
@@ -38,7 +38,7 @@ export default function Sobre() {
       <HeroSm
         caminho={[{ label: 'Sobre' }]}
         titulo="O contabilista que automatiza."
-        destaque="E constrói sites para PME."
+        destaque="E constrói sites para empresas."
         descricao="Contabilidade, formação militar e muitas horas a construir sites e automações. É isso que está por trás de cada projeto da Starmountain Flash."
       />
 
@@ -72,12 +72,12 @@ export default function Sobre() {
             </p>
             <p>
               A parte dos sites começou como um gosto pessoal por web design. Tornou-se serviço quando percebi que
-              muitas PME tinham bons produtos e nenhuma forma de serem encontradas.
+              muitas empresas tinham bons produtos e nenhuma forma de serem encontradas.
             </p>
             <p>
               Antes da contabilidade houve o Exército. Uma missão internacional ao serviço da NATO e uma medalha de
               reconhecimento nacional ensinaram-me duas coisas que trago para cada projeto: um plano escrito antes de
-              começar, e prazos que se cumprem.
+              começar, e dizer logo quando alguma coisa muda.
             </p>
             <div className="sig">
               <strong>Pedro Pereira</strong>Covilhã, Serra da Estrela
@@ -260,16 +260,16 @@ export default function Sobre() {
             <span className="for">Missão</span>
             <h3>O que faço todos os dias</h3>
             <p style={{ color: '#555a57' }}>
-              Dar a PME e a marcas portuguesas a mesma presença online e a mesma automação que as grandes empresas
-              têm há muito: sites rápidos e fáceis de encontrar, e processos repetitivos a correr sozinhos. Com prazo
-              escrito, preço fechado e sem ninguém pelo meio entre quem pede e quem constrói.
+              Dar às empresas e marcas portuguesas a mesma presença online e a mesma automação que as grandes empresas
+              têm há muito: sites rápidos e fáceis de encontrar, e processos repetitivos a correr sozinhos. Sem ninguém
+              pelo meio entre quem pede e quem constrói.
             </p>
           </article>
           <article style={{ background: 'var(--ink)', color: '#fff' }}>
             <span className="for">Visão</span>
             <h3>Para onde quero chegar</h3>
             <p style={{ color: 'rgba(255,255,255,.72)' }}>
-              Que qualquer PME em Portugal seja encontrada por quem procura o que ela faz, no Google e nas respostas
+              Que qualquer empresa em Portugal seja encontrada por quem procura o que ela faz, no Google e nas respostas
               dos motores de IA, e que o trabalho repetitivo deixe de ocupar as horas de quem devia estar a fazer
               crescer o negócio.
             </p>

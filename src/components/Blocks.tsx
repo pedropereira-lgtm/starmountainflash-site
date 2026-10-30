@@ -2,8 +2,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import type { ReactNode } from 'react';
 import type { Faq } from '@/data/faqs';
-import { ArrowUpRight, CornerArrow, WhatsAppGlyph } from './Icons';
-import Nav from './Nav';
+import { ArrowUpRight } from './Icons';
 import hero from '@/img/hero-lagoa-comprida.jpg';
 
 /**
@@ -36,7 +35,6 @@ export function Hero({ children }: { children: ReactNode }) {
     <div className="wrap">
       <section className="hero" id="topo">
         <HeroFoto priority />
-        <Nav />
         {children}
       </section>
     </div>
@@ -61,7 +59,6 @@ export function HeroSm({
     <div className="wrap">
       <section className="hero hero-sm" id="topo">
         <HeroFoto priority />
-        <Nav />
         <div className="hero-body">
           <div>
             <nav className="crumb" aria-label="Caminho">
@@ -82,7 +79,7 @@ export function HeroSm({
             {acoes === 'orcamento-whatsapp' && (
               <div className="ctas">
                 <a href="#orcamento" className="btn btn-light">
-                  Pedir orçamento{' '}
+                  Proposta gratuita{' '}
                   <span className="ic">
                     <ArrowUpRight size={16} />
                   </span>
@@ -161,44 +158,12 @@ export function Faqs({ etiqueta = 'Perguntas frequentes', titulo, destaque, iten
   );
 }
 
-/** Bloco "Próximo passo" no fim das páginas interiores. */
+/**
+ * Bloco "Próximo passo" no fim das páginas interiores.
+ * O footer novo já abre com "Comece por uma proposta gratuita", por isso deixou de ser preciso.
+ */
 export function NextStep() {
-  return (
-    <section className="endcta">
-      <div className="sec">
-        <div className="igh">
-          <div>
-            <strong>Starmountain Flash</strong>
-            <span>Websites e automação</span>
-          </div>
-          <CornerArrow />
-        </div>
-        <div>
-          <span className="label">
-            <i />
-            Próximo passo
-          </span>
-          <h2>
-            Vamos falar do seu projeto? <span>Prazo fixo. Preço fechado.</span>
-          </h2>
-        </div>
-        <div className="btns">
-          <a href="#orcamento" className="btn btn-light">
-            Pedir orçamento{' '}
-            <span className="ic">
-              <ArrowUpRight size={16} />
-            </span>
-          </a>
-          <a href="#whatsapp" data-wa className="btn btn-wa">
-            WhatsApp{' '}
-            <span className="ic">
-              <WhatsAppGlyph size={16} />
-            </span>
-          </a>
-        </div>
-      </div>
-    </section>
-  );
+  return null;
 }
 
 /** Aviso de carrossel horizontal, visível apenas em telemóvel. */

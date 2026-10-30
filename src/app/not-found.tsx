@@ -11,11 +11,11 @@ export const metadata: Metadata = {
 };
 
 const atalhos = [
-  { href: '/websites', titulo: 'Websites', texto: 'Landing pages e sites institucionais para PME.' },
+  { href: '/websites', titulo: 'Websites', texto: 'Landing pages e sites institucionais.' },
   { href: '/lojas-online', titulo: 'Lojas online', texto: 'Shopify ou à medida, prontas a vender.' },
-  { href: '/automacoes', titulo: 'Automações de IA', texto: 'O trabalho repetitivo a fazer-se sozinho.' },
+  { href: '/automacoes', titulo: 'Automações à medida', texto: 'O trabalho repetitivo a fazer-se sozinho.' },
   { href: '/#trabalhos', titulo: 'Trabalhos', texto: nomesPublicados() + '.' },
-  { href: '/metodo', titulo: 'Método', texto: 'Três fases, prazo fixo e preço fechado.' },
+  { href: '/metodo', titulo: 'Método', texto: 'Três fases, a começar por uma proposta visual gratuita.' },
   { href: '/blog', titulo: 'Blog', texto: 'Notas sobre sites, SEO e automação.' },
 ];
 

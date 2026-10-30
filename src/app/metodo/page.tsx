@@ -6,7 +6,7 @@ import { faqLd, meta, migalhasLd } from '@/lib/seo';
 
 const TITULO = 'Método Operação Flash: como funciona um projeto | Starmountain Flash';
 const DESCRICAO =
-  'Como funciona um projeto de website ou automação com a Starmountain Flash: reconhecimento, execução e automação, com prazo escrito e preço fechado.';
+  'Como funciona um projeto de website ou automação com a Starmountain Flash: reconhecimento, execução e automação, a começar por uma proposta visual gratuita.';
 
 export const metadata: Metadata = meta({ titulo: TITULO, descricao: DESCRICAO, caminho: '/metodo' });
 
@@ -22,7 +22,7 @@ const fases = [
       'Análise da concorrência e das ferramentas que usa',
     ],
     recebe: [
-      'Proposta escrita com âmbito, prazo e valor',
+      'Proposta visual gratuita e, se quiser avançar, o orçamento ajustado ao que pediu',
       'Recomendação do formato certo: landing page, site, loja ou automação',
     ],
     preciso: ['Uma conversa de cerca de 30 minutos, online', 'Acesso ao que já existe: site, redes, materiais'],
@@ -32,7 +32,7 @@ const fases = [
     n: '02',
     titulo: 'Execução',
     resumo:
-      'Com a proposta aprovada, o projeto avança dentro do prazo acordado, com pontos de validação definidos desde o início.',
+      'Com o orçamento aprovado, o projeto avança no prazo combinado, com pontos de validação definidos desde o início.',
     acontece: [
       'Design à medida, com uma primeira validação',
       'Desenvolvimento em código, com uma segunda validação',
@@ -62,8 +62,8 @@ const fases = [
 ];
 
 const compromissos = [
-  ['01', 'Prazo escrito', 'O prazo fica na proposta antes de começar e é cumprido. Se alguma coisa mudar, sabe no próprio dia.'],
-  ['02', 'Preço fechado', 'O valor acordado é o valor final. Sem horas extra surpresa nem custos escondidos.'],
+  ['01', 'Ver antes de decidir', 'Começo por uma proposta visual gratuita. O orçamento só chega depois, se quiser avançar, ajustado ao que pedir.'],
+  ['02', 'Um plano escrito', 'O que vai receber e quando fica combinado antes de começar. Se alguma coisa mudar, sabe no próprio dia.'],
   ['03', 'Um só responsável', 'Fala sempre comigo, do primeiro contacto ao lançamento. Quem ouve o pedido é quem o constrói.'],
   ['04', 'Tudo em seu nome', 'O domínio e as contas ficam em nome da empresa. O site é seu, não fica preso a mim.'],
 ];

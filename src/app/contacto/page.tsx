@@ -7,7 +7,7 @@ import { meta, migalhasLd } from '@/lib/seo';
 
 const TITULO = 'Contacto | Starmountain Flash';
 const DESCRICAO =
-  'Contacte a Starmountain Flash por email, telefone ou WhatsApp, ou peça um orçamento para o seu site, loja online ou automação. Covilhã, clientes em todo o país.';
+  'Contacte a Starmountain Flash por email, telefone ou WhatsApp, ou peça uma proposta gratuita para o seu site, loja online ou automação. Covilhã, clientes em todo o país.';
 
 export const metadata: Metadata = meta({ titulo: TITULO, descricao: DESCRICAO, caminho: '/contacto' });
 
@@ -25,7 +25,7 @@ export default function Contacto() {
         caminho={[{ label: 'Contacto' }]}
         titulo="Contacto."
         destaque="Fala sempre comigo."
-        descricao="Um site novo, uma loja online ou uma tarefa para automatizar. Escolha o canal que lhe der mais jeito, ou peça já um orçamento."
+        descricao="Um site novo, uma loja online ou uma tarefa para automatizar. Escolha o canal que lhe der mais jeito, ou peça já uma proposta gratuita."
       />
 
       <section className="sec">
@@ -69,10 +69,10 @@ export default function Contacto() {
           <div>
             <span className="label">
               <i />
-              Pedir orçamento
+              Proposta gratuita
             </span>
             <h2>
-              Diga-me o que precisa. <span style={{ color: 'rgba(255,255,255,.6)' }}>Proposta por escrito.</span>
+              Diga-me o que precisa. <span style={{ color: 'rgba(255,255,255,.6)' }}>Comece por uma proposta gratuita.</span>
             </h2>
             <p
               style={{
@@ -83,7 +83,7 @@ export default function Contacto() {
                 maxWidth: 440,
               }}
             >
-              Respondo com uma proposta por escrito, com prazo e valor.
+              Leio e respondo eu. Começo por uma proposta visual gratuita; o orçamento só chega depois, se quiser avançar.
             </p>
           </div>
           <ContactForm />
