@@ -1,7 +1,5 @@
-import { servicos } from '@/data/servicos';
 import { site } from '@/data/site';
 import { trabalhosPublicados } from '@/data/trabalhos';
-import { faqsHome } from '@/data/faqs';
 import { dataPt, todosOsPosts } from '@/lib/posts';
 
 export const dynamic = 'force-static';
@@ -11,6 +9,16 @@ export const dynamic = 'force-static';
  * É gerado a partir dos mesmos dados das páginas, por isso não fica
  * desatualizado quando se acrescenta um trabalho ou um artigo.
  */
+/** As mesmas perguntas da página inicial. */
+const faqs = [
+  { q: 'Quanto custa um site?', a: 'Depende do tipo de site e do que precisa de fazer. Começo por uma proposta visual gratuita. Se gostar e quiser avançar, envio o orçamento ajustado ao que pedir.' },
+  { q: 'Quanto tempo demora?', a: 'O prazo fica combinado antes de começar. Landing pages são o formato mais rápido; lojas online e automações levam mais tempo.' },
+  { q: 'O que é aparecer no ChatGPT, na prática?', a: 'Quando alguém pede ao ChatGPT uma recomendação no seu setor, a resposta traz dois ou três nomes. O trabalho é fazer com que o seu esteja entre eles mais vezes, e medi-lo todos os meses.' },
+  { q: 'Preciso de site para automatizar?', a: 'Não. As automações ligam-se às ferramentas que a empresa já usa: email, Excel, programa de faturação, CRM.' },
+  { q: 'Os valores incluem IVA?', a: 'Não há IVA a acrescentar: a atividade está isenta ao abrigo do artigo 53.º do CIVA. O valor do orçamento é o valor final.' },
+  { q: 'Trabalha só com empresas da Covilhã?', a: 'Não. Estou na Covilhã, mas trabalho com clientes em todo o país. As reuniões fazem-se online.' },
+];
+
 export function GET() {
   const posts = todosOsPosts();
   const u = site.url;
@@ -27,10 +35,19 @@ export function GET() {
     '',
     '## Serviços',
     '',
-    ...servicos.map((s) => `- **${s.titulo}** (${u}${s.href}): ${s.texto}`),
-    `- **Visibilidade em IA (GEO)** (${u}/visibilidade-ia): auditoria e otimização para que a empresa seja citada pelo ChatGPT, Perplexity, Gemini e resumos de IA do Google, com as mesmas perguntas medidas todos os meses.`,
-    `- **Avaliações Google** (${u}/avaliacoes-google): pedido automático de avaliação a todos os clientes depois do serviço (WhatsApp, SMS, email ou QR code) e resposta a todas as avaliações do Perfil Google; as negativas só são publicadas com aprovação da empresa.`,
+    'Começa sempre por uma proposta visual gratuita (ou, nos serviços de IA, por uma verificação ou análise gratuita). O orçamento só é enviado depois, se o cliente quiser avançar, ajustado ao que pediu.',
+    '',
+    '### Presença digital',
+    '',
+    `- **Websites** (${u}/websites): landing pages e sites institucionais desenhados à medida e feitos em código (Next.js), pensados para telemóvel, com SEO técnico, dados estruturados e conteúdo preparado para motores de IA.`,
+    `- **Lojas online** (${u}/lojas-online): lojas em Shopify ou à medida, com catálogo, pagamentos usados em Portugal (MB WAY, Multibanco, cartão), envios, emails automáticos, páginas legais e formação para gerir a loja.`,
+    `- **Visibilidade em IA (GEO)** (${u}/visibilidade-ia): auditoria com 20 a 30 perguntas reais do setor e da zona em 4 assistentes (ChatGPT, Perplexity, Gemini e Google AI), correções técnicas no site (dados estruturados, llms.txt, acesso dos robôs de IA, conteúdo que responde) e relatório mensal com as mesmas perguntas. Verificação gratuita.`,
+    `- **Avaliações Google** (${u}/avaliacoes-google): pedido automático de avaliação a todos os clientes depois do serviço (WhatsApp, SMS, email ou QR code) e resposta a todas as avaliações do Perfil Google; as negativas só são publicadas com aprovação da empresa. Nada em troca de estrelas e nenhuma avaliação escrita pela Starmountain Flash. Análise gratuita ao perfil.`,
+    '',
+    '### Automações com IA',
+    '',
     `- **Método StarMap** (${u}/starmap): diagnóstico de automação. Reunião presencial, uma semana de registo das tarefas da equipa numa plataforma própria (diagnostico.starmountainflash.pt), relatório e reunião com o que automatizar primeiro.`,
+    `- **Automações à medida** (${u}/automacoes): processos repetitivos (emails, faturas, relatórios, marcações, CRM, portais sem integração) passam a correr sozinhos, ligados às ferramentas que a empresa já usa. Com ou sem site.`,
     `- **Assistente interno** (${u}/assistente-interno): para empresas de maior dimensão. Assistente de IA privado que responde com base nos documentos internos da empresa (Vault + RAG), com a fonte citada em cada resposta e as permissões de cada equipa.`,
     '',
     '## Método: Operação Flash',
@@ -77,7 +94,11 @@ export function GET() {
     '',
     '## Perguntas frequentes',
     '',
-    ...faqsHome.flatMap((f) => [`**${f.q}**`, f.a, '']),
+    ...faqs.flatMap((f) => [`**${f.q}**`, f.a, '']),
+    '## English',
+    '',
+    `An English version of the main pages is available at ${u}/en (home), ${u}/en/websites, ${u}/en/lojas-online, ${u}/en/visibilidade-ia, ${u}/en/avaliacoes-google, ${u}/en/starmap, ${u}/en/automacoes and ${u}/en/assistente-interno.`,
+    '',
     `Última atualização: ${dataPt(new Date().toISOString())}`,
     '',
   ];

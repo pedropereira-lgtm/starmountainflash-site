@@ -70,7 +70,7 @@ export const negocioLd = {
     { '@type': 'City', name: site.localidade },
   ],
   description: site.descricao,
-  knowsAbout: ['Criação de websites', 'Lojas online', 'Automações de IA', 'SEO'],
+  knowsAbout: ['Criação de websites', 'Lojas online', 'SEO', 'Generative Engine Optimization (GEO)', 'Gestão de avaliações Google', 'Automações com IA', 'Retrieval-Augmented Generation (RAG)'],
   ...(sameAs.length ? { sameAs } : {}),
 };
 
