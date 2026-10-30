@@ -28,6 +28,7 @@ const nextConfig: NextConfig = {
       // Páginas de serviço novas, estáticas em public/<slug>/ (fontes e imagens em public/assets/servicos/).
       { source: '/visibilidade-ia', destination: '/visibilidade-ia/index.html' },
       { source: '/ia-privada', destination: '/ia-privada/index.html' },
+      { source: '/avaliacoes-google', destination: '/avaliacoes-google/index.html' },
     ];
   },
   async redirects() {

@@ -41,5 +41,6 @@ export const navServicos = [
   { href: '/lojas-online', titulo: 'Lojas online', sub: 'Vender online sem complicar' },
   { href: '/automacoes', titulo: 'Automações de IA', sub: 'Processos repetitivos a correr sozinhos' },
   { href: '/visibilidade-ia', titulo: 'Visibilidade em IA (GEO)', sub: 'Aparecer quando perguntam ao ChatGPT' },
+  { href: '/avaliacoes-google', titulo: 'Avaliações Google', sub: 'Mais avaliações, todas respondidas' },
   { href: '/ia-privada', titulo: 'IA privada para empresas', sub: 'Os documentos internos, consultáveis com IA' },
 ] as const;
