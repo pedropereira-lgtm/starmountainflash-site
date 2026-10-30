@@ -25,3 +25,6 @@
 @import './21-footer.css';
 @import './22-menu.css';
 @import './23-contraste.css';
+/* Novo design (30/10/2026): chrome gerado e ajustes das páginas interiores. */
+@import './30-chrome.css';
+@import './31-novo.css';

@@ -14,7 +14,7 @@ export const site = {
   /** Nome completo, para os documentos legais. */
   nomeLegal: 'Pedro Miguel da Silva Pereira',
   descricao:
-    'Websites, lojas online e automações de IA para PME e marcas portuguesas. Prazo fixo e preço fechado.',
+    'Websites, lojas online, visibilidade em IA e automações com IA para empresas e marcas portuguesas. Proposta visual gratuita.',
   /** Perfis da empresa. Entram no "sameAs" do JSON-LD; os dois primeiros também no rodapé. */
   redes: {
     instagram: 'https://www.instagram.com/starmountainflash/',

@@ -2,8 +2,8 @@ import type { Metadata, Viewport } from 'next';
 import localFont from 'next/font/local';
 import Script from 'next/script';
 import '@/styles/globals.css';
-import Footer from '@/components/Footer';
-import SiteChrome from '@/components/SiteChrome';
+import CookieBanner from '@/components/chrome/CookieBanner';
+import { RODAPE, TOPO } from '@/components/novo/chrome';
 import { JsonLd } from '@/components/Blocks';
 import { negocioLd } from '@/lib/seo';
 import { site } from '@/data/site';
@@ -22,7 +22,7 @@ const onest = localFont({
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
   title: {
-    default: 'Starmountain Flash — Websites e automações de IA para PME',
+    default: 'Starmountain Flash · Websites e automações com IA para empresas',
     template: '%s',
   },
   description: site.descricao,
@@ -45,18 +45,21 @@ export const metadata: Metadata = {
 };
 
 export const viewport: Viewport = {
-  themeColor: '#F2F1ED',
+  themeColor: '#FFFFFF',
   width: 'device-width',
   initialScale: 1,
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="pt-PT" className={onest.variable}>
+    <html lang="pt-PT" data-lang="pt" className={onest.variable}>
       <body>
+        {/* Nav, menu do telemóvel e pop-up do novo design (iguais às páginas estáticas). */}
+        <div className="sfc sfc-top" dangerouslySetInnerHTML={{ __html: TOPO }} />
         {children}
-        <Footer />
-        <SiteChrome />
+        <div className="sfc sfc-foot" dangerouslySetInnerHTML={{ __html: RODAPE }} />
+        <CookieBanner />
+        <Script src="/assets/site/chrome.js" strategy="afterInteractive" />
         <JsonLd data={negocioLd} />
         {/* Plausible: medição de audiências sem cookies. */}
         <Script src="https://plausible.io/js/pa-2lRVurfYSTx4d-6iro9y0.js" strategy="lazyOnload" />
