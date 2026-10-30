@@ -9,10 +9,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const agora = new Date();
 
   const fixas: [string, number, MetadataRoute.Sitemap[number]['changeFrequency']][] = [
-    ['/metodo', 0.7, 'yearly'],
-    ['/sobre', 0.7, 'yearly'],
     ['/blog', 0.6, 'weekly'],
-    ['/contacto', 0.7, 'yearly'],
     ['/privacidade', 0.2, 'yearly'],
     ['/cookies', 0.2, 'yearly'],
     ['/termos', 0.2, 'yearly'],
@@ -29,6 +26,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ['/visibilidade-ia', 0.9],
     ['/avaliacoes-google', 0.9],
     ['/assistente-interno', 0.9],
+    ['/sobre', 0.8],
+    ['/metodo', 0.8],
+    ['/contacto', 0.8],
   ];
   const alt = (c: string) => ({ languages: { 'pt-PT': site.url + (c || '/'), en: site.url + '/en' + c } });
 

@@ -18,7 +18,7 @@ const nextConfig: NextConfig = {
   async rewrites() {
     // Página inicial e páginas de serviço: HTML estático em public/, em PT e EN
     // (gerado a partir do protótipo; fontes e imagens em public/assets/site/).
-    const servicos = ['websites', 'lojas-online', 'visibilidade-ia', 'avaliacoes-google', 'starmap', 'automacoes', 'assistente-interno'];
+    const servicos = ['websites', 'lojas-online', 'visibilidade-ia', 'avaliacoes-google', 'starmap', 'automacoes', 'assistente-interno', 'sobre', 'metodo', 'contacto'];
     return {
       // Antes das rotas da app, para o "/" não cair em nenhuma página React.
       beforeFiles: [
