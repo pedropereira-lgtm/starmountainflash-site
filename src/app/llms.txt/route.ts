@@ -97,7 +97,7 @@ export function GET() {
     ...faqs.flatMap((f) => [`**${f.q}**`, f.a, '']),
     '## English',
     '',
-    `An English version of the main pages is available at ${u}/en (home), ${u}/en/websites, ${u}/en/lojas-online, ${u}/en/visibilidade-ia, ${u}/en/avaliacoes-google, ${u}/en/starmap, ${u}/en/automacoes and ${u}/en/assistente-interno.`,
+    `An English version of the main pages is available at ${u}/en (home), ${u}/en/websites, ${u}/en/lojas-online, ${u}/en/visibilidade-ia, ${u}/en/avaliacoes-google, ${u}/en/starmap, ${u}/en/automacoes, ${u}/en/assistente-interno, ${u}/en/sobre (about), ${u}/en/metodo (method) and ${u}/en/contacto (contact).`,
     '',
     `Última atualização: ${dataPt(new Date().toISOString())}`,
     '',
