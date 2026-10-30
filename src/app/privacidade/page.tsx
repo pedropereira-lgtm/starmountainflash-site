@@ -9,7 +9,7 @@ const TITULO = 'Política de privacidade | Starmountain Flash';
 const DESCRICAO =
   'Que dados pessoais a Starmountain Flash recolhe no site, para que servem, quanto tempo ficam guardados e como exercer os seus direitos.';
 
-export const metadata: Metadata = meta({ titulo: TITULO, descricao: DESCRICAO, caminho: '/privacidade' });
+export const metadata: Metadata = meta({ titulo: TITULO, descricao: DESCRICAO, caminho: '/privacidade', alternativo: { pt: '/privacidade', en: '/en/privacidade' } });
 
 const ATUALIZADO = '23 de setembro de 2026';
 

@@ -9,7 +9,7 @@ const TITULO = 'Termos e condições | Starmountain Flash';
 const DESCRICAO =
   'Condições de utilização do site e regras dos serviços da Starmountain Flash: propostas, prazos, pagamentos, propriedade do trabalho e resolução de litígios.';
 
-export const metadata: Metadata = meta({ titulo: TITULO, descricao: DESCRICAO, caminho: '/termos' });
+export const metadata: Metadata = meta({ titulo: TITULO, descricao: DESCRICAO, caminho: '/termos', alternativo: { pt: '/termos', en: '/en/termos' } });
 
 const ATUALIZADO = '23 de setembro de 2026';
 

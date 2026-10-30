@@ -13,6 +13,8 @@ export function meta({
   tipo = 'website',
   publicadoEm,
   atualizadoEm,
+  lang = 'pt',
+  alternativo,
 }: {
   titulo: string;
   descricao: string;
@@ -21,19 +23,26 @@ export function meta({
   tipo?: 'website' | 'article';
   publicadoEm?: string;
   atualizadoEm?: string;
+  /** Língua da página. */
+  lang?: 'pt' | 'en';
+  /** Caminhos da mesma página em cada língua, para o hreflang. */
+  alternativo?: { pt: string; en: string };
 }): Metadata {
   const url = site.url + caminho;
+  const languages = alternativo
+    ? { 'pt-PT': alternativo.pt, en: alternativo.en, 'x-default': alternativo.pt }
+    : undefined;
   return {
     title: titulo,
     description: descricao,
-    alternates: { canonical: caminho },
+    alternates: { canonical: caminho, ...(languages ? { languages } : {}) },
     openGraph: {
       type: tipo,
       url,
       title: titulo,
       description: descricao,
       siteName: site.nome,
-      locale: 'pt_PT',
+      locale: lang === 'en' ? 'en_GB' : 'pt_PT',
       images: [{ url: imagem, width: 1200, height: 630, alt: site.nome }],
       ...(tipo === 'article'
         ? { publishedTime: publicadoEm, modifiedTime: atualizadoEm ?? publicadoEm, authors: [site.fundador] }
@@ -88,11 +97,12 @@ export const pessoaLd = {
   sameAs: ['https://www.linkedin.com/in/pedro-silva-pereira-89782a313/'],
 };
 
-export function migalhasLd(itens: { nome: string; caminho: string }[]) {
+export function migalhasLd(itens: { nome: string; caminho: string }[], lang: 'pt' | 'en' = 'pt') {
+  const inicio = lang === 'en' ? { nome: 'Home', caminho: '/en' } : { nome: 'Início', caminho: '/' };
   return {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
-    itemListElement: [{ nome: 'Início', caminho: '/' }, ...itens].map((it, i) => ({
+    itemListElement: [inicio, ...itens].map((it, i) => ({
       '@type': 'ListItem',
       position: i + 1,
       name: it.nome,

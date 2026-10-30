@@ -26,7 +26,12 @@ export async function generateMetadata({
   const { slug } = await params;
   const caso = casos[slug];
   if (!caso) return {};
-  return meta({ titulo: caso.titulo, descricao: caso.descricao, caminho: '/trabalhos/' + slug });
+  return meta({
+    titulo: caso.titulo,
+    descricao: caso.descricao,
+    caminho: '/trabalhos/' + slug,
+    alternativo: { pt: '/trabalhos/' + slug, en: '/en/trabalhos/' + slug },
+  });
 }
 
 function Amostras({ cores }: { cores: Cor[] }) {

@@ -6,17 +6,25 @@ export type Seccao = { id: string; titulo: string; corpo: ReactNode };
  * Página legal: índice fixo à esquerda, texto à direita.
  * Reaproveita o layout e os estilos da página de artigo.
  */
-export default function Legal({ atualizado, seccoes }: { atualizado: string; seccoes: Seccao[] }) {
+export default function Legal({
+  atualizado,
+  seccoes,
+  lang = 'pt',
+}: {
+  atualizado: string;
+  seccoes: Seccao[];
+  lang?: 'pt' | 'en';
+}) {
   return (
     <section className="sec">
       <div className="art">
         <aside className="art-side">
           <div className="art-meta">
-            <span>Última atualização</span>
+            <span>{lang === 'en' ? 'Last updated' : 'Última atualização'}</span>
             <strong style={{ color: 'var(--ink)', fontSize: 15 }}>{atualizado}</strong>
           </div>
-          <nav className="toc" aria-label="Índice">
-            <h2>Nesta página</h2>
+          <nav className="toc" aria-label={lang === 'en' ? 'Contents' : 'Índice'}>
+            <h2>{lang === 'en' ? 'On this page' : 'Nesta página'}</h2>
             <ol>
               {seccoes.map((s) => (
                 <li key={s.id}>

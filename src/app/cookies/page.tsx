@@ -9,7 +9,7 @@ const TITULO = 'Política de cookies | Starmountain Flash';
 const DESCRICAO =
   'Que cookies o site starmountainflash.pt usa, para que servem, quanto tempo duram e como mudar a sua escolha a qualquer momento.';
 
-export const metadata: Metadata = meta({ titulo: TITULO, descricao: DESCRICAO, caminho: '/cookies' });
+export const metadata: Metadata = meta({ titulo: TITULO, descricao: DESCRICAO, caminho: '/cookies', alternativo: { pt: '/cookies', en: '/en/cookies' } });
 
 const ATUALIZADO = '23 de setembro de 2026';
 

@@ -3,7 +3,7 @@ import localFont from 'next/font/local';
 import Script from 'next/script';
 import '@/styles/globals.css';
 import CookieBanner from '@/components/chrome/CookieBanner';
-import { RODAPE, TOPO } from '@/components/novo/chrome';
+import { Rodape, Topo } from '@/components/novo/Chrome';
 import { JsonLd } from '@/components/Blocks';
 import { negocioLd } from '@/lib/seo';
 import { site } from '@/data/site';
@@ -52,12 +52,12 @@ export const viewport: Viewport = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="pt-PT" data-lang="pt" className={onest.variable}>
+    <html lang="pt-PT" data-lang="pt" className={onest.variable} suppressHydrationWarning>
       <body>
         {/* Nav, menu do telemóvel e pop-up do novo design (iguais às páginas estáticas). */}
-        <div className="sfc sfc-top" dangerouslySetInnerHTML={{ __html: TOPO }} />
+        <Topo />
         {children}
-        <div className="sfc sfc-foot" dangerouslySetInnerHTML={{ __html: RODAPE }} />
+        <Rodape />
         <CookieBanner />
         <Script src="/assets/site/chrome.js" strategy="afterInteractive" />
         <JsonLd data={negocioLd} />

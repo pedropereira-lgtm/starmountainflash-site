@@ -2,6 +2,7 @@
 import Link from 'next/link';
 import Script from 'next/script';
 import { useEffect, useState } from 'react';
+import { usePathname } from 'next/navigation';
 
 const CHAVE = 'smf-cookies';
 const GA = process.env.NEXT_PUBLIC_GA_ID;
@@ -15,6 +16,7 @@ type Estado = 'a-carregar' | 'por-decidir' | 'sim' | 'nao';
 export default function CookieBanner() {
   const [estado, setEstado] = useState<Estado>('a-carregar');
   const [visivel, setVisivel] = useState(false);
+  const en = usePathname()?.startsWith('/en') ?? false;
 
   useEffect(() => {
     let guardado: string | null = null;
@@ -55,18 +57,25 @@ export default function CookieBanner() {
 
       {estado === 'por-decidir' && (
         <div className={visivel ? 'ck show' : 'ck'} role="dialog" aria-label="Cookies">
-          <h4>Um pedido rápido sobre cookies.</h4>
-          <p>
-            Gostava de usar o Google Analytics para perceber que páginas são úteis. Só com a sua autorização. O site
-            funciona na mesma se recusar. Mais detalhes na{' '}
-            <Link href="/privacidade">política de privacidade</Link>.
-          </p>
+          <h4>{en ? 'A quick question about cookies.' : 'Um pedido rápido sobre cookies.'}</h4>
+          {en ? (
+            <p>
+              I&apos;d like to use Google Analytics to see which pages are useful, only with your permission. The site
+              works just the same if you decline. More in the <Link href="/en/privacidade">privacy policy</Link>.
+            </p>
+          ) : (
+            <p>
+              Gostava de usar o Google Analytics para perceber que páginas são úteis. Só com a sua autorização. O site
+              funciona na mesma se recusar. Mais detalhes na{' '}
+              <Link href="/privacidade">política de privacidade</Link>.
+            </p>
+          )}
           <div className="ck-acts">
             <button type="button" className="ok" onClick={() => decidir('sim')}>
-              Aceitar
+              {en ? 'Accept' : 'Aceitar'}
             </button>
             <button type="button" onClick={() => decidir('nao')}>
-              Recusar
+              {en ? 'Decline' : 'Recusar'}
             </button>
           </div>
         </div>
