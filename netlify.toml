@@ -9,6 +9,10 @@
 [[plugins]]
   package = "@netlify/plugin-nextjs"
 
+# IndexNow: avisa o Bing das páginas alteradas em cada publicação (netlify/plugins/indexnow).
+[[plugins]]
+  package = "./netlify/plugins/indexnow"
+
 # --- Redirecionamentos 301 do site antigo -----------------------------------
 # Os URLs do protótipo estático estão tratados em next.config.ts.
 # Acrescentar aqui os URLs do site que está atualmente em starmountainflash.pt
