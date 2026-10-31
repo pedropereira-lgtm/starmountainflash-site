@@ -46,3 +46,4 @@ details summary{font-family:"PF",Georgia,serif;font-weight:400}
 .canais + .onde,.onde{background:#0A1A13!important}
 .sfc .mob{z-index:95!important}.sfc .md{z-index:96!important}
 .prose blockquote{background:#F4F6F5;border-left:3px solid #0E6B4C;border-radius:0 14px 14px 0}
+@media (max-width:620px){.prose table{table-layout:fixed;font-size:13px}.prose th,.prose td{padding:9px 5px;overflow-wrap:anywhere;hyphens:auto}.prose th{font-size:10.5px;letter-spacing:.02em}}
