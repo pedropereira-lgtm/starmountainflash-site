@@ -1,7 +1,7 @@
 ---
-titulo: "Quanto custa um site para uma PME em Portugal?"
+titulo: "Quanto custa um site para uma empresa em Portugal?"
 slug: "quanto-custa-um-site-pme-portugal"
-descricao: "Quanto custa um site para uma PME em Portugal em 2026: valores de referência, o que faz variar o preço e o que perguntar antes de aceitar um orçamento."
+descricao: "Quanto custa um site para uma empresa em Portugal em 2026: valores de referência, freelancer, agência ou faça você mesmo, e o que perguntar antes de aceitar."
 categoria: "Websites"
 data: 2026-09-21
 capa: ""
@@ -15,7 +15,7 @@ faq:
   - pergunta: "Posso fazer o meu próprio site?"
     resposta: "Pode, com plataformas de arrastar e largar. Poupa no início, mas paga em tempo, e o resultado costuma ser mais fraco em velocidade e SEO."
 ---
-Um site profissional para uma PME custa normalmente entre 500 € e 5.000 €. Uma loja online pode chegar aos 15.000 €. A diferença não é arbitrária: depende do tipo de site, do que ele tem de fazer e de quem o faz.
+Um site profissional para uma empresa custa normalmente entre 500 € e 5.000 €. Uma loja online pode chegar aos 15.000 €. A diferença não é arbitrária: depende do tipo de site, do que ele tem de fazer e de quem o faz.
 
 Este guia explica os valores de referência, o que faz o preço subir ou descer, e o que deve perguntar antes de aceitar um orçamento.
 
@@ -36,6 +36,21 @@ São intervalos largos de propósito. Dois sites com "cinco páginas" podem cust
 4. **Integrações.** [Ligar o site a um CRM](/blog/ligar-formulario-site-crm-email), a um programa de faturação ou a um sistema de pagamentos acrescenta trabalho e valor.
 5. **SEO e preparação para IA.** Um site pensado para [aparecer no Google](/blog/como-aparecer-google-seo-pme-portugal) e nas respostas do ChatGPT exige estrutura, dados técnicos e conteúdo organizado.
 6. **Quem faz.** Agências, freelancers e plataformas de arrastar e largar têm custos, prazos e níveis de acompanhamento muito diferentes.
+
+## Freelancer, agência ou faça você mesmo
+
+O mesmo site pode ser feito de três formas, e o preço muda tanto como o resultado.
+
+| | Faça você mesmo (Wix, Squarespace) | Freelancer | Agência |
+|---|---|---|---|
+| Custo inicial | O mais baixo | Intermédio | O mais alto |
+| Custo mensal | Subscrição da plataforma | Alojamento e manutenção, se contratada | Alojamento e manutenção, normalmente em contrato |
+| Com quem fala | Ninguém, faz sozinho | Com quem faz o site | Com um gestor de conta |
+| Design | Limitado aos modelos | À medida ou tema, conforme a pessoa | À medida |
+| SEO e preparação para IA | Depende do seu tempo e conhecimento | Varia muito de pessoa para pessoa | Normalmente incluído, por vezes à parte |
+| Ideal para | Testar uma ideia com pouco orçamento | Empresas que querem contacto direto e preço ajustado | Projetos grandes, com várias pessoas envolvidas |
+
+A crítica mais comum aos freelancers é saberem fazer o site mas não o pôr a trazer clientes. Por isso, antes de escolher, pergunte quem trata do Google, das respostas de IA e das ligações ao CRM depois do lançamento. Na Starmountain Flash faço as três coisas: o site, a [visibilidade no Google e na IA](/visibilidade-ia) e as [automações](/automacoes).
 
 ## Os custos que nem sempre aparecem no orçamento
 

@@ -1,7 +1,7 @@
 ---
-titulo: "How much does a website cost for an SME in Portugal?"
+titulo: "How much does a website cost for a company in Portugal?"
 slug: "quanto-custa-um-site-pme-portugal"
-descricao: "What a website costs for an SME in Portugal in 2026: reference prices, what makes the price vary and what to ask before accepting a quote."
+descricao: "What a website costs for a company in Portugal in 2026: reference prices, freelancer, agency or do it yourself, and what to ask before accepting."
 categoria: "Websites"
 data: 2026-09-21
 capa: ""
@@ -15,7 +15,7 @@ faq:
   - pergunta: "Can I build my own website?"
     resposta: "You can, with drag-and-drop platforms. You save money at the start but pay for it in time, and the result is usually weaker on speed and SEO."
 ---
-A professional website for a small or medium-sized business usually costs between €500 and €5,000. An online shop can reach €15,000. The difference isn't arbitrary: it depends on the type of site, what it has to do and who builds it.
+A professional website for a company usually costs between €500 and €5,000. An online shop can reach €15,000. The difference isn't arbitrary: it depends on the type of site, what it has to do and who builds it.
 
 This guide explains the reference prices, what makes the price go up or down, and what you should ask before accepting a quote.
 
@@ -36,6 +36,21 @@ These ranges are wide on purpose. Two websites with "five pages" can cost very d
 4. **Integrations.** [Connecting the site to a CRM](/en/blog/ligar-formulario-site-crm-email), an invoicing program or a payment system adds work and value.
 5. **SEO and AI readiness.** A site designed to [show up on Google](/en/blog/como-aparecer-google-seo-pme-portugal) and in ChatGPT's answers needs structure, technical data and well-organised content.
 6. **Who builds it.** Agencies, freelancers and drag-and-drop platforms differ widely in cost, timeframe and level of support.
+
+## Freelancer, agency or do it yourself
+
+The same website can be built three ways, and the price changes as much as the result.
+
+| | Do it yourself (Wix, Squarespace) | Freelancer | Agency |
+|---|---|---|---|
+| Upfront cost | The lowest | In between | The highest |
+| Monthly cost | Platform subscription | Hosting and maintenance, if contracted | Hosting and maintenance, usually under contract |
+| Who you talk to | Nobody, you do it yourself | The person building the site | An account manager |
+| Design | Limited to the templates | Custom or a theme, depending on the person | Custom |
+| SEO and AI readiness | Depends on your time and know-how | Varies a lot from person to person | Usually included, sometimes extra |
+| Best for | Testing an idea on a small budget | Companies that want direct contact and a fair price | Large projects with several people involved |
+
+The most common criticism of freelancers is that they can build a site but not get it bringing in customers. So before choosing, ask who looks after Google, AI answers and CRM connections after launch. At Starmountain Flash I do all three: the website, [visibility on Google and in AI](/en/visibilidade-ia) and [automations](/en/automacoes).
 
 ## The costs that don't always appear in the quote
 
