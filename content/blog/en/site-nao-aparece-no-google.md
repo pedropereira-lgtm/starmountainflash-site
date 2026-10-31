@@ -99,4 +99,4 @@ It depends on the cause. A block fixed today can show results within a few days,
 
 If you are thinking of rebuilding your site because of this, the guide [WordPress, Wix or a custom-built website](/en/blog/wordpress-wix-ou-site-a-medida) will help you choose the right foundation.
 
-*Want to know which of these situations applies to your site? I offer a [free review of your website](/analise-gratuita): I check whether it is on Google, what is holding it back and what to fix first. You get the report by email within 3 working days, with no obligation.*
+*Want to know which of these situations applies to your site? I offer a [free review of your website](/en/analise-gratuita): I check whether it is on Google, what is holding it back and what to fix first. You get the report by email within 3 working days, with no obligation.*
