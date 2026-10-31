@@ -35,7 +35,7 @@
  function runL(){clearInterval(tl);const lg=document.getElementById('log');lg.innerHTML='';let k=0;
   const add=()=>{const now=new Date(Date.now()+k*41000),hh=String(now.getHours()).padStart(2,'0'),mm=String(now.getMinutes()).padStart(2,'0');
    const el=document.createElement('div');el.innerHTML=`<span>${hh}:${mm}  ${LG[L()][k%5]}</span><span>✓</span>`;lg.prepend(el);if(lg.children.length>4)lg.lastChild.remove();k++};add();tl=setInterval(add,1300)}
- function show(i){cur=i;tabs.forEach((b,k)=>{b.classList.toggle('on',k===i);b.style.animation='none';b.offsetWidth;b.style.animation=''});
+ function show(i){cur=i;tabs.forEach((b,k)=>{b.classList.toggle('on',k===i)});
   demo.querySelectorAll('.pane').forEach((p,k)=>p.classList.toggle('on',k===i));i===0?runQ():runL()}
  tabs.forEach((b,k)=>b.onclick=()=>{auto=false;demo.classList.add('stop');show(k)});
  show(0);setInterval(()=>{if(auto)show(1-cur)},7000);
@@ -45,7 +45,7 @@
  requestAnimationFrame(()=>{const h=document.getElementById('hero');if(h)h.classList.add('in')});const mk=null;if(mk&&matchMedia('(pointer:fine)').matches)addEventListener('mousemove',e=>{const x=(e.clientX/innerWidth-.5)*30,y=(e.clientY/innerHeight-.5)*30;mk.style.transform=`translate(${x}px,${y}px)`},{passive:true});
  if(document.getElementById('fill')){const met=document.getElementById('metodo'),fill=document.getElementById('fill'),phs=met.querySelectorAll('.ph2');
  function mp(){const r=met.getBoundingClientRect(),k=Math.min(1,Math.max(0,(innerHeight*.75-r.top-200)/(r.height*.55)));fill.style.width=(k*100)+'%';phs.forEach((e,i)=>e.classList.toggle('lit',k>=i/phs.length+.02))}
- addEventListener('scroll',mp,{passive:true});mp();}
+ addEventListener('scroll',()=>requestAnimationFrame(mp),{passive:true});requestAnimationFrame(mp);}
  const els=document.querySelectorAll('.rv');
  if(!('IntersectionObserver' in window)){els.forEach(e=>e.classList.add('in'));document.querySelectorAll('.pain').forEach(e=>e.classList.add('on'));return}
  const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12,rootMargin:'0px 0px -6% 0px'});els.forEach(e=>io.observe(e));
