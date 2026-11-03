@@ -17,11 +17,11 @@ faq:
   - pergunta: "Este artigo substitui um advogado?"
     resposta: "Não. É informação geral sobre o regulamento. Para um caso concreto, convém falar com um jurista."
 ---
-No Google Trends, "regulamento sobre inteligência artificial" está entre as pesquisas sobre IA que mais subiram em Portugal no último ano. Muitos donos de empresas usam o ChatGPT ou o Claude todos os dias e não sabem se isso os obriga a alguma coisa. Faço automações com IA para empresas e esta pergunta aparece cada vez mais nas reuniões, por isso juntei aqui o que já se aplica e o que ficou para depois.
+No Google Trends, "regulamento sobre inteligência artificial" está entre as pesquisas sobre IA que mais subiram em Portugal no último ano. Muitos donos de empresas usam o ChatGPT ou o Claude todos os dias e não sabem se isso os obriga a alguma coisa. Eu também tive de perceber o que me cabe a mim, porque uso estas ferramentas no meu trabalho e construo automações com IA para outras empresas. Juntei aqui o que já se aplica e o que ficou para depois.
 
 **Resposta curta:** para a maioria das PME, o que já conta é avisar quando um cliente está a falar com uma IA, identificar imagens e vídeos gerados por IA que pareçam reais e tomar medidas para que a equipa saiba usar estas ferramentas. As regras mais exigentes, para sistemas de alto risco como a triagem de candidatos, foram adiadas para dezembro de 2027 e agosto de 2028.
 
-Isto é informação geral, escrita por quem implementa automações, e não aconselhamento jurídico.
+Escrevo isto como quem implementa automações. Para um caso concreto, fala com um jurista.
 
 ## O que é o regulamento
 
@@ -33,13 +33,13 @@ O regulamento entrou em vigor em 2024 e aplica-se por fases. Em julho de 2026 fo
 
 ### A equipa tem de saber usar a IA
 
-O artigo 4.º obriga as empresas que usam IA a tomar medidas para que a equipa saiba trabalhar com ela. Com a alteração de julho, a obrigação passou a ser de esforço e não de resultado: a empresa tem de fazer alguma coisa, adaptada à experiência das pessoas e ao uso que dão às ferramentas, mas não tem de garantir um nível mínimo de conhecimento.
+O artigo 4.º obriga as empresas que usam IA a tomar medidas para que a equipa saiba trabalhar com ela. Com a alteração de julho, a redação ficou mais flexível. A empresa tem de fazer alguma coisa, adaptada à experiência das pessoas e ao uso que dão às ferramentas, mas não tem de garantir um nível mínimo de conhecimento.
 
 Numa PME, isto pode ser simples: uma página com as ferramentas que a equipa usa, o que pode e não pode ser posto lá dentro e quem revê antes de enviar a um cliente.
 
 ### Transparência
 
-Desde 2 de agosto de 2026 aplicam-se as regras de transparência do artigo 50.º. Na prática, para uma PME, quer dizer três coisas. Quem fala com um chatbot tem de saber que está a falar com uma IA. Imagens, áudio e vídeo gerados ou alterados por IA que pareçam reais têm de ser identificados como tal. E as ferramentas que geram conteúdo têm de o marcar de forma que outros sistemas o consigam detetar.
+Desde 2 de agosto de 2026 aplicam-se as regras de transparência do artigo 50.º. Para uma PME, o que pesa mais é o chatbot: quem fala com ele tem de saber que está a falar com uma IA. Imagens, áudio e vídeo gerados ou alterados por IA que pareçam reais também têm de ser identificados como tal. Há ainda uma obrigação técnica, a de as ferramentas que geram conteúdo o marcarem de forma que outros sistemas o consigam detetar.
 
 Esta última parte cabe a quem cria as ferramentas, como a OpenAI, a Anthropic ou a Google. Os sistemas generativos que já estavam no mercado antes de agosto têm até 2 de dezembro de 2026 para a cumprir.
 
@@ -69,4 +69,4 @@ O regulamento da IA não substitui o RGPD. Se alguém da equipa cola num chatbot
 
 Nos sistemas que uso na Starmountain, a IA prepara e uma pessoa decide o que sai. A prospeção deixa rascunhos de email no Gmail e sou eu que os envio de manhã. A análise das reuniões gera um resumo e um rascunho de seguimento, que reviso antes de mandar ao cliente. É a mesma lógica que aplico quando construo [automações](https://starmountainflash.pt/automacoes) para outras empresas: nada que chegue a um cliente sai sem revisão, a não ser que a empresa decida o contrário com conhecimento do risco.
 
-Se queres perceber que tarefas da tua empresa podem ser automatizadas sem criar problemas destes, é isso que faço no [Diagnóstico Flash](https://starmountainflash.pt/starmap).
+Se queres perceber que tarefas da tua empresa podem ser automatizadas sem criar problemas destes, é isso que faço no [diagnóstico StarMap](https://starmountainflash.pt/starmap).

@@ -17,11 +17,11 @@ faq:
   - pergunta: "Does this article replace a lawyer?"
     resposta: "No. It is general information about the regulation. For a specific case, talk to a legal professional."
 ---
-On Google Trends, "regulamento sobre inteligência artificial" (AI regulation) is among the AI-related searches that grew the most in Portugal over the past year. Many business owners use ChatGPT or Claude every day and don't know whether that puts them under any obligation. I build AI automations for companies and this question comes up more and more in meetings, so I've put together what already applies and what has been pushed back.
+On Google Trends, "regulamento sobre inteligência artificial" (AI regulation) is among the AI-related searches that grew the most in Portugal over the past year. Many business owners use ChatGPT or Claude every day and don't know whether that puts them under any obligation. I had to work out what applies to me too, because I use these tools in my own work and build AI automations for other companies. Here is what already applies and what has been pushed back.
 
 **Short answer:** for most small businesses, what already counts is telling customers when they are talking to an AI, labelling AI-generated images and videos that look real, and taking steps so the team knows how to use these tools. The strictest rules, for high-risk systems such as screening job candidates, were postponed to December 2027 and August 2028.
 
-This is general information written by someone who builds automations, not legal advice.
+I'm writing this as someone who implements automations. For a specific case, talk to a lawyer.
 
 ## What the regulation is
 
@@ -33,13 +33,13 @@ The regulation came into force in 2024 and applies in phases. In July 2026 it wa
 
 ### The team has to know how to use AI
 
-Article 4 requires companies that use AI to take steps so their team knows how to work with it. Since the July amendment, this is an obligation of effort rather than result: the company has to do something, suited to people's experience and how they use the tools, but it doesn't have to guarantee a minimum level of knowledge.
+Article 4 requires companies that use AI to take steps so their team knows how to work with it. The July amendment made the wording more flexible. The company has to do something, suited to people's experience and how they use the tools, but it doesn't have to guarantee a minimum level of knowledge.
 
 In a small business this can be simple: one page listing the tools the team uses, what can and can't be put into them, and who reviews things before they go to a client.
 
 ### Transparency
 
-Since 2 August 2026, the transparency rules in Article 50 apply. In practice, for a small business, that means three things. People talking to a chatbot have to know it's an AI. AI-generated or AI-altered images, audio and video that look real have to be labelled as such. And tools that generate content have to mark it in a way other systems can detect.
+Since 2 August 2026, the transparency rules in Article 50 apply. For a small business, the chatbot is what matters most: people talking to it have to know it's an AI. AI-generated or AI-altered images, audio and video that look real also have to be labelled as such. There is also a technical obligation for tools that generate content to mark it in a way other systems can detect.
 
 That last part falls on the companies that build the tools, such as OpenAI, Anthropic or Google. Generative systems already on the market before August have until 2 December 2026 to comply.
 
@@ -69,4 +69,4 @@ The AI Act doesn't replace the GDPR. If someone on the team pastes a customer's 
 
 In the systems I use at Starmountain, AI prepares and a person decides what goes out. Prospecting leaves email drafts in Gmail and I send them in the morning. Meeting analysis produces a summary and a follow-up draft, which I review before sending it to the client. It's the same approach I take when I build [automations](https://starmountainflash.pt/en/automacoes) for other companies: nothing that reaches a customer goes out without review, unless the company chooses otherwise knowing the risk.
 
-If you want to find out which tasks in your company can be automated without creating problems like these, that's what I do in the [Flash Diagnostic](https://starmountainflash.pt/en/starmap).
+If you want to find out which tasks in your company can be automated without creating problems like these, that's what I do in the [StarMap diagnostic](https://starmountainflash.pt/en/starmap).
