@@ -1,7 +1,7 @@
 ---
 titulo: "What happens to a website when nobody looks after it"
 slug: "manutencao-site-o-que-acontece"
-descricao: "Contact forms that stop sending, certificates that expire, domains that lapse. What breaks on a website without maintenance and how to check it in 15 minutes."
+descricao: "Forms that stop sending, certificates that expire, domains that lapse. What breaks on a website without maintenance and how to check it in 15 minutes."
 categoria: "Websites"
 data: 2026-11-11
 capa: ""
